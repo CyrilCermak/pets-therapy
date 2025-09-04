@@ -37,10 +37,6 @@ class PetsSelectionViewModel: ObservableObject {
 
     init() {
         bindPets()
-        Task { @MainActor in
-            let currentDate = Calendar.current.dateComponents([.year, .month, .day], from: Date())
-            self.showSneakBitBanner = currentDate.year == 2025 && (currentDate.month ?? 0) < 2
-        }
     }
 
     private func bindPets() {

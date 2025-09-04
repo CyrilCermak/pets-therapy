@@ -299,7 +299,6 @@
 		1E77BED72D293A6900AA14EC /* OnScreen */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (1E77BF122D293A6900AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 1E77BF132D293A6900AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = OnScreen; sourceTree = "<group>"; };
 		1E77BF172D293A6C00AA14EC /* PetDetails */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = PetDetails; sourceTree = "<group>"; };
 		1E77BF232D293A6E00AA14EC /* PetsSelection */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = PetsSelection; sourceTree = "<group>"; };
-		1E77BF2F2D293A7000AA14EC /* RemoteConfig */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = RemoteConfig; sourceTree = "<group>"; };
 		1E77BF362D293A7100AA14EC /* Screensaver */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Screensaver; sourceTree = "<group>"; };
 		1E77BF492D293A7400AA14EC /* Settings */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (1E77BF552D293A7400AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 1E77BF562D293A7400AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Settings; sourceTree = "<group>"; };
 		1E77BF592D293A7600AA14EC /* StatusBar */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (1E77BF5C2D293A7600AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 1E77BF5D2D293A7600AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = StatusBar; sourceTree = "<group>"; };
@@ -550,7 +549,6 @@
 				1E77BED72D293A6900AA14EC /* OnScreen */,
 				1E77BF172D293A6C00AA14EC /* PetDetails */,
 				1E77BF232D293A6E00AA14EC /* PetsSelection */,
-				1E77BF2F2D293A7000AA14EC /* RemoteConfig */,
 				1E77BF362D293A7100AA14EC /* Screensaver */,
 				1E77BF492D293A7400AA14EC /* Settings */,
 				1E77BDF12D2938FA00AA14EC /* Shop */,
@@ -634,7 +632,6 @@
 				1E77BED72D293A6900AA14EC /* OnScreen */,
 				1E77BF172D293A6C00AA14EC /* PetDetails */,
 				1E77BF232D293A6E00AA14EC /* PetsSelection */,
-				1E77BF2F2D293A7000AA14EC /* RemoteConfig */,
 				1E77BF362D293A7100AA14EC /* Screensaver */,
 				1E77BF492D293A7400AA14EC /* Settings */,
 				1E77BF762D293A7800AA14EC /* Yage */,
@@ -716,7 +713,6 @@
 				1E77BED72D293A6900AA14EC /* OnScreen */,
 				1E77BF172D293A6C00AA14EC /* PetDetails */,
 				1E77BF232D293A6E00AA14EC /* PetsSelection */,
-				1E77BF2F2D293A7000AA14EC /* RemoteConfig */,
 				1E77BF362D293A7100AA14EC /* Screensaver */,
 				1E77BF762D293A7800AA14EC /* Yage */,
 			);
