@@ -50,7 +50,7 @@ struct ShamelessSubscriptionBanner: View {
                         .padding(.horizontal)
                         .frame(height: 32)
                         .foregroundStyle(Color.white)
-                        .background(Color.red)
+                        .background(Color.accent)
                         .cornerRadius(8)
                         .shadow(radius: 8)
                     }

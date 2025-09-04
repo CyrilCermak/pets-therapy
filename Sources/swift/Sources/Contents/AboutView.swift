@@ -105,9 +105,10 @@ private struct SocialIcon: View {
 
 private struct LeaveReview: View {
     var body: some View {
-        VStack(spacing: .md) {
+        VStack(spacing: .lg) {
             Text(Lang.About.leaveReviewMessage)
                 .multilineTextAlignment(.center)
+                .font(.title2.bold())
             Button(Lang.About.leaveReview) {
                 URL.visit(urlString: Lang.Urls.appStore)
             }
