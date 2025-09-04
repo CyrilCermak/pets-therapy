@@ -3,25 +3,23 @@
     {
       "id": "front",
       "position": "fromEntityBottomLeft",
-      "requiredLoops": 2
-    },
-    {
-      "id": "idle",
-      "position": "fromEntityBottomLeft"
+      "requiredLoops": 5
     },
     {
       "id": "eat",
       "position": "fromEntityBottomLeft",
-      "requiredLoops": 3
+      "requiredLoops": 5
     },
     {
-      "id": "puke",
-      "position": "fromEntityBottomLeft"
+      "id": "sleep",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 20
     }
   ],
   "capabilities": [
     "AnimatedSprite",
     "AnimationsProvider",
+    "AnimationsScheduler",
     "AutoRespawn",
     "BounceOnLateralCollisions",
     "Draggable",
@@ -29,15 +27,14 @@
     "Gravity",
     "LinearMovement",
     "PetsSpritesProvider",
-    "AnimationsScheduler",
     "Rotating",
     "ShowsMenuOnRightClick"
   ],
   "dragPath": "drag",
   "fps": 10,
   "zIndex": 0,
-  "tags": ["forest", "supporters-only"],
-  "id": "sheep",
+  "tags": ["forest"],
+  "id": "ape_chef",
   "movementPath": "walk",
-  "speed": 0.8
+  "speed": 0.7
 }
