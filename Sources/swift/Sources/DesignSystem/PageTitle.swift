@@ -11,8 +11,6 @@ struct PageTitle: View {
             if DeviceRequirement.macOS.isSatisfied {
                 ShamelessSubscriptionBanner()
                 JoinOurDiscord()
-                SneakBitQuick()
-                YouTubeQuick()
             }
         }
     }

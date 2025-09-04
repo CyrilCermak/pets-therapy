@@ -1,8 +1,10 @@
 import NotAGif
 import SwiftUI
 import Swinject
+import Combine
 
 struct ContributorsView: View {
+    @Environment(\.dismiss) var dismiss
     @StateObject private var vm = ContributorsViewModel()
 
     private let columns = [GridItem(.adaptive(minimum: 250, maximum: 800), spacing: Spacing.xl.rawValue)]
@@ -10,7 +12,12 @@ struct ContributorsView: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: .xl) {
-                PageTitle(text: Lang.Page.contributors)
+                HStack {
+                    Text(Lang.Page.contributors).font(.boldTitle)
+                    Spacer()
+                    Button(Lang.cancel, action: { dismiss() })
+                        .buttonStyle(.text)
+                }
                 LazyVGrid(columns: columns, spacing: Spacing.xl.rawValue) {
                     ForEach(vm.contributors) {
                         ItemView(contributor: $0)
@@ -18,7 +25,7 @@ struct ContributorsView: View {
                 }
             }
             .padding(.md)
-            .padding(.bottom, .xxxxl)
+            .padding(.bottom, .md)
         }
         .environmentObject(vm)
     }
@@ -126,9 +133,24 @@ private struct RoleView: View {
 
 private class ContributorsViewModel: ObservableObject {
     @Inject private var assets: PetsAssetsProvider
-
+    @Inject private var theme: ThemeUseCase
+    
+    @Published var colorScheme: ColorScheme?
+    private var disposables = Set<AnyCancellable>()
+    
     var contributors: [Contributor] { Contributors.all }
 
+    init() {
+        theme.theme()
+            .sink { [weak self] theme in
+                guard let self else { return }
+                withAnimation {
+                    self.colorScheme = theme.colorScheme
+                }
+            }
+            .store(in: &disposables)
+    }
+    
     func thumbnail(for species: String) -> ImageFrame? {
         assets.image(sprite: "\(species)_front-1")
     }
