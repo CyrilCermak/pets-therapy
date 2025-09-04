@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1E9505B029B21341007666BF"
-               BuildableName = "BitTherapy.app"
-               BlueprintName = "BitTherapy"
-               ReferencedContainer = "container:BitTherapy.xcodeproj">
+               BlueprintIdentifier = "1EF863E829B22DD400413AEA"
+               BuildableName = "Pets TherapyMobile.app"
+               BlueprintName = "Pets TherapyMobile"
+               ReferencedContainer = "container:Pets Therapy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,7 +29,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:Tests/macOS/BitTherapy.xctestplan"
+            reference = "container:Tests/iOS/BitTherapyMobile.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -39,10 +39,10 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1E9505C029B21342007666BF"
-               BuildableName = "BitTherapy Tests.xctest"
-               BlueprintName = "BitTherapy Tests"
-               ReferencedContainer = "container:BitTherapy.xcodeproj">
+               BlueprintIdentifier = "1EF863F729B22DD500413AEA"
+               BuildableName = "Pets TherapyMobile Tests.xctest"
+               BlueprintName = "Pets TherapyMobile Tests"
+               ReferencedContainer = "container:Pets Therapy.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -50,21 +50,10 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1E9505CA29B21342007666BF"
-               BuildableName = "BitTherapy UITests.xctest"
-               BlueprintName = "BitTherapy UITests"
-               ReferencedContainer = "container:BitTherapy.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1E9505C029B21342007666BF"
-               BuildableName = "BitTherapy Tests.xctest"
-               BlueprintName = "BitTherapy Tests"
-               ReferencedContainer = "container:BitTherapy.xcodeproj">
+               BlueprintIdentifier = "1EF8640129B22DD500413AEA"
+               BuildableName = "Pets TherapyMobile UITests.xctest"
+               BlueprintName = "Pets TherapyMobile UITests"
+               ReferencedContainer = "container:Pets Therapy.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -73,7 +62,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = "en"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -84,10 +72,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1E9505B029B21341007666BF"
-            BuildableName = "BitTherapy.app"
-            BlueprintName = "BitTherapy"
-            ReferencedContainer = "container:BitTherapy.xcodeproj">
+            BlueprintIdentifier = "1EF863E829B22DD400413AEA"
+            BuildableName = "Pets TherapyMobile.app"
+            BlueprintName = "Pets TherapyMobile"
+            ReferencedContainer = "container:Pets Therapy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -101,10 +89,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1E9505B029B21341007666BF"
-            BuildableName = "BitTherapy.app"
-            BlueprintName = "BitTherapy"
-            ReferencedContainer = "container:BitTherapy.xcodeproj">
+            BlueprintIdentifier = "1EF863E829B22DD400413AEA"
+            BuildableName = "Pets TherapyMobile.app"
+            BlueprintName = "Pets TherapyMobile"
+            ReferencedContainer = "container:Pets Therapy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

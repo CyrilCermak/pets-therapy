@@ -17,10 +17,10 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1EF8640129B22DD500413AEA"
-               BuildableName = "BitTherapyMobile UITests.xctest"
-               BlueprintName = "BitTherapyMobile UITests"
-               ReferencedContainer = "container:BitTherapy.xcodeproj">
+               BlueprintIdentifier = "1E9505C029B21342007666BF"
+               BuildableName = "Pets Therapy Tests.xctest"
+               BlueprintName = "Pets Therapy Tests"
+               ReferencedContainer = "container:Pets Therapy.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

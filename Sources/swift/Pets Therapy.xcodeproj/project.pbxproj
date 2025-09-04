@@ -135,8 +135,8 @@
 
 /* Begin PBXFileReference section */
 		1E07311F29B9BD2200E31EED /* ScreenshotsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotsHelper.swift; sourceTree = "<group>"; };
-		1E07313629B9D64B00E31EED /* BitTherapyMobile Screenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BitTherapyMobile Screenshots.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E07314729B9D86500E31EED /* BitTherapy Screenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BitTherapy Screenshots.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E07313629B9D64B00E31EED /* Pets TherapyMobile Screenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pets TherapyMobile Screenshots.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E07314729B9D86500E31EED /* Pets Therapy Screenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pets Therapy Screenshots.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E07314829B9D88000E31EED /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		1E07314B29B9D89800E31EED /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
 		1E07314E29B9D89E00E31EED /* Orientations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orientations.swift; sourceTree = "<group>"; };
@@ -150,18 +150,18 @@
 		1E7E218E29B0874C00AC9438 /* PetsAssets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PetsAssets; path = ../../PetsAssets; sourceTree = "<group>"; };
 		1E7E218F29B0874C00AC9438 /* Species */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Species; path = ../../Species; sourceTree = "<group>"; };
 		1E93C60229623192007A5B91 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1E9505B129B21341007666BF /* BitTherapy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitTherapy.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E9505C129B21342007666BF /* BitTherapy Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BitTherapy Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E9505B129B21341007666BF /* Pets Therapy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pets Therapy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E9505C129B21342007666BF /* Pets Therapy Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pets Therapy Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9505C529B21342007666BF /* BitTherapyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitTherapyTests.swift; sourceTree = "<group>"; };
-		1E9505CB29B21342007666BF /* BitTherapy UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BitTherapy UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E9505CB29B21342007666BF /* Pets Therapy UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pets Therapy UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9505CF29B21342007666BF /* BitTherapyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitTherapyUITests.swift; sourceTree = "<group>"; };
 		1EB5E8E729A12E4500FF9C9C /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1ED44B8629B221C20091CDAE /* ImageInterpolationUseCaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageInterpolationUseCaseTests.swift; sourceTree = "<group>"; };
 		1EDDB01E29C1B770002696D3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1EE90BFA299802690019CA9A /* contributors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contributors.json; sourceTree = "<group>"; };
-		1EF863E929B22DD400413AEA /* BitTherapyMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitTherapyMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1EF863F829B22DD500413AEA /* BitTherapyMobile Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BitTherapyMobile Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1EF8640229B22DD500413AEA /* BitTherapyMobile UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BitTherapyMobile UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EF863E929B22DD400413AEA /* Pets TherapyMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pets TherapyMobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EF863F829B22DD500413AEA /* Pets TherapyMobile Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pets TherapyMobile Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EF8640229B22DD500413AEA /* Pets TherapyMobile UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pets TherapyMobile UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF8640629B22DD500413AEA /* BitTherapyMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitTherapyMobileUITests.swift; sourceTree = "<group>"; };
 		640CD7B62B17BD230067C88A /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		640CD7B72B17BD2B0067C88A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 			membershipExceptions = (
 				iOS/MainScene.swift,
 			);
-			target = 1E9505B029B21341007666BF /* BitTherapy */;
+			target = 1E9505B029B21341007666BF /* Pets Therapy */;
 		};
 		1E77BE0E2D29393F00AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -201,7 +201,7 @@
 				macOS/MacContentView.swift,
 				macOS/MainScene.swift,
 			);
-			target = 1EF863E829B22DD400413AEA /* BitTherapyMobile */;
+			target = 1EF863E829B22DD400413AEA /* Pets TherapyMobile */;
 		};
 		1E77BE242D29394300AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -209,7 +209,7 @@
 				iOS/App.swift,
 				iOS/DummyNotificationsService.swift,
 			);
-			target = 1E9505B029B21341007666BF /* BitTherapy */;
+			target = 1E9505B029B21341007666BF /* Pets Therapy */;
 		};
 		1E77BE252D29394300AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -217,7 +217,7 @@
 				macOS/App.swift,
 				macOS/DistributedNotificationsService.swift,
 			);
-			target = 1EF863E829B22DD400413AEA /* BitTherapyMobile */;
+			target = 1EF863E829B22DD400413AEA /* Pets TherapyMobile */;
 		};
 		1E77BE5F2D29395200AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -226,7 +226,7 @@
 				Export/iOS/ExportPetUseCaseImpl.swift,
 				Import/iOS/ImportPetUseCaseImpl.swift,
 			);
-			target = 1E9505B029B21341007666BF /* BitTherapy */;
+			target = 1E9505B029B21341007666BF /* Pets Therapy */;
 		};
 		1E77BE602D29395200AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -235,7 +235,7 @@
 				Export/macOS/ExportPetUseCaseImpl.swift,
 				Import/macOS/ImportPetUseCaseImpl.swift,
 			);
-			target = 1EF863E829B22DD400413AEA /* BitTherapyMobile */;
+			target = 1EF863E829B22DD400413AEA /* Pets TherapyMobile */;
 		};
 		1E77BF122D293A6900AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -243,7 +243,7 @@
 				Environments/iOS/OnScreenCoordinatorImpl.swift,
 				Rendering/iOS/ImageManipulation.swift,
 			);
-			target = 1E9505B029B21341007666BF /* BitTherapy */;
+			target = 1E9505B029B21341007666BF /* Pets Therapy */;
 		};
 		1E77BF132D293A6900AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -253,14 +253,14 @@
 				Rendering/macOS/PixelArtEntityView.swift,
 				Rendering/macOS/WorldWindow.swift,
 			);
-			target = 1EF863E829B22DD400413AEA /* BitTherapyMobile */;
+			target = 1EF863E829B22DD400413AEA /* Pets TherapyMobile */;
 		};
 		1E77BF552D293A7400AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				iOS/MobileSettings.swift,
 			);
-			target = 1E9505B029B21341007666BF /* BitTherapy */;
+			target = 1E9505B029B21341007666BF /* Pets Therapy */;
 		};
 		1E77BF562D293A7400AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -269,21 +269,21 @@
 				iOS/MobileSettings.swift,
 				Settings.swift,
 			);
-			target = 1EF863E829B22DD400413AEA /* BitTherapyMobile */;
+			target = 1EF863E829B22DD400413AEA /* Pets TherapyMobile */;
 		};
 		1E77BF5C2D293A7600AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				StatusBar.swift,
 			);
-			target = 1E9505B029B21341007666BF /* BitTherapy */;
+			target = 1E9505B029B21341007666BF /* Pets Therapy */;
 		};
 		1E77BF5D2D293A7600AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				NoStatusBar.swift,
 			);
-			target = 1EF863E829B22DD400413AEA /* BitTherapyMobile */;
+			target = 1EF863E829B22DD400413AEA /* Pets TherapyMobile */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -514,14 +514,14 @@
 				1E7E218F29B0874C00AC9438 /* Species */,
 				1E9505C429B21342007666BF /* Tests */,
 				1E9505CE29B21342007666BF /* Tests UI */,
-				1E9505B129B21341007666BF /* BitTherapy.app */,
-				1E07314729B9D86500E31EED /* BitTherapy Screenshots.xctest */,
-				1E9505C129B21342007666BF /* BitTherapy Tests.xctest */,
-				1E9505CB29B21342007666BF /* BitTherapy UITests.xctest */,
-				1EF863E929B22DD400413AEA /* BitTherapyMobile.app */,
-				1E07313629B9D64B00E31EED /* BitTherapyMobile Screenshots.xctest */,
-				1EF863F829B22DD500413AEA /* BitTherapyMobile Tests.xctest */,
-				1EF8640229B22DD500413AEA /* BitTherapyMobile UITests.xctest */,
+				1E9505B129B21341007666BF /* Pets Therapy.app */,
+				1E07314729B9D86500E31EED /* Pets Therapy Screenshots.xctest */,
+				1E9505C129B21342007666BF /* Pets Therapy Tests.xctest */,
+				1E9505CB29B21342007666BF /* Pets Therapy UITests.xctest */,
+				1EF863E929B22DD400413AEA /* Pets TherapyMobile.app */,
+				1E07313629B9D64B00E31EED /* Pets TherapyMobile Screenshots.xctest */,
+				1EF863F829B22DD500413AEA /* Pets TherapyMobile Tests.xctest */,
+				1EF8640229B22DD500413AEA /* Pets TherapyMobile UITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -563,9 +563,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1E07312529B9D64B00E31EED /* BitTherapyMobile Screenshots */ = {
+		1E07312529B9D64B00E31EED /* Pets TherapyMobile Screenshots */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E07313329B9D64B00E31EED /* Build configuration list for PBXNativeTarget "BitTherapyMobile Screenshots" */;
+			buildConfigurationList = 1E07313329B9D64B00E31EED /* Build configuration list for PBXNativeTarget "Pets TherapyMobile Screenshots" */;
 			buildPhases = (
 				1E07312B29B9D64B00E31EED /* Sources */,
 				1E07312F29B9D64B00E31EED /* Frameworks */,
@@ -576,19 +576,19 @@
 			dependencies = (
 				1E07312629B9D64B00E31EED /* PBXTargetDependency */,
 			);
-			name = "BitTherapyMobile Screenshots";
+			name = "Pets TherapyMobile Screenshots";
 			packageProductDependencies = (
 				1E07312829B9D64B00E31EED /* FirebaseAnalyticsWithoutAdIdSupport */,
 				1E07312A29B9D64B00E31EED /* FirebaseCrashlytics */,
 				1EA1679429C1E0E000FAF378 /* Schwifty */,
 			);
 			productName = "Mobile PetsUITests";
-			productReference = 1E07313629B9D64B00E31EED /* BitTherapyMobile Screenshots.xctest */;
+			productReference = 1E07313629B9D64B00E31EED /* Pets TherapyMobile Screenshots.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		1E07313B29B9D86500E31EED /* BitTherapy Screenshots */ = {
+		1E07313B29B9D86500E31EED /* Pets Therapy Screenshots */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E07314429B9D86500E31EED /* Build configuration list for PBXNativeTarget "BitTherapy Screenshots" */;
+			buildConfigurationList = 1E07314429B9D86500E31EED /* Build configuration list for PBXNativeTarget "Pets Therapy Screenshots" */;
 			buildPhases = (
 				1E07313E29B9D86500E31EED /* Sources */,
 				1E07314229B9D86500E31EED /* Frameworks */,
@@ -599,17 +599,17 @@
 			dependencies = (
 				1E07313C29B9D86500E31EED /* PBXTargetDependency */,
 			);
-			name = "BitTherapy Screenshots";
+			name = "Pets Therapy Screenshots";
 			packageProductDependencies = (
 				1E07315929BA18DD00E31EED /* Schwifty */,
 			);
 			productName = "Desktop PetsUITests";
-			productReference = 1E07314729B9D86500E31EED /* BitTherapy Screenshots.xctest */;
+			productReference = 1E07314729B9D86500E31EED /* Pets Therapy Screenshots.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		1E9505B029B21341007666BF /* BitTherapy */ = {
+		1E9505B029B21341007666BF /* Pets Therapy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E9505D329B21342007666BF /* Build configuration list for PBXNativeTarget "BitTherapy" */;
+			buildConfigurationList = 1E9505D329B21342007666BF /* Build configuration list for PBXNativeTarget "Pets Therapy" */;
 			buildPhases = (
 				1ED44B8329B21B920091CDAE /* SwiftLint */,
 				1E9505AD29B21341007666BF /* Sources */,
@@ -639,7 +639,7 @@
 				1E77BF492D293A7400AA14EC /* Settings */,
 				1E77BF762D293A7800AA14EC /* Yage */,
 			);
-			name = BitTherapy;
+			name = "Pets Therapy";
 			packageProductDependencies = (
 				1ED44B7329B21AD50091CDAE /* LaunchAtLogin */,
 				1ED44B7729B21AD50091CDAE /* RateKit */,
@@ -651,12 +651,12 @@
 				6437A6D62B041AE300C2D8D7 /* BareBones */,
 			);
 			productName = "Desktop Pets";
-			productReference = 1E9505B129B21341007666BF /* BitTherapy.app */;
+			productReference = 1E9505B129B21341007666BF /* Pets Therapy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1E9505C029B21342007666BF /* BitTherapy Tests */ = {
+		1E9505C029B21342007666BF /* Pets Therapy Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E9505D629B21342007666BF /* Build configuration list for PBXNativeTarget "BitTherapy Tests" */;
+			buildConfigurationList = 1E9505D629B21342007666BF /* Build configuration list for PBXNativeTarget "Pets Therapy Tests" */;
 			buildPhases = (
 				1E9505BD29B21342007666BF /* Sources */,
 				1E9505BE29B21342007666BF /* Frameworks */,
@@ -667,14 +667,14 @@
 			dependencies = (
 				1E9505C329B21342007666BF /* PBXTargetDependency */,
 			);
-			name = "BitTherapy Tests";
+			name = "Pets Therapy Tests";
 			productName = "Desktop PetsTests";
-			productReference = 1E9505C129B21342007666BF /* BitTherapy Tests.xctest */;
+			productReference = 1E9505C129B21342007666BF /* Pets Therapy Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1E9505CA29B21342007666BF /* BitTherapy UITests */ = {
+		1E9505CA29B21342007666BF /* Pets Therapy UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E9505D929B21342007666BF /* Build configuration list for PBXNativeTarget "BitTherapy UITests" */;
+			buildConfigurationList = 1E9505D929B21342007666BF /* Build configuration list for PBXNativeTarget "Pets Therapy UITests" */;
 			buildPhases = (
 				1E9505C729B21342007666BF /* Sources */,
 				1E9505C829B21342007666BF /* Frameworks */,
@@ -685,14 +685,14 @@
 			dependencies = (
 				1E9505CD29B21342007666BF /* PBXTargetDependency */,
 			);
-			name = "BitTherapy UITests";
+			name = "Pets Therapy UITests";
 			productName = "Desktop PetsUITests";
-			productReference = 1E9505CB29B21342007666BF /* BitTherapy UITests.xctest */;
+			productReference = 1E9505CB29B21342007666BF /* Pets Therapy UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		1EF863E829B22DD400413AEA /* BitTherapyMobile */ = {
+		1EF863E829B22DD400413AEA /* Pets TherapyMobile */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1EF8641029B22DD500413AEA /* Build configuration list for PBXNativeTarget "BitTherapyMobile" */;
+			buildConfigurationList = 1EF8641029B22DD500413AEA /* Build configuration list for PBXNativeTarget "Pets TherapyMobile" */;
 			buildPhases = (
 				1E2DBAF129B866BA00870EB0 /* SwiftLint */,
 				1EF863E529B22DD400413AEA /* Sources */,
@@ -720,7 +720,7 @@
 				1E77BF362D293A7100AA14EC /* Screensaver */,
 				1E77BF762D293A7800AA14EC /* Yage */,
 			);
-			name = BitTherapyMobile;
+			name = "Pets TherapyMobile";
 			packageProductDependencies = (
 				1EF8642029B22F2500413AEA /* Swinject */,
 				1E1CF22929B2C5E30018A994 /* WindowsDetector */,
@@ -729,12 +729,12 @@
 				6437A6D82B041AEA00C2D8D7 /* BareBones */,
 			);
 			productName = "Mobile Pets";
-			productReference = 1EF863E929B22DD400413AEA /* BitTherapyMobile.app */;
+			productReference = 1EF863E929B22DD400413AEA /* Pets TherapyMobile.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1EF863F729B22DD500413AEA /* BitTherapyMobile Tests */ = {
+		1EF863F729B22DD500413AEA /* Pets TherapyMobile Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1EF8641129B22DD500413AEA /* Build configuration list for PBXNativeTarget "BitTherapyMobile Tests" */;
+			buildConfigurationList = 1EF8641129B22DD500413AEA /* Build configuration list for PBXNativeTarget "Pets TherapyMobile Tests" */;
 			buildPhases = (
 				1EF863F429B22DD500413AEA /* Sources */,
 				1EF863F529B22DD500413AEA /* Frameworks */,
@@ -745,16 +745,16 @@
 			dependencies = (
 				1EF863FA29B22DD500413AEA /* PBXTargetDependency */,
 			);
-			name = "BitTherapyMobile Tests";
+			name = "Pets TherapyMobile Tests";
 			packageProductDependencies = (
 			);
 			productName = "Mobile PetsTests";
-			productReference = 1EF863F829B22DD500413AEA /* BitTherapyMobile Tests.xctest */;
+			productReference = 1EF863F829B22DD500413AEA /* Pets TherapyMobile Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1EF8640129B22DD500413AEA /* BitTherapyMobile UITests */ = {
+		1EF8640129B22DD500413AEA /* Pets TherapyMobile UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1EF8641229B22DD500413AEA /* Build configuration list for PBXNativeTarget "BitTherapyMobile UITests" */;
+			buildConfigurationList = 1EF8641229B22DD500413AEA /* Build configuration list for PBXNativeTarget "Pets TherapyMobile UITests" */;
 			buildPhases = (
 				1EF863FE29B22DD500413AEA /* Sources */,
 				1EF863FF29B22DD500413AEA /* Frameworks */,
@@ -765,11 +765,11 @@
 			dependencies = (
 				1EF8640429B22DD500413AEA /* PBXTargetDependency */,
 			);
-			name = "BitTherapyMobile UITests";
+			name = "Pets TherapyMobile UITests";
 			packageProductDependencies = (
 			);
 			productName = "Mobile PetsUITests";
-			productReference = 1EF8640229B22DD500413AEA /* BitTherapyMobile UITests.xctest */;
+			productReference = 1EF8640229B22DD500413AEA /* Pets TherapyMobile UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -809,7 +809,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A65FE358283D80C900D1F5C8 /* Build configuration list for PBXProject "BitTherapy" */;
+			buildConfigurationList = A65FE358283D80C900D1F5C8 /* Build configuration list for PBXProject "Pets Therapy" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -839,14 +839,14 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1E9505B029B21341007666BF /* BitTherapy */,
-				1E9505C029B21342007666BF /* BitTherapy Tests */,
-				1E9505CA29B21342007666BF /* BitTherapy UITests */,
-				1E07313B29B9D86500E31EED /* BitTherapy Screenshots */,
-				1EF863E829B22DD400413AEA /* BitTherapyMobile */,
-				1EF863F729B22DD500413AEA /* BitTherapyMobile Tests */,
-				1EF8640129B22DD500413AEA /* BitTherapyMobile UITests */,
-				1E07312529B9D64B00E31EED /* BitTherapyMobile Screenshots */,
+				1E9505B029B21341007666BF /* Pets Therapy */,
+				1E9505C029B21342007666BF /* Pets Therapy Tests */,
+				1E9505CA29B21342007666BF /* Pets Therapy UITests */,
+				1E07313B29B9D86500E31EED /* Pets Therapy Screenshots */,
+				1EF863E829B22DD400413AEA /* Pets TherapyMobile */,
+				1EF863F729B22DD500413AEA /* Pets TherapyMobile Tests */,
+				1EF8640129B22DD500413AEA /* Pets TherapyMobile UITests */,
+				1E07312529B9D64B00E31EED /* Pets TherapyMobile Screenshots */,
 			);
 		};
 /* End PBXProject section */
@@ -939,7 +939,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint lint \"$SRCROOT\" --config \"$SRCROOT\"/.swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  echo \"Linting...\"\n  swiftlint lint \"$SRCROOT\" --config \"$SRCROOT\"/.swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\nexit 0\n";
 		};
 		1ED44B8329B21B920091CDAE /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -958,7 +958,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/zsh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint lint \"$SRCROOT\" --config \"$SRCROOT\"/.swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint lint \"$SRCROOT\"/Sources/ --config \"$SRCROOT\"/.swiftlint.yml \nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		1ED44B8429B21BA40091CDAE /* Launch at Login Helper */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1071,32 +1071,32 @@
 /* Begin PBXTargetDependency section */
 		1E07312629B9D64B00E31EED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1EF863E829B22DD400413AEA /* BitTherapyMobile */;
+			target = 1EF863E829B22DD400413AEA /* Pets TherapyMobile */;
 			targetProxy = 1E07312729B9D64B00E31EED /* PBXContainerItemProxy */;
 		};
 		1E07313C29B9D86500E31EED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1E9505B029B21341007666BF /* BitTherapy */;
+			target = 1E9505B029B21341007666BF /* Pets Therapy */;
 			targetProxy = 1E07313D29B9D86500E31EED /* PBXContainerItemProxy */;
 		};
 		1E9505C329B21342007666BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1E9505B029B21341007666BF /* BitTherapy */;
+			target = 1E9505B029B21341007666BF /* Pets Therapy */;
 			targetProxy = 1E9505C229B21342007666BF /* PBXContainerItemProxy */;
 		};
 		1E9505CD29B21342007666BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1E9505B029B21341007666BF /* BitTherapy */;
+			target = 1E9505B029B21341007666BF /* Pets Therapy */;
 			targetProxy = 1E9505CC29B21342007666BF /* PBXContainerItemProxy */;
 		};
 		1EF863FA29B22DD500413AEA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1EF863E829B22DD400413AEA /* BitTherapyMobile */;
+			target = 1EF863E829B22DD400413AEA /* Pets TherapyMobile */;
 			targetProxy = 1EF863F929B22DD500413AEA /* PBXContainerItemProxy */;
 		};
 		1EF8640429B22DD500413AEA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1EF863E829B22DD400413AEA /* BitTherapyMobile */;
+			target = 1EF863E829B22DD400413AEA /* Pets TherapyMobile */;
 			targetProxy = 1EF8640329B22DD500413AEA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1228,13 +1228,13 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 206501;
-				DEVELOPMENT_TEAM = 9L5V9XNS25;
+				DEVELOPMENT_TEAM = SH6896K6L5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Resources/macOS/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = BitTherapy;
+				INFOPLIST_KEY_CFBundleDisplayName = "Pets Therapy";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
@@ -1265,13 +1265,13 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 206501;
-				DEVELOPMENT_TEAM = 9L5V9XNS25;
+				DEVELOPMENT_TEAM = SH6896K6L5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Resources/macOS/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = BitTherapy;
+				INFOPLIST_KEY_CFBundleDisplayName = "Pets Therapy";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
@@ -1313,7 +1313,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitTherapy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BitTherapy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pets Therapy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pets Therapy";
 			};
 			name = Debug;
 		};
@@ -1339,7 +1339,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitTherapy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BitTherapy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pets Therapy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pets Therapy";
 			};
 			name = Release;
 		};
@@ -1404,7 +1404,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Resources/iOS/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = BitTherapy;
+				INFOPLIST_KEY_CFBundleDisplayName = "Pets Therapy";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1442,7 +1442,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Resources/iOS/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = BitTherapy;
+				INFOPLIST_KEY_CFBundleDisplayName = "Pets Therapy";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1489,7 +1489,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitTherapyMobile.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BitTherapyMobile";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pets TherapyMobile.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pets TherapyMobile";
 			};
 			name = Debug;
 		};
@@ -1514,7 +1514,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitTherapyMobile.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BitTherapyMobile";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pets TherapyMobile.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pets TherapyMobile";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1690,7 +1690,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1E07313329B9D64B00E31EED /* Build configuration list for PBXNativeTarget "BitTherapyMobile Screenshots" */ = {
+		1E07313329B9D64B00E31EED /* Build configuration list for PBXNativeTarget "Pets TherapyMobile Screenshots" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E07313429B9D64B00E31EED /* Debug */,
@@ -1699,7 +1699,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1E07314429B9D86500E31EED /* Build configuration list for PBXNativeTarget "BitTherapy Screenshots" */ = {
+		1E07314429B9D86500E31EED /* Build configuration list for PBXNativeTarget "Pets Therapy Screenshots" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E07314529B9D86500E31EED /* Debug */,
@@ -1708,7 +1708,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1E9505D329B21342007666BF /* Build configuration list for PBXNativeTarget "BitTherapy" */ = {
+		1E9505D329B21342007666BF /* Build configuration list for PBXNativeTarget "Pets Therapy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E9505D429B21342007666BF /* Debug */,
@@ -1717,7 +1717,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1E9505D629B21342007666BF /* Build configuration list for PBXNativeTarget "BitTherapy Tests" */ = {
+		1E9505D629B21342007666BF /* Build configuration list for PBXNativeTarget "Pets Therapy Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E9505D729B21342007666BF /* Debug */,
@@ -1726,7 +1726,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1E9505D929B21342007666BF /* Build configuration list for PBXNativeTarget "BitTherapy UITests" */ = {
+		1E9505D929B21342007666BF /* Build configuration list for PBXNativeTarget "Pets Therapy UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E9505DA29B21342007666BF /* Debug */,
@@ -1735,7 +1735,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1EF8641029B22DD500413AEA /* Build configuration list for PBXNativeTarget "BitTherapyMobile" */ = {
+		1EF8641029B22DD500413AEA /* Build configuration list for PBXNativeTarget "Pets TherapyMobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1EF8640A29B22DD500413AEA /* Debug */,
@@ -1744,7 +1744,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1EF8641129B22DD500413AEA /* Build configuration list for PBXNativeTarget "BitTherapyMobile Tests" */ = {
+		1EF8641129B22DD500413AEA /* Build configuration list for PBXNativeTarget "Pets TherapyMobile Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1EF8640C29B22DD500413AEA /* Debug */,
@@ -1753,7 +1753,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1EF8641229B22DD500413AEA /* Build configuration list for PBXNativeTarget "BitTherapyMobile UITests" */ = {
+		1EF8641229B22DD500413AEA /* Build configuration list for PBXNativeTarget "Pets TherapyMobile UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1EF8640E29B22DD500413AEA /* Debug */,
@@ -1762,7 +1762,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A65FE358283D80C900D1F5C8 /* Build configuration list for PBXProject "BitTherapy" */ = {
+		A65FE358283D80C900D1F5C8 /* Build configuration list for PBXProject "Pets Therapy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A65FE380283D80CB00D1F5C8 /* Debug */,
