@@ -133,23 +133,10 @@ private struct RoleView: View {
 
 private class ContributorsViewModel: ObservableObject {
     @Inject private var assets: PetsAssetsProvider
-    @Inject private var theme: ThemeUseCase
-    
-    @Published var colorScheme: ColorScheme?
-    private var disposables = Set<AnyCancellable>()
     
     var contributors: [Contributor] { Contributors.all }
 
-    init() {
-        theme.theme()
-            .sink { [weak self] theme in
-                guard let self else { return }
-                withAnimation {
-                    self.colorScheme = theme.colorScheme
-                }
-            }
-            .store(in: &disposables)
-    }
+    init() {}
     
     func thumbnail(for species: String) -> ImageFrame? {
         assets.image(sprite: "\(species)_front-1")
