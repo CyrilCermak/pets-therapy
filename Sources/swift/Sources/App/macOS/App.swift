@@ -23,13 +23,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @Inject private var commandLine: CommandLineUseCase
     @Inject private var notifications: NotificationsService
     @Inject private var onScreen: OnScreenCoordinator
-    @Inject private var remoteConfig: RemoteConfigProvider
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         Logger.log("AppDelegate", "Did finish launching")
         commandLine.handleCommandLineArgs()
         notifications.start()
-        remoteConfig.fetch()
 
         if config.floatOverFullscreenApps {
             NSApp.setActivationPolicy(.accessory)

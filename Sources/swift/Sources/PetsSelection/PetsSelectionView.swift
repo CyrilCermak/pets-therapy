@@ -39,8 +39,6 @@ private struct MyPets: View {
                 if DeviceRequirement.macOS.isSatisfied {
                     ShamelessSubscriptionBanner()
                     JoinOurDiscord()
-                    SneakBitQuick()
-                    YouTubeQuick()
                 }
             }
             PetsGrid(

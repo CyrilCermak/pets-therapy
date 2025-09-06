@@ -10,8 +10,7 @@ class Dependencies {
         container.registerSingleton(PetsAssetsProvider.self) { _ in PetsAssetsProviderImpl() }
         container.registerSingleton(SpeciesNamesRepository.self) { _ in SpeciesNamesRepositoryImpl() }
         container.registerSingleton(SpeciesProvider.self) { _ in SpeciesProviderImpl() }
-        container.registerSingleton(RemoteConfigProvider.self) { _ in RemoteConfigFromGitHubRepo() }
-
+        
         container.register(CommandLineUseCase.self) { _ in CommandLineUseCaseImpl() }
         container.register(CustomPetsResourcesProvider.self) { _ in CustomPetsResourcesProviderImpl() }
         container.register(DeletePetButtonCoordinator.self) { _ in DeletePetButtonCoordinatorImpl() }

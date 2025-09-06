@@ -25,7 +25,6 @@ struct ContentView: View {
     @ViewBuilder private func contents(of page: AppPage) -> some View {
         switch page {
         case .about: AboutView()
-        case .contributors: ContributorsView()
         case .petSelection: PetsSelectionView()
         case .screensaver: ScreensaverView()
         case .settings: SettingsView()
@@ -47,11 +46,7 @@ private class ContentViewModel: ObservableObject {
     @Published var backgroundBlurRadius: CGFloat = 10
 
     lazy var options: [AppPage] = {
-        if DeviceRequirement.iOS.isSatisfied {
-            return [.petSelection, .screensaver, .settings, .about]
-        } else {
-            return [.petSelection, .screensaver, .settings, .contributors, .about]
-        }
+        return [.petSelection, .screensaver, .settings, .about]
     }()
 
     private var disposables = Set<AnyCancellable>()

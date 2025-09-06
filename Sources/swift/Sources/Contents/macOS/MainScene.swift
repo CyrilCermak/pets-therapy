@@ -14,8 +14,9 @@ struct MainScene: Scene {
 
     static func show() {
         if let window = AppWindowManager.shared.current {
-            window.makeKey()
-            window.makeMain()
+            window.makeKeyAndOrderFront(nil)
+            window.orderFrontRegardless()
+            NSApp.activate(ignoringOtherApps: true)
         } else {
             showMainWindow()
         }

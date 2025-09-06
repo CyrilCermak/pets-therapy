@@ -22,6 +22,7 @@ enum Lang {
         static let leaveReview = "about.leaveReview".localized()
         static let leaveReviewMessage = "about.leaveReviewMessage".localized()
         static let privacyPolicy = "about.privacyPolicy".localized()
+        static let contributors = "about.contributors".localized()
         static let termsAndConditions = "about.termsAndConditions".localized()
     }
 
@@ -172,7 +173,6 @@ extension AppPage: CustomStringConvertible {
     var description: String {
         switch self {
         case .about: return Lang.Page.about
-        case .contributors: return Lang.Page.contributors
         case .petSelection: return Lang.Page.petSelection
         case .screensaver: return Lang.Page.screensaver
         case .settings: return Lang.Page.settings
