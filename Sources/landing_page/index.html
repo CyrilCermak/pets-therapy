@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Therapy - Digital Companions for Your Mac</title>
+    <meta name="description" content="Bring joy to your Mac with adorable digital pets. Watch apes and other companions living on your desktop!">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-mountains" id="backgroundMountains"></div>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Pets Therapy</h1>
+            <p class="hero-subtitle">Digital companions that bring joy to your Mac desktop</p>
+            <p class="hero-description">
+                Watch adorable pets roam freely on your screen. Playful apes, chef companions,
+                and so much more. Your desktop will never be boring again!
+            </p>
+            <div class="hero-buttons">
+                <a href="#download" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 16L7 11L8.4 9.6L11 12.2V4H13V12.2L15.6 9.6L17 11L12 16Z" fill="currentColor"/>
+                        <path d="M5 20V18H19V20H5Z" fill="currentColor"/>
+                    </svg>
+                    Download for Mac
+                </a>
+                <a href="#pets" class="btn btn-secondary">Meet the Pets</a>
+            </div>
+        </div>
+
+        <div class="hero-pets-showcase">
+            <div class="floating-pet" id="ape">
+                <img src="../../PetsAssets/ape_front-0.png" alt="Ape" class="pet-image" data-species="ape">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="pets" class="featured-pets-section">
+            <div class="container">
+                <h2 class="section-title">Meet Your Digital Companions</h2>
+                <p class="section-description">
+                    Choose from a variety of adorable pets, each with unique personalities and animations
+                </p>
+                
+                <div class="featured-pets-grid" id="featuredPetsGrid">
+                    <!-- Featured pets will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="download-section">
+            <div class="container">
+                <h2 class="section-title">Ready to Get Started?</h2>
+                <p class="section-description">
+                    Download Pets Therapy for free and start enjoying digital companionship on your Mac
+                </p>
+
+                <div class="download-options">
+                    <div class="download-card">
+                        <h3>Mac App Store</h3>
+                        <p>Easy installation and automatic updates</p>
+                        <a href="#" class="btn btn-primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 22C7.78997 22.05 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.13997 6.91 8.85997 6.88C10.15 6.85 11.36 7.72 12.11 7.72C12.86 7.72 14.28 6.66 15.81 6.84C16.37 6.87 18.27 7.04 19.44 8.68C19.34 8.75 17.61 9.81 17.63 12.14C17.66 14.92 20.26 15.9 20.29 15.91C20.27 15.99 19.88 17.39 18.71 19.5Z" fill="currentColor"/>
+                                <path d="M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z" fill="currentColor"/>
+                            </svg>
+                            Download from App Store
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="system-requirements">
+                    <h4>System Requirements</h4>
+                    <ul>
+                        <li>macOS 11.0 or later</li>
+                        <li>Intel or Apple Silicon Mac</li>
+                        <li>50MB of free disk space</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Pets Therapy</h4>
+                    <p>Digital companions for your Mac desktop</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="#pets">All Pets</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#download">Download</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
