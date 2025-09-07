@@ -22,7 +22,7 @@ class PetDetailsViewModel: ObservableObject {
     let speciesAbout: String
     var canRemove: Bool { isSelected }
     var canSelect: Bool { !isSelected }
-    var isPaid: Bool { species.tags.contains(kTagSupporters)}
+    var isPaid: Bool { species.tags.contains("supporters-only")}
     var isSelected: Bool { appConfig.isSelected(species.id) }
 
     var animationFrames: [ImageFrame] {

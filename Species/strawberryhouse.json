@@ -14,7 +14,7 @@
   "dragPath": "front",
   "fps": 0.5,
   "zIndex": 100,
-  "tags": ["cats"],
+  "tags": ["cats-dogs"],
   "id": "strawberryhouse",
   "movementPath": "front",
   "speed": 0,

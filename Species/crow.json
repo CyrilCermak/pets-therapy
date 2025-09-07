@@ -38,7 +38,7 @@
   "dragPath": "drag",
   "fps": 10,
   "zIndex": 0,
-  "tags": ["birds"],
+  "tags": ["wild-animals"],
   "id": "crow",
   "movementPath": "fly",
   "speed": 1.4

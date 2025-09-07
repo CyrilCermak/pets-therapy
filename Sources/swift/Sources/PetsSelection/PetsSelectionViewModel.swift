@@ -11,7 +11,7 @@ class PetsSelectionViewModel: ObservableObject {
     @Published var selectedSpecies: [Species] = []
     @Published var unselectedSpecies: [Species] = []
     @Published var showSneakBitBanner: Bool = false
-    @Published private(set) var selectedTag: String?
+    @Published private(set) var selectedTag: String? = "featured"
 
     lazy var showingDetails: Binding<Bool> = Binding {
         self.openSpecies != nil
@@ -75,6 +75,19 @@ class PetsSelectionViewModel: ObservableObject {
     private func loadPets(all: [Species], selectedIds: [String], tag: String?) {
         let selected = selectedIds.compactMap { speciesProvider.by(id: $0) }
         selectedSpecies = selected
-        unselectedSpecies = all.filter { tag == nil || $0.tags.contains(tag ?? "") }
+        
+        // Filter unselected species based on the tag
+        if let tag = tag {
+            if tag == "free" {
+                // "free" is a computed tag for pets that don't have "supporters-only"
+                unselectedSpecies = all.filter { !$0.tags.contains("supporters-only") }
+            } else {
+                // Regular tag filtering
+                unselectedSpecies = all.filter { $0.tags.contains(tag) }
+            }
+        } else {
+            // No filter - show all pets
+            unselectedSpecies = all
+        }
     }
 }

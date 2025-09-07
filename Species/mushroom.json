@@ -29,7 +29,7 @@
   "fallPath": "fall",
   "fps": 10,
   "zIndex": 0,
-  "tags": ["forest"],
+  "tags": ["wild-animals"],
   "id": "mushroom",
   "movementPath": "walk",
   "speed": 0.3

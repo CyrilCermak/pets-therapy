@@ -7,11 +7,13 @@ struct HorizontalFiltersView: View {
     @StateObject private var viewModel = FiltersViewModel()
 
     var body: some View {
-        HStack(spacing: .sm) {
-            ForEach(viewModel.availableTags, id: \.self) {
-                TagView(tag: $0)
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: .sm) {
+                ForEach(viewModel.availableTags, id: \.self) {
+                    TagView(tag: $0)
+                }
             }
-            Spacer()
+            .padding(.horizontal, .sm)
         }
         .environmentObject(viewModel)
     }
@@ -21,7 +23,7 @@ private class FiltersViewModel: ObservableObject {
     @Inject private var speciesProvider: SpeciesProvider
 
     @Published var availableTags: [String] = []
-    @Published var selectedTag = kTagAll
+    @Published var selectedTag = "featured"
 
     private var disposables = Set<AnyCancellable>()
 
@@ -35,19 +37,44 @@ private class FiltersViewModel: ObservableObject {
     }
 
     private func loadTags(from species: [Species], selectedTag: String?) {
-        var tags = species
+        let allSpeciesTags = species
             .flatMap { $0.tags }
-            .filter { $0 != kTagAll && $0 != kTagSupporters }
             .removeDuplicates(keepOrder: false)
-            .sorted()
         
-        tags.insert(kTagAll, at: 0)
+        var sortedTags: [String] = []
         
-        if DeviceRequirement.macOS.isSatisfied {
-            tags.insert(kTagSupporters, at: 1)
+        // Define the priority order for the new tag system
+        let priorityTags = [
+            "featured",
+            "supporters-only",
+            "free",
+            "cats-dogs",
+            "wild-animals",
+            "characters",
+            "memes-fun"
+        ]
+        
+        // Add priority tags first if they exist in species
+        for priorityTag in priorityTags where allSpeciesTags.contains(priorityTag) {
+            sortedTags.append(priorityTag)
         }
         
-        availableTags = tags
+        // Adding free category
+        if let supportersIndex = sortedTags.firstIndex(of: "supporters-only") {
+            sortedTags.insert("free", at: supportersIndex + 1)
+        }
+        
+        // Add any remaining tags alphabetically
+        let remainingTags = allSpeciesTags
+            .filter { !priorityTags.contains($0) && $0 != kTagAll && $0 != kTagSupporters }
+            .sorted()
+        
+        sortedTags.append(contentsOf: remainingTags)
+        
+        // Insert "All" at the beginning
+        sortedTags.insert(kTagAll, at: 0)
+        
+        availableTags = sortedTags
     }
 
     func isSelected(tag: String) -> Bool {

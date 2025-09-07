@@ -33,7 +33,7 @@
   "dragPath": "front",
   "fps": 10,
   "zIndex": 0,
-  "tags": ["memes", "forest"],
+  "tags": ["featured", "memes-fun"],
   "id": "shiba",
   "movementPath": "walk",
   "speed": 1.0

@@ -59,7 +59,7 @@ private struct MorePets: View {
             Title(text: Lang.PetSelection.morePets)
             GridAndFiltersVerticallyStacked(
                 text: {
-                    if viewModel.selectedTag != kTagSupporters { return nil }
+                    if viewModel.selectedTag != "supporters-only" { return nil }
                     if shopViewModel.hasActiveSubscription { return nil }                        
                     return Lang.Shop.theseAreOnlyForSupporters
                 }()
