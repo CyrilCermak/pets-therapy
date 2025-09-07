@@ -16,6 +16,7 @@ class PetDetailsViewModel: ObservableObject {
     @Binding var isShown: Bool
     @Published var canBeAdded = true
     @Published var title: String = ""
+    @Published var selectedAnimation: String = "front"
 
     let species: Species
     let speciesAbout: String
@@ -25,7 +26,11 @@ class PetDetailsViewModel: ObservableObject {
     var isSelected: Bool { appConfig.isSelected(species.id) }
 
     var animationFrames: [ImageFrame] {
-        assets.images(for: species.id, animation: "front")
+        assets.images(for: species.id, animation: selectedAnimation)
+    }
+    
+    var animations: [String] {
+        species.animations.map({ $0.id })
     }
 
     var animationFps: TimeInterval {
@@ -59,6 +64,10 @@ class PetDetailsViewModel: ObservableObject {
 
     func didAppear() {
         // ...
+    }
+    
+    func selectAnimation(_ animation: String) {
+        selectedAnimation = animation
     }
 
     private func bindTitle() {
