@@ -31,8 +31,6 @@ class PetsSelectionViewModel: ObservableObject {
         return spacing.rawValue
     }
 
-    private let importPet = ImportPetDragAndDropCoordinator()
-
     private var disposables = Set<AnyCancellable>()
 
     init() {
@@ -66,10 +64,6 @@ class PetsSelectionViewModel: ObservableObject {
 
     func isSelected(_ species: Species) -> Bool {
         appConfig.isSelected(species.id)
-    }
-
-    func importView() -> AnyView {
-        importPet.view()
     }
 
     private func loadPets(all: [Species], selectedIds: [String], tag: String?) {
