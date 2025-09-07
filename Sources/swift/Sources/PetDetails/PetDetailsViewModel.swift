@@ -30,7 +30,15 @@ class PetDetailsViewModel: ObservableObject {
     }
     
     var animations: [String] {
-        species.animations.map({ $0.id })
+        var allAnimations = species.animations.map({ $0.id })
+        
+        // Add movement-related animations that might not be in the animations array
+        let movementAnimations = [species.movementPath, species.dragPath, species.fallPath]
+        for animation in movementAnimations where !allAnimations.contains(animation) {
+            allAnimations.append(animation)
+        }
+        
+        return allAnimations
     }
 
     var animationFps: TimeInterval {

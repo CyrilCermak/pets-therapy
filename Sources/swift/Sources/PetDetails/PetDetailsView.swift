@@ -14,7 +14,7 @@ struct PetDetailsView: View {
             PetDetailsHeader()
             AnimatedPreview()
             AnimationSelector()
-            About()//.padding(.top, .sm)
+            About()
             if DeviceRequirement.iOS.isSatisfied { Spacer() }
             Footer()
         }
