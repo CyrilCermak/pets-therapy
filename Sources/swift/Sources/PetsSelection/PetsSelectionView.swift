@@ -12,7 +12,7 @@ struct PetsSelectionView: View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: .xxl) {
                 MyPets()
-                MorePets().padding(.bottom, .xl)
+                MorePets().padding(.bottom, .xxxl)
             }
             .padding(.md)
         }
