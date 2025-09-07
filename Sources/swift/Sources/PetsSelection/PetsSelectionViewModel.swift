@@ -70,18 +70,19 @@ class PetsSelectionViewModel: ObservableObject {
         let selected = selectedIds.compactMap { speciesProvider.by(id: $0) }
         selectedSpecies = selected
         
-        // Filter unselected species based on the tag
-        if let tag = tag {
-            if tag == PetTag.free.rawValue {
-                // "free" is a computed tag for pets that don't have "supporters-only"
-                unselectedSpecies = all.filter { !$0.tags.contains(PetTag.supportersOnly.rawValue) }
-            } else {
-                // Regular tag filtering
-                unselectedSpecies = all.filter { $0.tags.contains(tag) }
-            }
-        } else {
-            // No filter - show all pets
+        // Filter unselected species based on the tag, displaying all
+        guard let tag else {
             unselectedSpecies = all
+            return
         }
+        
+        // "free" is a computed tag for pets that don't have "supporters-only"
+        if tag == PetTag.free.rawValue {
+            unselectedSpecies = all.filter { !$0.tags.contains(PetTag.supportersOnly.rawValue) }
+            return
+        }
+        
+        // Regular tag filtering
+        unselectedSpecies = all.filter { $0.tags.contains(tag) }
     }
 }
