@@ -34,7 +34,7 @@
   "scale": 1.33,
   "fps": 10,
   "zIndex": 0,
-  "tags": ["supporters-only", "wild-animals"],
+  "tags": ["featured", "wild-animals"],
   "id": "bunnym",
   "movementPath": "walk",
   "speed": 1.0

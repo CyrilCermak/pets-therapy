@@ -57,7 +57,7 @@
   "dragPath": "drag",
   "fps": 10,
   "zIndex": 0,
-  "tags": ["supporters-only", "featured", "wild-animals"],
+  "tags": ["supporters-only", "wild-animals"],
   "id": "trex",
   "movementPath": "walk",
   "speed": 1

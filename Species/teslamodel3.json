@@ -29,7 +29,7 @@
     "fps": 10,
     "scale": 1,
     "zIndex": 0,
-    "tags": ["memes-fun"],
+    "tags": ["memes-fun", "supporters-only"],
     "id": "teslamodel3",
     "movementPath": "walk",
     "speed": 1.65

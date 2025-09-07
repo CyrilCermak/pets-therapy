@@ -49,7 +49,7 @@
   "dragPath": "drag",
   "fps": 10,
   "zIndex": 0,
-  "tags": ["wild-animals", "memes-fun"],
+  "tags": ["wild-animals", "memes-fun", "featured", "supporters-only"],
   "id": "sloth_swag",
   "movementPath": "walk",
   "speed": 0.6

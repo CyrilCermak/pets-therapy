@@ -44,7 +44,7 @@
   "dragPath": "flight",
   "fps": 10,
   "zIndex": 0,
-  "tags": ["supporters-only", "featured", "characters"],
+  "tags": ["supporters-only", "characters"],
   "id": "raiden",
   "movementPath": "walk",
   "scale": 1.5,

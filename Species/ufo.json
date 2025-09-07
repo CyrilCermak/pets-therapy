@@ -46,7 +46,7 @@
   "dragPath": "front",
   "fps": 10,
   "zIndex": 0,
-  "tags": ["supporters-only", "featured", "memes-fun"],
+  "tags": ["supporters-only", "memes-fun"],
   "id": "ufo",
   "movementPath": "front",
   "speed": 2

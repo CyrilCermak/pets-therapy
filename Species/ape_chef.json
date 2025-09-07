@@ -33,7 +33,7 @@
   "dragPath": "drag",
   "fps": 10,
   "zIndex": 0,
-  "tags": ["wild-animals"],
+  "tags": ["featured", "supporters-only", "wild-animals"],
   "id": "ape_chef",
   "movementPath": "walk",
   "speed": 0.7
