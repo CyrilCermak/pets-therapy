@@ -3,6 +3,27 @@ import Foundation
 import Schwifty
 import SwiftUI
 
+enum PetTag: String, CaseIterable {
+    case all = "all"
+    case featured = "featured"
+    case supportersOnly = "supporters-only"
+    case free = "free"
+    case catsDogs = "cats-dogs"
+    case wildAnimals = "wild-animals"
+    case characters = "characters"
+    case memesFun = "memes-fun"
+    
+    static let priorityOrder: [PetTag] = [
+        .featured,
+        .supportersOnly,
+        .free,
+        .catsDogs,
+        .wildAnimals,
+        .characters,
+        .memesFun
+    ]
+}
+
 struct HorizontalFiltersView: View {
     @StateObject private var viewModel = FiltersViewModel()
 
@@ -23,7 +44,7 @@ private class FiltersViewModel: ObservableObject {
     @Inject private var speciesProvider: SpeciesProvider
 
     @Published var availableTags: [String] = []
-    @Published var selectedTag = "featured"
+    @Published var selectedTag = PetTag.featured.rawValue
 
     private var disposables = Set<AnyCancellable>()
 
@@ -43,36 +64,26 @@ private class FiltersViewModel: ObservableObject {
         
         var sortedTags: [String] = []
         
-        // Define the priority order for the new tag system
-        let priorityTags = [
-            "featured",
-            "supporters-only",
-            "free",
-            "cats-dogs",
-            "wild-animals",
-            "characters",
-            "memes-fun"
-        ]
-        
         // Add priority tags first if they exist in species
-        for priorityTag in priorityTags where allSpeciesTags.contains(priorityTag) {
-            sortedTags.append(priorityTag)
+        for priorityTag in PetTag.priorityOrder where allSpeciesTags.contains(priorityTag.rawValue) {
+            sortedTags.append(priorityTag.rawValue)
         }
         
         // Adding free category
-        if let supportersIndex = sortedTags.firstIndex(of: "supporters-only") {
-            sortedTags.insert("free", at: supportersIndex + 1)
+        if let supportersIndex = sortedTags.firstIndex(of: PetTag.supportersOnly.rawValue) {
+            sortedTags.insert(PetTag.free.rawValue, at: supportersIndex + 1)
         }
         
         // Add any remaining tags alphabetically
+        let priorityTagStrings = PetTag.priorityOrder.map(\.rawValue)
         let remainingTags = allSpeciesTags
-            .filter { !priorityTags.contains($0) && $0 != kTagAll && $0 != kTagSupporters }
+            .filter { !priorityTagStrings.contains($0) && $0 != PetTag.all.rawValue && $0 != PetTag.supportersOnly.rawValue }
             .sorted()
         
         sortedTags.append(contentsOf: remainingTags)
         
         // Insert "All" at the beginning
-        sortedTags.insert(kTagAll, at: 0)
+        sortedTags.insert(PetTag.all.rawValue, at: 0)
         
         availableTags = sortedTags
     }
@@ -116,10 +127,9 @@ private struct TagView: View {
             .foregroundColor(foreground)
             .onTapGesture {
                 viewModel.toggleSelection(tag: tag)
-                petsSelection.filterChanged(to: tag == kTagAll ? nil : tag)
+                petsSelection.filterChanged(to: tag == PetTag.all.rawValue ? nil : tag)
             }
     }
 }
 
-private let kTagAll = "all"
-let kTagSupporters = "supporters-only"
+

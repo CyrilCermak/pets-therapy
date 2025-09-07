@@ -11,7 +11,7 @@ class PetsSelectionViewModel: ObservableObject {
     @Published var selectedSpecies: [Species] = []
     @Published var unselectedSpecies: [Species] = []
     @Published var showSneakBitBanner: Bool = false
-    @Published private(set) var selectedTag: String? = "featured"
+    @Published private(set) var selectedTag: String? = PetTag.featured.rawValue
 
     lazy var showingDetails: Binding<Bool> = Binding {
         self.openSpecies != nil
@@ -72,9 +72,9 @@ class PetsSelectionViewModel: ObservableObject {
         
         // Filter unselected species based on the tag
         if let tag = tag {
-            if tag == "free" {
+            if tag == PetTag.free.rawValue {
                 // "free" is a computed tag for pets that don't have "supporters-only"
-                unselectedSpecies = all.filter { !$0.tags.contains("supporters-only") }
+                unselectedSpecies = all.filter { !$0.tags.contains(PetTag.supportersOnly.rawValue) }
             } else {
                 // Regular tag filtering
                 unselectedSpecies = all.filter { $0.tags.contains(tag) }
