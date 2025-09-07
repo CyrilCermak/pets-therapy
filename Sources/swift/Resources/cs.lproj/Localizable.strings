@@ -24,7 +24,7 @@
 "customPets.genericImportError" = "Při importu souborů došlo k chybě, zkuste zavřít aplikaci a zkusit to znovu? Nebo požádejte o pomoc na našem Discordu!";
 "customPets.genericExportError" = "Při exportu došlo k chybě, zkuste zavřít aplikaci a zkusit to znovu? Nebo požádejte o pomoc na našem Discordu!";
 "customPets.importSuccess" = "Úspěšně importováno!";
-"customPets.invalidJson" = "Váš json soubor druhu obsahuje chyby, zkontrolujte prosím dokumentaci nebo požádejte o pomoc na Discordu!";
+"customPets.invalidJson" = "Váš json soubor obsahuje chyby, zkontrolujte prosím dokumentaci nebo požádejte o pomoc na Discordu!";
 "customPets.message" = "Nyní si můžete vytvořit vlastní zvířátka!\nVyžaduje to trochu designérské práce z vaší strany, ale může to být opravdu uspokojující!\nZačněte podle instrukcí v odkazu níže, pak jednoduše přetáhněte svůj zip soubor do oblasti níže!";
 "customPets.missingFiles" = "Zdá se, že něco chybí (%@), zkontrolujte dokumentaci nebo požádejte o pomoc na Discordu!";
 "customPets.setNameTitle" = "Změnit přezdívku";
@@ -137,7 +137,7 @@
 "species.about.klee" = "Výbušná osobnost! Tahle jiskrová rytířka přináší bomby, skoky a Genshin magii na váš desktop!";
 "species.about.koala" = "Eukalyptusem poháněný akrobat! Kotrmelce pro lásku a dokazuje, že 'funkčně vyhynulý' je jen stav mysli!";
 "species.about.koala_pirate" = "Ahoj, kamaráde! Tento mořeplavecký vačnatec dokazuje, že pirátský život si vybral jeho, ne naopak!";
-"species.about.labrador" = "Americká miláček na čtyřech nohách! Věrný, milující a vždycky připravený na procházky!";
+"species.about.labrador" = "Miláček na čtyřech nohách! Věrný, milující a vždycky připravený na procházky!";
 "species.about.lattehouse" = "Kavárna vibrace! Útulná café estetika pro když vaše zvířátka potřebují perfektní latte lifestyle!";
 "species.about.milo" = "Přetížení energie dobrého psa! Honí sny, žvýká kosti a spí jako nejhodnější psík!";
 "species.about.minecraft_bed" = "Respawn bod zajištěn! Hranatý komfort pro pixelové sny a digitální spánkové cykly!";
