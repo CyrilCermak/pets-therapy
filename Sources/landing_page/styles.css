@@ -722,11 +722,18 @@ section {
     padding: 80px 0;
 }
 
+.download-section .container {
+    max-width: 800px;
+}
+
 .download-options {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    justify-content: center;
     gap: 2rem;
     margin-bottom: 3rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .download-card {
@@ -738,6 +745,8 @@ section {
     box-shadow: 0 8px 32px var(--shadow-light);
     transition: transform 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    min-width: 280px;
+    max-width: 350px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -775,6 +784,62 @@ section {
 
 .download-card .btn {
     width: 100%;
+}
+
+/* Apple App Store Button */
+.app-store-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 0.8rem 1.5rem;
+    background: #000000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Therapy', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+
+.app-store-btn:hover {
+    background: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.app-store-btn:active {
+    transform: translateY(0);
+}
+
+.app-store-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.app-store-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.2;
+}
+
+.app-store-small {
+    font-size: 0.7rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.app-store-large {
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'Therapy', sans-serif;
 }
 
 .system-requirements {
@@ -972,7 +1037,9 @@ section {
     }
 
     .download-options {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: center;
+        max-width: 400px;
     }
 }
 
@@ -1436,6 +1503,156 @@ section {
     background: rgba(102, 126, 234, 0.2);
     color: var(--accent-primary);
     border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+/* Promotional Tile Styles */
+.promo-tile {
+    background: var(--gradient-primary) !important;
+    color: white !important;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.promo-tile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    pointer-events: none;
+}
+
+.promo-tile-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.promo-icon {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.promo-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.promo-pets-preview {
+    display: flex;
+    gap: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.promo-emoji {
+    font-size: 1.2rem;
+    animation: promo-float 2s ease-in-out infinite;
+}
+
+.promo-emoji:nth-child(1) { animation-delay: 0s; }
+.promo-emoji:nth-child(2) { animation-delay: 0.5s; }
+.promo-emoji:nth-child(3) { animation-delay: 1s; }
+.promo-emoji:nth-child(4) { animation-delay: 1.5s; }
+
+@keyframes promo-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.promo-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: white !important;
+}
+
+.promo-description {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.9) !important;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.promo-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.promo-arrow {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.promo-tile:hover .promo-arrow {
+    transform: translateX(5px);
+}
+
+.promo-tile:hover {
+    box-shadow: 0 25px 50px rgba(255, 45, 146, 0.4) !important;
+}
+
+.promo-tile:active {
+    transform: scale(0.98) !important;
+}
+
+/* Responsive promo tile */
+@media (max-width: 768px) {
+    .promo-number {
+        font-size: 2rem;
+    }
+
+    .promo-title {
+        font-size: 1rem;
+    }
+
+    .promo-description {
+        font-size: 0.8rem;
+    }
+
+    .promo-cta {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .promo-tile-content {
+        padding: 0.8rem;
+    }
+
+    .promo-number {
+        font-size: 1.8rem;
+    }
+
+    .promo-emoji {
+        font-size: 1rem;
+    }
+
+    .promo-title {
+        font-size: 0.9rem;
+    }
+
+    .promo-description {
+        font-size: 0.75rem;
+        margin-bottom: 0.8rem;
+    }
 }
 
 /* Generic Animal animations */

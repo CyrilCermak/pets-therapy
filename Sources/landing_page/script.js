@@ -123,9 +123,8 @@ class AnimalAnimationSystem {
                 this.startAnimation('idle');
                 this.scheduleRandomAnimations();
             } else {
-                // Start with walking animation after preloading
+                // Start with walking animation after preloading for all other animals
                 this.startWalkingAnimation();
-                // Schedule random animations
                 this.scheduleRandomAnimations();
             }
         });
@@ -260,7 +259,7 @@ class AnimalAnimationSystem {
         this.currentAnimation = 'walk';
 
         // Get container bounds
-        const container = this.animalPet.closest(`${this.animalId}-display-area`) || this.animalPet.closest('.animal-display-area');
+        const container = this.animalPet.closest(`.${this.animalId}-display-area`) || this.animalPet.closest('.animal-display-area');
         const containerWidth = container ? container.offsetWidth : 400;
         const animalWidth = 200; // Animal image width
         const maxPosition = containerWidth - animalWidth;
@@ -301,7 +300,7 @@ class AnimalAnimationSystem {
 
     updatePosition() {
         // Get container bounds
-        const container = this.animalPet.closest(`${this.animalId}-display-area`) || this.animalPet.closest('.animal-display-area');
+        const container = this.animalPet.closest(`.${this.animalId}-display-area`) || this.animalPet.closest('.animal-display-area');
         const containerWidth = container ? container.offsetWidth : 400;
         const animalWidth = 200;
         const maxPosition = containerWidth - animalWidth;
@@ -377,7 +376,7 @@ class AnimalAnimationSystem {
 
     recalculateBounds() {
         // Recalculate container bounds when window is resized
-        const container = this.animalPet.closest(`${this.animalId}-display-area`) || this.animalPet.closest('.animal-display-area');
+        const container = this.animalPet.closest(`.${this.animalId}-display-area`) || this.animalPet.closest('.animal-display-area');
         if (container) {
             const containerWidth = container.offsetWidth;
             const animalWidth = 200;
@@ -643,6 +642,10 @@ function initializeFeaturedPets() {
         const petCard = createFeaturedPetCard(pet);
         grid.appendChild(petCard);
     });
+
+    // Add promotional tile for 60+ pets
+    const promoTile = createPromoTile();
+    grid.appendChild(promoTile);
 }
 
 function createFeaturedPetCard(pet) {
@@ -656,9 +659,6 @@ function createFeaturedPetCard(pet) {
         </div>
         <div class="featured-pet-name">${pet.name}</div>
         <div class="featured-pet-category">${pet.category}</div>
-        <div class="featured-pet-tags">
-            ${pet.tags.map(tag => `<span class="featured-pet-tag">${tag}</span>`).join('')}
-        </div>
     `;
 
     // Add hover effect
@@ -685,6 +685,59 @@ function createFeaturedPetCard(pet) {
     });
 
     return card;
+}
+
+function createPromoTile() {
+    const tile = document.createElement('div');
+    tile.className = 'featured-pet-card promo-tile';
+
+    tile.innerHTML = `
+        <div class="promo-tile-content">
+            <div class="promo-icon">
+                <span class="promo-number">60+</span>
+                <div class="promo-pets-preview">
+                    <span class="promo-emoji">🦖</span>
+                    <span class="promo-emoji">🐱</span>
+                    <span class="promo-emoji">🐑</span>
+                    <span class="promo-emoji">🐸</span>
+                </div>
+            </div>
+            <div class="promo-text">
+                <h3 class="promo-title">60+ Pets Waiting</h3>
+                <p class="promo-description">Discover the complete collection of digital companions that will roam your Mac desktop</p>
+                <div class="promo-cta">
+                    <span class="promo-arrow">→</span>
+                    Download Now
+                </div>
+            </div>
+        </div>
+    `;
+
+    // Add click handler to download
+    tile.addEventListener('click', function() {
+        // Scroll to download section
+        const downloadSection = document.getElementById('download');
+        if (downloadSection) {
+            downloadSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Add click animation
+        this.style.transform = 'scale(0.98)';
+        setTimeout(() => {
+            this.style.transform = '';
+        }, 150);
+    });
+
+    // Add hover effects
+    tile.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px) scale(1.02)';
+    });
+
+    tile.addEventListener('mouseleave', function() {
+        this.style.transform = '';
+    });
+
+    return tile;
 }
 
 // Pet Walking Animations
@@ -890,7 +943,7 @@ function initializeInteractivity() {
         });
     });
 
-    // Download button interactions
+    // Download button interactions - let real URLs work, only prevent # links
     const downloadButtons = document.querySelectorAll('.btn-primary');
     downloadButtons.forEach(button => {
         button.addEventListener('click', function(e) {
@@ -898,6 +951,7 @@ function initializeInteractivity() {
                 e.preventDefault();
                 showDownloadModal();
             }
+            // Real App Store links will work normally without preventDefault
         });
     });
 }
