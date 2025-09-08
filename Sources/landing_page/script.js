@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializePetWalkingAnimations();
     initializeTrexShowcase();
     initializeSheepBlackShowcase();
+    initializeApeChefShowcase();
     initializeFeaturedPets();
     initializeScrollEffects();
     initializeInteractivity();
@@ -116,11 +117,16 @@ class AnimalAnimationSystem {
         
         // Preload all animation frames
         this.preloadAnimations().then(() => {
-            // Start with walking animation after preloading
-            this.startWalkingAnimation();
-            
-            // Schedule random animations
-            this.scheduleRandomAnimations();
+            // For ape_chef, start with idle since it has complex front animation
+            if (this.animalId === 'ape_chef') {
+                this.startAnimation('idle');
+                this.scheduleRandomAnimations();
+            } else {
+                // Start with walking animation after preloading
+                this.startWalkingAnimation();
+                // Schedule random animations
+                this.scheduleRandomAnimations();
+            }
         });
     }
 
@@ -134,7 +140,9 @@ class AnimalAnimationSystem {
                     const img = new Image();
                     img.onload = resolve;
                     img.onerror = reject;
-                    img.src = `../../PetsAssets/${this.assetPrefix}_${animName}-${i}.png`;
+                    // For ape_chef idle, use front animation frames
+                    const framePrefix = (this.animalId === 'ape_chef' && animName === 'idle') ? 'front' : animName;
+                    img.src = `../../PetsAssets/${this.assetPrefix}_${framePrefix}-${i}.png`;
                 });
                 preloadPromises.push(promise);
             }
@@ -172,7 +180,7 @@ class AnimalAnimationSystem {
         this.currentFrame = 0;
         this.currentLoops = 0;
         this.isUserControlled = userTriggered;
-
+        
         // Handle walking animation specially - don't stop movement, just change frames
         if (animationName === 'walk') {
             this.startWalkingAnimation();
@@ -202,7 +210,9 @@ class AnimalAnimationSystem {
         if (!this.currentAnimation) return;
         
         const config = this.animations[this.currentAnimation];
-        const imagePath = `../../PetsAssets/${this.assetPrefix}_${this.currentAnimation}-${this.currentFrame}.png`;
+        // For ape_chef idle, use front animation frames
+        const framePrefix = (this.animalId === 'ape_chef' && this.currentAnimation === 'idle') ? 'front' : this.currentAnimation;
+        const imagePath = `../../PetsAssets/${this.assetPrefix}_${framePrefix}-${this.currentFrame}.png`;
         
         this.animalImage.src = imagePath;
         this.currentFrame++;
@@ -226,9 +236,13 @@ class AnimalAnimationSystem {
         // Clear button states
         this.updateButtonStates(null);
 
-        // Return to walking after special animations
+        // Return to appropriate default animation after special animations
         setTimeout(() => {
-            this.startWalkingAnimation();
+            if (this.animalId === 'ape_chef') {
+                this.startAnimation('idle');
+            } else {
+                this.startWalkingAnimation();
+            }
             if (this.isUserControlled) {
                 // Reset user control after a delay
                 setTimeout(() => {
@@ -412,6 +426,22 @@ const animalConfigs = {
             walk: { frames: 8, loops: -1, fps: 10 }
         },
         specialAnimations: ['eat', 'puke']
+    },
+    ape_chef: {
+        animalId: 'ape_chef',
+        imageId: 'apeChefImage',
+        petId: 'apeChefPet',
+        assetPrefix: 'ape_chef',
+        walkSpeed: 0.7,
+        animations: {
+            front: { frames: 33, loops: 5, fps: 10 },
+            idle: { frames: 33, loops: -1, fps: 10 }, // Use front as idle
+            eat: { frames: 32, loops: 5, fps: 10 },
+            sleep: { frames: 8, loops: 20, fps: 10 },
+            angry: { frames: 16, loops: 3, fps: 10 },
+            walk: { frames: 8, loops: -1, fps: 10 }
+        },
+        specialAnimations: ['eat', 'sleep', 'angry']
     }
 };
 
@@ -500,6 +530,10 @@ function initializeSheepBlackShowcase() {
     return initializeAnimalShowcase('sheep_black');
 }
 
+function initializeApeChefShowcase() {
+    return initializeAnimalShowcase('ape_chef');
+}
+
 // Featured Pets Data and Display
 const featuredPets = [
     {
@@ -536,6 +570,13 @@ const featuredPets = [
         category: 'Forest Rebel',
         tags: ['forest', 'memes'],
         description: 'The rebel of the flock with eating and unique personality animations'
+    },
+    {
+        id: 'ape_chef',
+        name: 'Ape Chef',
+        category: 'Culinary Master',
+        tags: ['forest', 'chef'],
+        description: 'Professional chef with cooking, sleeping, and emotional animations including angry outbursts'
     },
     {
         id: 'betta',
@@ -998,6 +1039,9 @@ window.PetsTherapy = {
     triggerSheepBlackAnimation: function(animationName) {
         return this.triggerAnimalAnimation('sheep_black', animationName);
     },
+    triggerApeChefAnimation: function(animationName) {
+        return this.triggerAnimalAnimation('ape_chef', animationName);
+    },
     getAnimalCurrentAnimation: function(animalId) {
         const system = window[`${animalId}System`];
         return system ? system.currentAnimation : null;
@@ -1007,5 +1051,8 @@ window.PetsTherapy = {
     },
     getSheepBlackCurrentAnimation: function() {
         return this.getAnimalCurrentAnimation('sheep_black');
+    },
+    getApeChefCurrentAnimation: function() {
+        return this.getAnimalCurrentAnimation('ape_chef');
     }
 };

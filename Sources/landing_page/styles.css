@@ -918,24 +918,28 @@ section {
     }
 
     .trex-showcase-container,
-    .sheep-black-showcase-container {
+    .sheep-black-showcase-container,
+    .ape-chef-showcase-container {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
 
     .trex-display-area,
-    .sheep-black-display-area {
+    .sheep-black-display-area,
+    .ape-chef-display-area {
         height: 100%;
         margin-bottom: 1rem;
     }
     
     .trex-pet,
-    .sheep-black-pet {
+    .sheep-black-pet,
+    .ape-chef-pet {
         bottom: 1.5rem;
     }
 
     .trex-image,
-    .sheep-black-image {
+    .sheep-black-image,
+    .ape-chef-image {
         width: 150px;
     }
 
@@ -982,33 +986,39 @@ section {
     }
 
     .trex-showcase-section,
-    .sheep-black-showcase-section {
+    .sheep-black-showcase-section,
+    .ape-chef-showcase-section {
         padding: 60px 0;
     }
 
     .trex-display-area,
-    .sheep-black-display-area {
+    .sheep-black-display-area,
+    .ape-chef-display-area {
         height: 100%;
         margin-bottom: 1.5rem;
     }
     
     .trex-pet,
-    .sheep-black-pet {
+    .sheep-black-pet,
+    .ape-chef-pet {
         bottom: 1.5rem;
     }
 
     .trex-image,
-    .sheep-black-image {
+    .sheep-black-image,
+    .ape-chef-image {
         width: 120px;
     }
 
     .trex-controls,
-    .sheep-black-controls {
+    .sheep-black-controls,
+    .ape-chef-controls {
         padding: 1.5rem;
     }
 
     .trex-controls h3,
-    .sheep-black-controls h3 {
+    .sheep-black-controls h3,
+    .ape-chef-controls h3 {
         font-size: 1.1rem;
         margin-bottom: 1rem;
     }
@@ -1030,7 +1040,8 @@ section {
     }
 
     .trex-info h4,
-    .sheep-black-info h4 {
+    .sheep-black-info h4,
+    .ape-chef-info h4 {
         font-size: 1rem;
         margin-bottom: 0.8rem;
     }
@@ -1112,13 +1123,15 @@ section {
 }
 
 .trex-showcase-section,
-.sheep-black-showcase-section {
+.sheep-black-showcase-section,
+.ape-chef-showcase-section {
     padding: 80px 0;
     position: relative;
 }
 
 .trex-showcase-container,
-.sheep-black-showcase-container {
+.sheep-black-showcase-container,
+.ape-chef-showcase-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
@@ -1127,7 +1140,8 @@ section {
 }
 
 .trex-display-area,
-.sheep-black-display-area {
+.sheep-black-display-area,
+.ape-chef-display-area {
     position: relative;
     height: 100%;
     overflow: visible;
@@ -1137,7 +1151,8 @@ section {
 }
 
 .trex-pet,
-.sheep-black-pet {
+.sheep-black-pet,
+.ape-chef-pet {
     position: absolute;
     bottom: 2rem;
     left: 50%;
@@ -1147,7 +1162,8 @@ section {
 }
 
 .trex-image,
-.sheep-black-image {
+.sheep-black-image,
+.ape-chef-image {
     width: 200px;
     height: auto;
     image-rendering: pixelated;
@@ -1158,7 +1174,8 @@ section {
 }
 
 .trex-controls,
-.sheep-black-controls {
+.sheep-black-controls,
+.ape-chef-controls {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     border-radius: var(--border-radius);
@@ -1167,13 +1184,15 @@ section {
 }
 
 [data-theme="dark"] .trex-controls,
-[data-theme="dark"] .sheep-black-controls {
+[data-theme="dark"] .sheep-black-controls,
+[data-theme="dark"] .ape-chef-controls {
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 [data-theme="light"] .trex-controls,
-[data-theme="light"] .sheep-black-controls {
+[data-theme="light"] .sheep-black-controls,
+[data-theme="light"] .ape-chef-controls {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -1239,6 +1258,38 @@ section {
     75% { transform: translateX(3px) scale(0.98); }
 }
 
+/* Ape Chef enhanced animations */
+.ape_chef-eat-active {
+    animation: ape-chef-cook 0.8s ease-in-out infinite;
+}
+
+@keyframes ape-chef-cook {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-8px) rotate(-2deg) scale(1.02); }
+    75% { transform: translateY(-4px) rotate(2deg) scale(1.02); }
+}
+
+.ape_chef-sleep-active {
+    animation: ape-chef-snore 2s ease-in-out infinite;
+    filter: drop-shadow(0 0 15px rgba(100, 150, 255, 0.5)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes ape-chef-snore {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02) translateY(-3px); }
+}
+
+.ape_chef-angry-active {
+    animation: ape-chef-rage 0.4s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px rgba(255, 50, 50, 0.8)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes ape-chef-rage {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.05) rotate(-2deg); }
+    75% { transform: scale(1.05) rotate(2deg); }
+}
+
 /* Legacy T-Rex Showcase Section for backwards compatibility */
 .trex-showcase-section {
     padding: 80px 0;
@@ -1246,7 +1297,8 @@ section {
 }
 
 .trex-controls h3,
-.sheep-black-controls h3 {
+.sheep-black-controls h3,
+.ape-chef-controls h3 {
     margin-bottom: 1.5rem;
     color: var(--text-primary);
     font-size: 1.3rem;
@@ -1309,7 +1361,8 @@ section {
 }
 
 .trex-info h4,
-.sheep-black-info h4 {
+.sheep-black-info h4,
+.ape-chef-info h4 {
     margin-bottom: 1rem;
     color: var(--text-primary);
     font-size: 1.1rem;
