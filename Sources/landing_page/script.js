@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeThemeDetection();
     initializeThemeToggle();
     initializePetWalkingAnimations();
+    initializeTrexShowcase();
+    initializeSheepBlackShowcase();
     initializeFeaturedPets();
     initializeScrollEffects();
     initializeInteractivity();
@@ -15,7 +17,7 @@ function initializeThemeDetection() {
     // Check for saved theme preference or default to system preference
     const savedTheme = localStorage.getItem('theme');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
+
     if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
         updateThemeToggleState(savedTheme === 'dark');
@@ -43,21 +45,21 @@ function initializeThemeDetection() {
 // Theme Toggle Functionality
 function initializeThemeToggle() {
     const themeToggle = document.getElementById('theme-switch');
-    
+
     if (themeToggle) {
         themeToggle.addEventListener('change', function() {
             const isDark = this.checked;
             const theme = isDark ? 'dark' : 'light';
-            
+
             // Save preference
             localStorage.setItem('theme', theme);
-            
+
             // Apply theme
             document.documentElement.setAttribute('data-theme', theme);
-            
+
             // Update background
             updateBackground();
-            
+
             // Add transition effect
             document.body.style.transition = 'all 0.3s ease';
             setTimeout(() => {
@@ -77,13 +79,425 @@ function updateThemeToggleState(isDark) {
 function updateBackground() {
     const backgroundElement = document.querySelector('.background-mountains');
     const currentTheme = document.documentElement.getAttribute('data-theme');
-    
+
     if (backgroundElement) {
         const imagePath = currentTheme === 'dark'
             ? '../../PetsAssets/mountains_night-0.png'
             : '../../PetsAssets/mountains-0.png';
         backgroundElement.style.backgroundImage = `url('${imagePath}')`;
     }
+}
+
+// Generic Animal Showcase System
+class AnimalAnimationSystem {
+    constructor(config) {
+        this.animalId = config.animalId;
+        this.animalImage = document.getElementById(config.imageId);
+        this.animalPet = document.getElementById(config.petId);
+        this.assetPrefix = config.assetPrefix;
+        this.currentAnimation = null;
+        this.currentFrame = 0;
+        this.animationTimer = null;
+        this.movementTimer = null;
+        this.autoScheduleTimer = null;
+        this.isUserControlled = false;
+        
+        // Walking animation state
+        this.position = 0;
+        this.direction = 1; // 1 for right, -1 for left
+        this.isGoingLeft = false;
+        this.walkSpeed = config.walkSpeed || 0.7;
+        
+        // Animation configurations
+        this.animations = config.animations;
+        this.specialAnimations = config.specialAnimations || [];
+        
+        this.currentLoops = 0;
+        
+        // Preload all animation frames
+        this.preloadAnimations().then(() => {
+            // Start with walking animation after preloading
+            this.startWalkingAnimation();
+            
+            // Schedule random animations
+            this.scheduleRandomAnimations();
+        });
+    }
+
+    preloadAnimations() {
+        const preloadPromises = [];
+        
+        Object.keys(this.animations).forEach(animName => {
+            const frameCount = this.animations[animName].frames;
+            for (let i = 0; i < frameCount; i++) {
+                const promise = new Promise((resolve, reject) => {
+                    const img = new Image();
+                    img.onload = resolve;
+                    img.onerror = reject;
+                    img.src = `../../PetsAssets/${this.assetPrefix}_${animName}-${i}.png`;
+                });
+                preloadPromises.push(promise);
+            }
+        });
+        
+        return Promise.all(preloadPromises).then(() => {
+            // Remove loading state when preloading is complete
+            if (this.animalImage) {
+                this.animalImage.style.opacity = '1';
+                this.animalImage.style.filter = '';
+                this.animalImage.style.transition = 'opacity 0.5s ease, filter 0.5s ease';
+            }
+        }).catch(error => {
+            console.warn(`Some ${this.animalId} animation frames failed to load:`, error);
+            // Still remove loading state even if some frames failed
+            if (this.animalImage) {
+                this.animalImage.style.opacity = '1';
+                this.animalImage.style.filter = '';
+            }
+        });
+    }
+
+    startAnimation(animationName, userTriggered = false) {
+        if (!this.animations[animationName]) return;
+
+        // Clear existing animation timer
+        if (this.animationTimer) {
+            clearInterval(this.animationTimer);
+        }
+        if (this.autoScheduleTimer && userTriggered) {
+            clearTimeout(this.autoScheduleTimer);
+        }
+
+        this.currentAnimation = animationName;
+        this.currentFrame = 0;
+        this.currentLoops = 0;
+        this.isUserControlled = userTriggered;
+
+        // Handle walking animation specially - don't stop movement, just change frames
+        if (animationName === 'walk') {
+            this.startWalkingAnimation();
+            return;
+        } else {
+            // For special animations, pause walking but keep position
+            this.pauseWalkingMovement();
+        }
+
+        // Update UI button states
+        this.updateButtonStates(animationName);
+        
+        // Add visual effects
+        if (userTriggered) {
+            this.addAnimationEffects(animationName);
+        }
+        
+        const config = this.animations[animationName];
+        const frameInterval = 1000 / config.fps;
+        
+        this.animationTimer = setInterval(() => {
+            this.updateFrame();
+        }, frameInterval);
+    }
+
+    updateFrame() {
+        if (!this.currentAnimation) return;
+        
+        const config = this.animations[this.currentAnimation];
+        const imagePath = `../../PetsAssets/${this.assetPrefix}_${this.currentAnimation}-${this.currentFrame}.png`;
+        
+        this.animalImage.src = imagePath;
+        this.currentFrame++;
+
+        // Check if animation cycle is complete
+        if (this.currentFrame >= config.frames) {
+            this.currentFrame = 0;
+            this.currentLoops++;
+
+            // Check if we've completed required loops
+            if (config.loops > 0 && this.currentLoops >= config.loops) {
+                this.completeAnimation();
+            }
+        }
+    }
+
+    completeAnimation() {
+        clearInterval(this.animationTimer);
+        this.animationTimer = null;
+
+        // Clear button states
+        this.updateButtonStates(null);
+
+        // Return to walking after special animations
+        setTimeout(() => {
+            this.startWalkingAnimation();
+            if (this.isUserControlled) {
+                // Reset user control after a delay
+                setTimeout(() => {
+                    this.isUserControlled = false;
+                    this.scheduleRandomAnimations();
+                }, 3000);
+            } else {
+                this.scheduleRandomAnimations();
+            }
+        }, 500);
+    }
+
+    startWalkingAnimation() {
+        this.currentAnimation = 'walk';
+
+        // Get container bounds
+        const container = this.animalPet.closest(`${this.animalId}-display-area`) || this.animalPet.closest('.animal-display-area');
+        const containerWidth = container ? container.offsetWidth : 400;
+        const animalWidth = 200; // Animal image width
+        const maxPosition = containerWidth - animalWidth;
+        
+        // Initialize position if not set
+        if (this.position === 0) {
+            this.position = Math.random() * maxPosition;
+        }
+        
+        // Start frame animation
+        const config = this.animations.walk;
+        const frameInterval = 1000 / config.fps;
+        
+        this.animationTimer = setInterval(() => {
+            const imagePath = `../../PetsAssets/${this.assetPrefix}_walk-${this.currentFrame}.png`;
+            this.animalImage.src = imagePath;
+            this.currentFrame = (this.currentFrame + 1) % config.frames;
+        }, frameInterval);
+        
+        // Start movement animation
+        this.movementTimer = setInterval(() => {
+            this.updatePosition();
+        }, 16); // ~60fps for smooth movement
+        
+        // Set initial position and styling
+        this.animalPet.style.position = 'absolute';
+        this.animalPet.style.left = this.position + 'px';
+        this.animalPet.style.bottom = '2rem';
+        this.animalPet.style.transform = this.isGoingLeft ? 'scaleX(-1)' : 'scaleX(1)';
+    }
+
+    pauseWalkingMovement() {
+        if (this.movementTimer) {
+            clearInterval(this.movementTimer);
+            this.movementTimer = null;
+        }
+    }
+
+    updatePosition() {
+        // Get container bounds
+        const container = this.animalPet.closest(`${this.animalId}-display-area`) || this.animalPet.closest('.animal-display-area');
+        const containerWidth = container ? container.offsetWidth : 400;
+        const animalWidth = 200;
+        const maxPosition = containerWidth - animalWidth;
+        
+        // Update position
+        this.position += this.direction * this.walkSpeed;
+        
+        // Check bounds and change direction
+        if (this.position >= maxPosition && this.direction > 0) {
+            this.direction = -1;
+            this.isGoingLeft = true;
+        } else if (this.position <= 0 && this.direction < 0) {
+            this.direction = 1;
+            this.isGoingLeft = false;
+        }
+        
+        // Apply position and flip
+        this.animalPet.style.left = this.position + 'px';
+        this.animalPet.style.transform = this.isGoingLeft ? 'scaleX(-1)' : 'scaleX(1)';
+    }
+
+    scheduleRandomAnimations() {
+        if (this.isUserControlled) return;
+
+        // Schedule next random animation
+        const delay = 5000 + Math.random() * 10000; // 5-15 seconds
+        this.autoScheduleTimer = setTimeout(() => {
+            if (!this.isUserControlled) {
+                this.triggerRandomAnimation();
+            }
+        }, delay);
+    }
+
+    triggerRandomAnimation() {
+        if (this.specialAnimations.length > 0) {
+            const randomAnim = this.specialAnimations[Math.floor(Math.random() * this.specialAnimations.length)];
+            this.startAnimation(randomAnim);
+        }
+    }
+
+    updateButtonStates(activeAnimation) {
+        const buttons = document.querySelectorAll(`#${this.animalId}Showcase .animation-btn`);
+        buttons.forEach(btn => {
+            if (btn.dataset.animation === activeAnimation) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+    }
+
+    addAnimationEffects(animationName) {
+        // Remove any existing animation effects
+        this.animalImage.classList.remove('animal-bounce', 'animal-glow', `${this.animalId}-${animationName}-active`);
+        
+        // Add base effects
+        this.animalImage.classList.add('animal-bounce', 'animal-glow');
+        
+        // Add animation-specific effects
+        setTimeout(() => {
+            this.animalImage.classList.add(`${this.animalId}-${animationName}-active`);
+        }, 300);
+        
+        // Remove all effects after animation completes
+        setTimeout(() => {
+            this.animalImage.classList.remove('animal-bounce', 'animal-glow', `${this.animalId}-${animationName}-active`);
+        }, 2000);
+    }
+
+    triggerUserAnimation(animationName) {
+        this.startAnimation(animationName, true);
+    }
+
+    recalculateBounds() {
+        // Recalculate container bounds when window is resized
+        const container = this.animalPet.closest(`${this.animalId}-display-area`) || this.animalPet.closest('.animal-display-area');
+        if (container) {
+            const containerWidth = container.offsetWidth;
+            const animalWidth = 200;
+            const maxPosition = containerWidth - animalWidth;
+            
+            // Adjust position if it's out of bounds
+            if (this.position > maxPosition) {
+                this.position = maxPosition;
+                this.animalPet.style.left = this.position + 'px';
+            }
+        }
+    }
+}
+
+// Animal showcase configurations
+const animalConfigs = {
+    trex: {
+        animalId: 'trex',
+        imageId: 'trexImage',
+        petId: 'trexPet',
+        assetPrefix: 'trex',
+        walkSpeed: 0.7,
+        animations: {
+            front: { frames: 15, loops: 2, fps: 10 },
+            idle: { frames: 20, loops: -1, fps: 10 },
+            eat: { frames: 10, loops: 4, fps: 10 },
+            selfie: { frames: 11, loops: 2, fps: 10 },
+            texting: { frames: 20, loops: 2, fps: 10 },
+            roar: { frames: 14, loops: 3, fps: 10 },
+            guitar: { frames: 19, loops: 3, fps: 10 },
+            fireball: { frames: 13, loops: 2, fps: 10 },
+            walk: { frames: 6, loops: -1, fps: 10 }
+        },
+        specialAnimations: ['eat', 'roar', 'guitar', 'selfie', 'texting', 'fireball']
+    },
+    sheep_black: {
+        animalId: 'sheep_black',
+        imageId: 'sheepBlackImage',
+        petId: 'sheepBlackPet',
+        assetPrefix: 'sheep_black',
+        walkSpeed: 0.8,
+        animations: {
+            front: { frames: 9, loops: 2, fps: 10 },
+            idle: { frames: 12, loops: -1, fps: 10 },
+            eat: { frames: 38, loops: 3, fps: 10 },
+            puke: { frames: 32, loops: 1, fps: 10 },
+            walk: { frames: 8, loops: -1, fps: 10 }
+        },
+        specialAnimations: ['eat', 'puke']
+    }
+};
+
+function initializeAnimalShowcase(animalId) {
+    const config = animalConfigs[animalId];
+    if (!config) return;
+    
+    // Show loading state
+    const animalImage = document.getElementById(config.imageId);
+    if (animalImage) {
+        animalImage.style.opacity = '0.5';
+        animalImage.style.filter = 'blur(2px)';
+    }
+    
+    // Initialize animal animation system
+    const animalSystem = new AnimalAnimationSystem(config);
+    
+    // Set up animation button handlers
+    const showcase = document.getElementById(`${animalId}Showcase`);
+    if (showcase) {
+        const animationButtons = showcase.querySelectorAll('.animation-btn');
+        animationButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const animationName = this.dataset.animation;
+                
+                // Only trigger if animal system is ready
+                if (animalSystem && animalSystem.animalImage && animalSystem.animalImage.style.opacity !== '0.5') {
+                    animalSystem.triggerUserAnimation(animationName);
+                    
+                    // Add click feedback with ripple effect
+                    this.style.transform = 'scale(0.95)';
+                    this.style.boxShadow = '0 0 20px rgba(255, 45, 146, 0.6)';
+                    
+                    setTimeout(() => {
+                        this.style.transform = '';
+                        this.style.boxShadow = '';
+                    }, 300);
+                    
+                    // Add success feedback after animation starts
+                    setTimeout(() => {
+                        if (this.classList.contains('active')) {
+                            this.style.background = 'var(--gradient-primary)';
+                            this.style.color = 'white';
+                        }
+                    }, 500);
+                }
+            });
+            
+            // Add hover effects
+            button.addEventListener('mouseenter', function() {
+                if (!this.classList.contains('active')) {
+                    this.style.transform = 'translateY(-2px)';
+                }
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                if (!this.classList.contains('active')) {
+                    this.style.transform = '';
+                }
+            });
+        });
+        
+        // Add showcase to intersection observer for fade-in
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        observer.observe(showcase);
+    }
+    
+    // Store reference for external access
+    window[`${animalId}System`] = animalSystem;
+    
+    return animalSystem;
+}
+
+function initializeTrexShowcase() {
+    return initializeAnimalShowcase('trex');
+}
+
+function initializeSheepBlackShowcase() {
+    return initializeAnimalShowcase('sheep_black');
 }
 
 // Featured Pets Data and Display
@@ -112,9 +526,16 @@ const featuredPets = [
     {
         id: 'trex',
         name: 'T-Rex',
-        category: 'Prehistoric Pal',
-        tags: ['dinos', 'memes'],
-        description: 'Mighty dinosaur companion'
+        category: 'Prehistoric Superstar',
+        tags: ['dinos', 'memes', 'advanced'],
+        description: 'Ultimate digital companion with 8+ unique animations including roar, guitar, fireball, and selfie modes'
+    },
+    {
+        id: 'sheep_black',
+        name: 'Black Sheep',
+        category: 'Forest Rebel',
+        tags: ['forest', 'memes'],
+        description: 'The rebel of the flock with eating and unique personality animations'
     },
     {
         id: 'betta',
@@ -505,7 +926,9 @@ function optimizePerformance() {
         '../../PetsAssets/ape_walk-4.png',
         '../../PetsAssets/ape_walk-5.png',
         '../../PetsAssets/ape_walk-6.png',
-        '../../PetsAssets/ape_walk-7.png'
+        '../../PetsAssets/ape_walk-7.png',
+        // Preload T-Rex front frame for initial display
+        '../../PetsAssets/trex_yellow_front-0.png'
     ];
 
     criticalImages.forEach(src => {
@@ -526,6 +949,14 @@ window.addEventListener('resize', function() {
         setTimeout(() => {
             startWalkingAnimation(img, 0);
         }, 100);
+    });
+
+    // Also handle animal bounds recalculation
+    Object.keys(animalConfigs).forEach(animalId => {
+        const system = window[`${animalId}System`];
+        if (system) {
+            system.recalculateBounds();
+        }
     });
 });
 
@@ -553,5 +984,28 @@ window.PetsTherapy = {
     },
     getTheme: function() {
         return document.documentElement.getAttribute('data-theme');
+    },
+    // Animal specific functions
+    triggerAnimalAnimation: function(animalId, animationName) {
+        const system = window[`${animalId}System`];
+        if (system) {
+            system.triggerUserAnimation(animationName);
+        }
+    },
+    triggerTrexAnimation: function(animationName) {
+        return this.triggerAnimalAnimation('trex', animationName);
+    },
+    triggerSheepBlackAnimation: function(animationName) {
+        return this.triggerAnimalAnimation('sheep_black', animationName);
+    },
+    getAnimalCurrentAnimation: function(animalId) {
+        const system = window[`${animalId}System`];
+        return system ? system.currentAnimation : null;
+    },
+    getTrexCurrentAnimation: function() {
+        return this.getAnimalCurrentAnimation('trex');
+    },
+    getSheepBlackCurrentAnimation: function() {
+        return this.getAnimalCurrentAnimation('sheep_black');
     }
 };
