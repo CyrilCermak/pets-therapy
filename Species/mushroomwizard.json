@@ -29,7 +29,7 @@
   "fallPath": "drag",
   "fps": 10,
   "zIndex": 0,
-  "tags": ["supporters-only"],
+  "tags": ["supporters-only", "memes-fun"],
   "id": "mushroomwizard",
   "movementPath": "walk",
   "speed": 0.4

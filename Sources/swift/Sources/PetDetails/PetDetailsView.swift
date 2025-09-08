@@ -13,7 +13,8 @@ struct PetDetailsView: View {
         VStack(spacing: .xl) {
             PetDetailsHeader()
             AnimatedPreview()
-            About().padding(.top, .lg)
+            AnimationSelector()
+            About()
             if DeviceRequirement.iOS.isSatisfied { Spacer() }
             Footer()
         }
@@ -40,14 +41,45 @@ private struct AnimatedPreview: View {
     @EnvironmentObject var viewModel: PetDetailsViewModel
 
     var body: some View {
-        ZStack {
-            AnimatedContent(frames: viewModel.animationFrames, fps: viewModel.animationFps) { frame in
-                Image(frame: frame)
-                    .pixelArt()
-                    .frame(width: 150, height: 150)
+        VStack(spacing: .md) {
+            ZStack {
+                AnimatedContent(frames: viewModel.animationFrames, fps: viewModel.animationFps) { frame in
+                    Image(frame: frame)
+                        .pixelArt()
+                        .frame(width: 150, height: 150)
+                }
+                .id(viewModel.selectedAnimation)
             }
+            .frame(width: 150, height: 150)
         }
-        .frame(width: 150, height: 150)
+    }
+}
+
+private struct AnimationSelector: View {
+    @EnvironmentObject var viewModel: PetDetailsViewModel
+    
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: .sm) {
+                ForEach(viewModel.animations, id: \.self) { animation in
+                    Button(action: { viewModel.selectAnimation(animation) }) {
+                        Text(animation.capitalized)
+                            .font(.title3)
+                            .padding(.horizontal, .sm)
+                            .padding(.vertical, .xs)
+                            .background(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .fill(viewModel.selectedAnimation == animation ? 
+                                          Color.accent : Color.secondary.opacity(0.2))
+                            )
+                            .foregroundColor(viewModel.selectedAnimation == animation ? 
+                                           .white : .primary)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                }
+            }
+            .padding(.horizontal, .md)
+        }
     }
 }
 
@@ -78,4 +110,9 @@ private struct Footer: View {
                 .buttonStyle(.text)
         }
     }
+}
+
+#Preview {
+    PetDetailsView(isShown: Binding<Bool>.init(get: {true}, set: { _ in }),
+                   species: Species(id: "ape"))
 }

@@ -33,7 +33,7 @@
   "dragPath": "front",
   "fps": 10,
   "zIndex": 0,
-  "tags": ["supporters-only"],
+  "tags": ["supporters-only", "characters"],
   "id": "pikachu",
   "movementPath": "walk",
   "speed": 0.8

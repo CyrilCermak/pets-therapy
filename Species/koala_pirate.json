@@ -41,7 +41,7 @@
   "dragPath": "drag",
   "fps": 10,
   "zIndex": 0,
-  "tags": ["memes"],
+  "tags": ["featured", "memes-fun", "supporters-only"],
   "id": "koala_pirate",
   "movementPath": "walk",
   "speed": 0.8
