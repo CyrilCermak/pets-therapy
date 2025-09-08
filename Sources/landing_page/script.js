@@ -397,7 +397,7 @@ const animalConfigs = {
         animalId: 'trex',
         imageId: 'trexImage',
         petId: 'trexPet',
-        assetPrefix: 'trex',
+        assetPrefix: 'trex_yellow',
         walkSpeed: 0.7,
         animations: {
             front: { frames: 15, loops: 2, fps: 10 },
