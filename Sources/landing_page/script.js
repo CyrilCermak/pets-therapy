@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeTrexShowcase();
     initializeSheepBlackShowcase();
     initializeApeChefShowcase();
+    initializeCatBlueShowcase();
     initializeFeaturedPets();
     initializeScrollEffects();
     initializeInteractivity();
@@ -102,19 +103,19 @@ class AnimalAnimationSystem {
         this.movementTimer = null;
         this.autoScheduleTimer = null;
         this.isUserControlled = false;
-        
+
         // Walking animation state
         this.position = 0;
         this.direction = 1; // 1 for right, -1 for left
         this.isGoingLeft = false;
         this.walkSpeed = config.walkSpeed || 0.7;
-        
+
         // Animation configurations
         this.animations = config.animations;
         this.specialAnimations = config.specialAnimations || [];
-        
+
         this.currentLoops = 0;
-        
+
         // Preload all animation frames
         this.preloadAnimations().then(() => {
             // For ape_chef, start with idle since it has complex front animation
@@ -132,7 +133,7 @@ class AnimalAnimationSystem {
 
     preloadAnimations() {
         const preloadPromises = [];
-        
+
         Object.keys(this.animations).forEach(animName => {
             const frameCount = this.animations[animName].frames;
             for (let i = 0; i < frameCount; i++) {
@@ -147,7 +148,7 @@ class AnimalAnimationSystem {
                 preloadPromises.push(promise);
             }
         });
-        
+
         return Promise.all(preloadPromises).then(() => {
             // Remove loading state when preloading is complete
             if (this.animalImage) {
@@ -180,7 +181,7 @@ class AnimalAnimationSystem {
         this.currentFrame = 0;
         this.currentLoops = 0;
         this.isUserControlled = userTriggered;
-        
+
         // Handle walking animation specially - don't stop movement, just change frames
         if (animationName === 'walk') {
             this.startWalkingAnimation();
@@ -192,15 +193,15 @@ class AnimalAnimationSystem {
 
         // Update UI button states
         this.updateButtonStates(animationName);
-        
+
         // Add visual effects
         if (userTriggered) {
             this.addAnimationEffects(animationName);
         }
-        
+
         const config = this.animations[animationName];
         const frameInterval = 1000 / config.fps;
-        
+
         this.animationTimer = setInterval(() => {
             this.updateFrame();
         }, frameInterval);
@@ -208,12 +209,12 @@ class AnimalAnimationSystem {
 
     updateFrame() {
         if (!this.currentAnimation) return;
-        
+
         const config = this.animations[this.currentAnimation];
         // For ape_chef idle, use front animation frames
         const framePrefix = (this.animalId === 'ape_chef' && this.currentAnimation === 'idle') ? 'front' : this.currentAnimation;
         const imagePath = `../../PetsAssets/${this.assetPrefix}_${framePrefix}-${this.currentFrame}.png`;
-        
+
         this.animalImage.src = imagePath;
         this.currentFrame++;
 
@@ -263,27 +264,27 @@ class AnimalAnimationSystem {
         const containerWidth = container ? container.offsetWidth : 400;
         const animalWidth = 200; // Animal image width
         const maxPosition = containerWidth - animalWidth;
-        
+
         // Initialize position if not set
         if (this.position === 0) {
             this.position = Math.random() * maxPosition;
         }
-        
+
         // Start frame animation
         const config = this.animations.walk;
         const frameInterval = 1000 / config.fps;
-        
+
         this.animationTimer = setInterval(() => {
             const imagePath = `../../PetsAssets/${this.assetPrefix}_walk-${this.currentFrame}.png`;
             this.animalImage.src = imagePath;
             this.currentFrame = (this.currentFrame + 1) % config.frames;
         }, frameInterval);
-        
+
         // Start movement animation
         this.movementTimer = setInterval(() => {
             this.updatePosition();
         }, 16); // ~60fps for smooth movement
-        
+
         // Set initial position and styling
         this.animalPet.style.position = 'absolute';
         this.animalPet.style.left = this.position + 'px';
@@ -304,10 +305,10 @@ class AnimalAnimationSystem {
         const containerWidth = container ? container.offsetWidth : 400;
         const animalWidth = 200;
         const maxPosition = containerWidth - animalWidth;
-        
+
         // Update position
         this.position += this.direction * this.walkSpeed;
-        
+
         // Check bounds and change direction
         if (this.position >= maxPosition && this.direction > 0) {
             this.direction = -1;
@@ -316,7 +317,7 @@ class AnimalAnimationSystem {
             this.direction = 1;
             this.isGoingLeft = false;
         }
-        
+
         // Apply position and flip
         this.animalPet.style.left = this.position + 'px';
         this.animalPet.style.transform = this.isGoingLeft ? 'scaleX(-1)' : 'scaleX(1)';
@@ -355,15 +356,15 @@ class AnimalAnimationSystem {
     addAnimationEffects(animationName) {
         // Remove any existing animation effects
         this.animalImage.classList.remove('animal-bounce', 'animal-glow', `${this.animalId}-${animationName}-active`);
-        
+
         // Add base effects
         this.animalImage.classList.add('animal-bounce', 'animal-glow');
-        
+
         // Add animation-specific effects
         setTimeout(() => {
             this.animalImage.classList.add(`${this.animalId}-${animationName}-active`);
         }, 300);
-        
+
         // Remove all effects after animation completes
         setTimeout(() => {
             this.animalImage.classList.remove('animal-bounce', 'animal-glow', `${this.animalId}-${animationName}-active`);
@@ -381,7 +382,7 @@ class AnimalAnimationSystem {
             const containerWidth = container.offsetWidth;
             const animalWidth = 200;
             const maxPosition = containerWidth - animalWidth;
-            
+
             // Adjust position if it's out of bounds
             if (this.position > maxPosition) {
                 this.position = maxPosition;
@@ -442,23 +443,38 @@ const animalConfigs = {
             walk: { frames: 8, loops: -1, fps: 10 }
         },
         specialAnimations: ['eat', 'sleep', 'angry']
+    },
+    cat_blue: {
+        animalId: 'cat_blue',
+        imageId: 'catBlueImage',
+        petId: 'catBluePet',
+        assetPrefix: 'cat_blue',
+        walkSpeed: 0.8,
+        animations: {
+            front: { frames: 6, loops: 5, fps: 10 },
+            idle: { frames: 6, loops: 2, fps: 10 },
+            eat: { frames: 9, loops: 10, fps: 10 },
+            sleep: { frames: 6, loops: 50, fps: 10 },
+            walk: { frames: 8, loops: -1, fps: 10 }
+        },
+        specialAnimations: ['eat', 'sleep']
     }
 };
 
 function initializeAnimalShowcase(animalId) {
     const config = animalConfigs[animalId];
     if (!config) return;
-    
+
     // Show loading state
     const animalImage = document.getElementById(config.imageId);
     if (animalImage) {
         animalImage.style.opacity = '0.5';
         animalImage.style.filter = 'blur(2px)';
     }
-    
+
     // Initialize animal animation system
     const animalSystem = new AnimalAnimationSystem(config);
-    
+
     // Set up animation button handlers
     const showcase = document.getElementById(`${animalId}Showcase`);
     if (showcase) {
@@ -466,20 +482,20 @@ function initializeAnimalShowcase(animalId) {
         animationButtons.forEach(button => {
             button.addEventListener('click', function() {
                 const animationName = this.dataset.animation;
-                
+
                 // Only trigger if animal system is ready
                 if (animalSystem && animalSystem.animalImage && animalSystem.animalImage.style.opacity !== '0.5') {
                     animalSystem.triggerUserAnimation(animationName);
-                    
+
                     // Add click feedback with ripple effect
                     this.style.transform = 'scale(0.95)';
                     this.style.boxShadow = '0 0 20px rgba(255, 45, 146, 0.6)';
-                    
+
                     setTimeout(() => {
                         this.style.transform = '';
                         this.style.boxShadow = '';
                     }, 300);
-                    
+
                     // Add success feedback after animation starts
                     setTimeout(() => {
                         if (this.classList.contains('active')) {
@@ -489,21 +505,21 @@ function initializeAnimalShowcase(animalId) {
                     }, 500);
                 }
             });
-            
+
             // Add hover effects
             button.addEventListener('mouseenter', function() {
                 if (!this.classList.contains('active')) {
                     this.style.transform = 'translateY(-2px)';
                 }
             });
-            
+
             button.addEventListener('mouseleave', function() {
                 if (!this.classList.contains('active')) {
                     this.style.transform = '';
                 }
             });
         });
-        
+
         // Add showcase to intersection observer for fade-in
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -512,13 +528,13 @@ function initializeAnimalShowcase(animalId) {
                 }
             });
         }, { threshold: 0.1 });
-        
+
         observer.observe(showcase);
     }
-    
+
     // Store reference for external access
     window[`${animalId}System`] = animalSystem;
-    
+
     return animalSystem;
 }
 
@@ -532,6 +548,10 @@ function initializeSheepBlackShowcase() {
 
 function initializeApeChefShowcase() {
     return initializeAnimalShowcase('ape_chef');
+}
+
+function initializeCatBlueShowcase() {
+    return initializeAnimalShowcase('cat_blue');
 }
 
 // Featured Pets Data and Display
@@ -577,6 +597,13 @@ const featuredPets = [
         category: 'Culinary Master',
         tags: ['forest', 'chef'],
         description: 'Professional chef with cooking, sleeping, and emotional animations including angry outbursts'
+    },
+    {
+        id: 'cat_blue',
+        name: 'Blue Cat',
+        category: 'Feline Friend',
+        tags: ['cats'],
+        description: 'Classic cat behavior with eating, sleeping, and idle animations - perfect feline companion'
     },
     {
         id: 'betta',
@@ -1042,6 +1069,9 @@ window.PetsTherapy = {
     triggerApeChefAnimation: function(animationName) {
         return this.triggerAnimalAnimation('ape_chef', animationName);
     },
+    triggerCatBlueAnimation: function(animationName) {
+        return this.triggerAnimalAnimation('cat_blue', animationName);
+    },
     getAnimalCurrentAnimation: function(animalId) {
         const system = window[`${animalId}System`];
         return system ? system.currentAnimation : null;
@@ -1054,5 +1084,8 @@ window.PetsTherapy = {
     },
     getApeChefCurrentAnimation: function() {
         return this.getAnimalCurrentAnimation('ape_chef');
+    },
+    getCatBlueCurrentAnimation: function() {
+        return this.getAnimalCurrentAnimation('cat_blue');
     }
 };

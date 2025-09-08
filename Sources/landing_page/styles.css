@@ -919,27 +919,31 @@ section {
 
     .trex-showcase-container,
     .sheep-black-showcase-container,
-    .ape-chef-showcase-container {
+    .ape-chef-showcase-container,
+    .cat-blue-showcase-container {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
 
     .trex-display-area,
     .sheep-black-display-area,
-    .ape-chef-display-area {
+    .ape-chef-display-area,
+    .cat-blue-display-area {
         height: 100%;
         margin-bottom: 1rem;
     }
-    
+
     .trex-pet,
     .sheep-black-pet,
-    .ape-chef-pet {
+    .ape-chef-pet,
+    .cat-blue-pet {
         bottom: 1.5rem;
     }
 
     .trex-image,
     .sheep-black-image,
-    .ape-chef-image {
+    .ape-chef-image,
+    .cat-blue-image {
         width: 150px;
     }
 
@@ -987,38 +991,44 @@ section {
 
     .trex-showcase-section,
     .sheep-black-showcase-section,
-    .ape-chef-showcase-section {
+    .ape-chef-showcase-section,
+    .cat-blue-showcase-section {
         padding: 60px 0;
     }
 
     .trex-display-area,
     .sheep-black-display-area,
-    .ape-chef-display-area {
+    .ape-chef-display-area,
+    .cat-blue-display-area {
         height: 100%;
         margin-bottom: 1.5rem;
     }
-    
+
     .trex-pet,
     .sheep-black-pet,
-    .ape-chef-pet {
+    .ape-chef-pet,
+    .cat-blue-pet {
         bottom: 1.5rem;
     }
 
     .trex-image,
     .sheep-black-image,
-    .ape-chef-image {
+    .ape-chef-image,
+    .cat-blue-image {
         width: 120px;
     }
 
     .trex-controls,
     .sheep-black-controls,
-    .ape-chef-controls {
+    .ape-chef-controls,
+    .cat-blue-controls {
         padding: 1.5rem;
     }
 
     .trex-controls h3,
     .sheep-black-controls h3,
-    .ape-chef-controls h3 {
+    .ape-chef-controls h3,
+    .cat-blue-controls h3 {
         font-size: 1.1rem;
         margin-bottom: 1rem;
     }
@@ -1041,7 +1051,8 @@ section {
 
     .trex-info h4,
     .sheep-black-info h4,
-    .ape-chef-info h4 {
+    .ape-chef-info h4,
+    .cat-blue-info h4 {
         font-size: 1rem;
         margin-bottom: 0.8rem;
     }
@@ -1124,14 +1135,16 @@ section {
 
 .trex-showcase-section,
 .sheep-black-showcase-section,
-.ape-chef-showcase-section {
+.ape-chef-showcase-section,
+.cat-blue-showcase-section {
     padding: 80px 0;
     position: relative;
 }
 
 .trex-showcase-container,
 .sheep-black-showcase-container,
-.ape-chef-showcase-container {
+.ape-chef-showcase-container,
+.cat-blue-showcase-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
@@ -1141,7 +1154,8 @@ section {
 
 .trex-display-area,
 .sheep-black-display-area,
-.ape-chef-display-area {
+.ape-chef-display-area,
+.cat-blue-display-area {
     position: relative;
     height: 100%;
     overflow: visible;
@@ -1152,7 +1166,8 @@ section {
 
 .trex-pet,
 .sheep-black-pet,
-.ape-chef-pet {
+.ape-chef-pet,
+.cat-blue-pet {
     position: absolute;
     bottom: 2rem;
     left: 50%;
@@ -1163,7 +1178,8 @@ section {
 
 .trex-image,
 .sheep-black-image,
-.ape-chef-image {
+.ape-chef-image,
+.cat-blue-image {
     width: 200px;
     height: auto;
     image-rendering: pixelated;
@@ -1175,7 +1191,8 @@ section {
 
 .trex-controls,
 .sheep-black-controls,
-.ape-chef-controls {
+.ape-chef-controls,
+.cat-blue-controls {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     border-radius: var(--border-radius);
@@ -1185,14 +1202,16 @@ section {
 
 [data-theme="dark"] .trex-controls,
 [data-theme="dark"] .sheep-black-controls,
-[data-theme="dark"] .ape-chef-controls {
+[data-theme="dark"] .ape-chef-controls,
+[data-theme="dark"] .cat-blue-controls {
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 [data-theme="light"] .trex-controls,
 [data-theme="light"] .sheep-black-controls,
-[data-theme="light"] .ape-chef-controls {
+[data-theme="light"] .ape-chef-controls,
+[data-theme="light"] .cat-blue-controls {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -1287,7 +1306,27 @@ section {
 @keyframes ape-chef-rage {
     0%, 100% { transform: scale(1) rotate(0deg); }
     25% { transform: scale(1.05) rotate(-2deg); }
-    75% { transform: scale(1.05) rotate(2deg); }
+    50% { transform: scale(1.05) rotate(2deg); }
+}
+
+/* Blue Cat enhanced animations */
+.cat_blue-eat-active {
+    animation: cat-eat-nibble 0.6s ease-in-out infinite;
+}
+
+@keyframes cat-eat-nibble {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-6px) scale(1.02); }
+}
+
+.cat_blue-sleep-active {
+    animation: cat-sleep-purr 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 12px rgba(100, 200, 255, 0.4)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes cat-sleep-purr {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.01) translateY(-2px); }
 }
 
 /* Legacy T-Rex Showcase Section for backwards compatibility */
@@ -1298,7 +1337,8 @@ section {
 
 .trex-controls h3,
 .sheep-black-controls h3,
-.ape-chef-controls h3 {
+.ape-chef-controls h3,
+.cat-blue-controls h3 {
     margin-bottom: 1.5rem;
     color: var(--text-primary);
     font-size: 1.3rem;
@@ -1362,7 +1402,8 @@ section {
 
 .trex-info h4,
 .sheep-black-info h4,
-.ape-chef-info h4 {
+.ape-chef-info h4,
+.cat-blue-info h4 {
     margin-bottom: 1rem;
     color: var(--text-primary);
     font-size: 1.1rem;
@@ -1465,6 +1506,10 @@ section {
 .btn:focus {
     outline: 2px solid var(--accent-primary);
     outline-offset: 2px;
+}
+
+.loved-ones {
+    text-align: center;
 }
 
 /* Reduced motion support */
