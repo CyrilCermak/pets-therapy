@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all functionality
     initializeThemeDetection();
+    initializeThemeToggle();
     initializePetWalkingAnimations();
     initializeFeaturedPets();
     initializeScrollEffects();
@@ -11,24 +12,78 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Theme Detection and Background Management
 function initializeThemeDetection() {
-    const backgroundElement = document.querySelector('.background-mountains');
-
-    function updateBackground() {
-        const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const imagePath = isDarkMode
-            ? '../../PetsAssets/mountains_night-0.png'
-            : '../../PetsAssets/mountains-0.png';
-
-        if (backgroundElement) {
-            backgroundElement.style.backgroundImage = `url('${imagePath}')`;
-        }
+    // Check for saved theme preference or default to system preference
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        updateThemeToggleState(savedTheme === 'dark');
+    } else if (systemPrefersDark) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        updateThemeToggleState(true);
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        updateThemeToggleState(false);
     }
 
-    // Update on load
     updateBackground();
 
-    // Listen for theme changes
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateBackground);
+    // Listen for system theme changes only if no manual preference is set
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+        if (!localStorage.getItem('theme')) {
+            const newTheme = e.matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            updateThemeToggleState(e.matches);
+            updateBackground();
+        }
+    });
+}
+
+// Theme Toggle Functionality
+function initializeThemeToggle() {
+    const themeToggle = document.getElementById('theme-switch');
+    
+    if (themeToggle) {
+        themeToggle.addEventListener('change', function() {
+            const isDark = this.checked;
+            const theme = isDark ? 'dark' : 'light';
+            
+            // Save preference
+            localStorage.setItem('theme', theme);
+            
+            // Apply theme
+            document.documentElement.setAttribute('data-theme', theme);
+            
+            // Update background
+            updateBackground();
+            
+            // Add transition effect
+            document.body.style.transition = 'all 0.3s ease';
+            setTimeout(() => {
+                document.body.style.transition = '';
+            }, 300);
+        });
+    }
+}
+
+function updateThemeToggleState(isDark) {
+    const themeToggle = document.getElementById('theme-switch');
+    if (themeToggle) {
+        themeToggle.checked = isDark;
+    }
+}
+
+function updateBackground() {
+    const backgroundElement = document.querySelector('.background-mountains');
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    
+    if (backgroundElement) {
+        const imagePath = currentTheme === 'dark'
+            ? '../../PetsAssets/mountains_night-0.png'
+            : '../../PetsAssets/mountains-0.png';
+        backgroundElement.style.backgroundImage = `url('${imagePath}')`;
+    }
 }
 
 // Featured Pets Data and Display
@@ -480,5 +535,23 @@ window.PetsTherapy = {
     stopWalkingAnimation,
     triggerPetAnimation,
     addIdleAnimation,
-    showDownloadModal
+    showDownloadModal,
+    toggleTheme: function() {
+        const themeToggle = document.getElementById('theme-switch');
+        if (themeToggle) {
+            themeToggle.checked = !themeToggle.checked;
+            themeToggle.dispatchEvent(new Event('change'));
+        }
+    },
+    setTheme: function(theme) {
+        if (theme === 'dark' || theme === 'light') {
+            localStorage.setItem('theme', theme);
+            document.documentElement.setAttribute('data-theme', theme);
+            updateThemeToggleState(theme === 'dark');
+            updateBackground();
+        }
+    },
+    getTheme: function() {
+        return document.documentElement.getAttribute('data-theme');
+    }
 };
