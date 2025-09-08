@@ -16,16 +16,29 @@ class PetDetailsViewModel: ObservableObject {
     @Binding var isShown: Bool
     @Published var canBeAdded = true
     @Published var title: String = ""
+    @Published var selectedAnimation: String = "front"
 
     let species: Species
     let speciesAbout: String
     var canRemove: Bool { isSelected }
     var canSelect: Bool { !isSelected }
-    var isPaid: Bool { species.tags.contains(kTagSupporters)}
+    var isPaid: Bool { species.tags.contains(PetTag.supportersOnly.rawValue)}
     var isSelected: Bool { appConfig.isSelected(species.id) }
 
     var animationFrames: [ImageFrame] {
-        assets.images(for: species.id, animation: "front")
+        assets.images(for: species.id, animation: selectedAnimation)
+    }
+    
+    var animations: [String] {
+        var allAnimations = species.animations.map({ $0.id })
+        
+        // Add movement-related animations that might not be in the animations array
+        let movementAnimations = [species.movementPath, species.dragPath, species.fallPath]
+        for animation in movementAnimations where !allAnimations.contains(animation) {
+            allAnimations.append(animation)
+        }
+        
+        return allAnimations
     }
 
     var animationFps: TimeInterval {
@@ -59,6 +72,10 @@ class PetDetailsViewModel: ObservableObject {
 
     func didAppear() {
         // ...
+    }
+    
+    func selectAnimation(_ animation: String) {
+        selectedAnimation = animation
     }
 
     private func bindTitle() {

@@ -38,7 +38,7 @@
   "dragPath": "drag",
   "fps": 10,
   "zIndex": 0,
-  "tags": ["cats"],
+  "tags": ["cats-dogs"],
   "id": "cat_cyan",
   "movementPath": "walk",
   "speed": 0.8

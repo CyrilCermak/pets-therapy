@@ -39,7 +39,7 @@
     "fps": 10,
     "scale": 2,
     "zIndex": 0,
-    "tags": ["memes"],
+    "tags": ["supporters-only", "memes-fun"],
     "id": "cybertruck",
     "movementPath": "walk",
     "speed": 1.65

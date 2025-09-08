@@ -11,7 +11,7 @@ class PetsSelectionViewModel: ObservableObject {
     @Published var selectedSpecies: [Species] = []
     @Published var unselectedSpecies: [Species] = []
     @Published var showSneakBitBanner: Bool = false
-    @Published private(set) var selectedTag: String?
+    @Published private(set) var selectedTag: String? = PetTag.featured.rawValue
 
     lazy var showingDetails: Binding<Bool> = Binding {
         self.openSpecies != nil
@@ -30,8 +30,6 @@ class PetsSelectionViewModel: ObservableObject {
         let spacing: Spacing = DeviceRequirement.iOS.isSatisfied ? .md : .lg
         return spacing.rawValue
     }
-
-    private let importPet = ImportPetDragAndDropCoordinator()
 
     private var disposables = Set<AnyCancellable>()
 
@@ -68,13 +66,23 @@ class PetsSelectionViewModel: ObservableObject {
         appConfig.isSelected(species.id)
     }
 
-    func importView() -> AnyView {
-        importPet.view()
-    }
-
     private func loadPets(all: [Species], selectedIds: [String], tag: String?) {
         let selected = selectedIds.compactMap { speciesProvider.by(id: $0) }
         selectedSpecies = selected
-        unselectedSpecies = all.filter { tag == nil || $0.tags.contains(tag ?? "") }
+        
+        // Filter unselected species based on the tag, displaying all
+        guard let tag else {
+            unselectedSpecies = all
+            return
+        }
+        
+        // "free" is a computed tag for pets that don't have "supporters-only"
+        if tag == PetTag.free.rawValue {
+            unselectedSpecies = all.filter { !$0.tags.contains(PetTag.supportersOnly.rawValue) }
+            return
+        }
+        
+        // Regular tag filtering
+        unselectedSpecies = all.filter { $0.tags.contains(tag) }
     }
 }

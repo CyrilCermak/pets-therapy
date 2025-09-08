@@ -12,8 +12,7 @@ struct PetsSelectionView: View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: .xxl) {
                 MyPets()
-                MorePets().padding(.bottom, .xl)
-                viewModel.importView().padding(.bottom, .xxxxl)
+                MorePets().padding(.bottom, .xxxl)
             }
             .padding(.md)
         }
@@ -59,7 +58,7 @@ private struct MorePets: View {
             Title(text: Lang.PetSelection.morePets)
             GridAndFiltersVerticallyStacked(
                 text: {
-                    if viewModel.selectedTag != kTagSupporters { return nil }
+                    if viewModel.selectedTag != PetTag.supportersOnly.rawValue { return nil }
                     if shopViewModel.hasActiveSubscription { return nil }                        
                     return Lang.Shop.theseAreOnlyForSupporters
                 }()
