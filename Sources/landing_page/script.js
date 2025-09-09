@@ -181,6 +181,13 @@ class AnimalAnimationSystem {
         this.currentLoops = 0;
         this.isUserControlled = userTriggered;
 
+        // Update UI button states - only highlight special animations, clear for walk/idle
+        if (animationName === 'walk' || animationName === 'idle') {
+            this.updateButtonStates(null); // Clear all button states for default animations
+        } else {
+            this.updateButtonStates(animationName); // Highlight button for special animations
+        }
+
         // Handle walking animation specially - don't stop movement, just change frames
         if (animationName === 'walk') {
             this.startWalkingAnimation();
@@ -189,9 +196,6 @@ class AnimalAnimationSystem {
             // For special animations, pause walking but keep position
             this.pauseWalkingMovement();
         }
-
-        // Update UI button states
-        this.updateButtonStates(animationName);
 
         // Add visual effects
         if (userTriggered) {
@@ -233,7 +237,7 @@ class AnimalAnimationSystem {
         clearInterval(this.animationTimer);
         this.animationTimer = null;
 
-        // Clear button states
+        // Clear button states when animation completes
         this.updateButtonStates(null);
 
         // Return to appropriate default animation after special animations
@@ -343,11 +347,16 @@ class AnimalAnimationSystem {
 
     updateButtonStates(activeAnimation) {
         const buttons = document.querySelectorAll(`#${this.animalId}Showcase .animation-btn`);
+        console.log(activeAnimation)
+        console.log(buttons)
         buttons.forEach(btn => {
             if (btn.dataset.animation === activeAnimation) {
                 btn.classList.add('active');
             } else {
                 btn.classList.remove('active');
+                // Clear any inline styles that might override CSS
+                btn.style.background = '';
+                btn.style.color = '';
             }
         });
     }
@@ -495,13 +504,8 @@ function initializeAnimalShowcase(animalId) {
                         this.style.boxShadow = '';
                     }, 300);
 
-                    // Add success feedback after animation starts
-                    setTimeout(() => {
-                        if (this.classList.contains('active')) {
-                            this.style.background = 'var(--gradient-primary)';
-                            this.style.color = 'white';
-                        }
-                    }, 500);
+                    // Remove the problematic inline style override
+                    // The CSS .active class will handle the styling
                 }
             });
 
