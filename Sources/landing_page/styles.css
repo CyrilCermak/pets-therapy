@@ -234,7 +234,6 @@ h4 { font-size: 1.25rem; }
 }
 
 .hero-content {
-    flex: 1;
     max-width: 600px;
     z-index: 2;
     background: rgba(255, 255, 255, 0.1);
@@ -928,7 +927,56 @@ section {
     color: white;
 }
 
-/* Responsive design */
+/* Responsive Design */
+/* Tablet Design - Medium screens */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .trex-showcase-container,
+    .sheep-black-showcase-container,
+    .ape-chef-showcase-container,
+    .cat-blue-showcase-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 3rem;
+    }
+
+    .trex-display-area,
+    .sheep-black-display-area,
+    .ape-chef-display-area,
+    .cat-blue-display-area {
+        height: 280px;
+        margin-bottom: 2rem;
+        grid-row: 1; /* Move animals to first row */
+    }
+
+    .trex-controls,
+    .sheep-black-controls,
+    .ape-chef-controls,
+    .cat-blue-controls {
+        grid-row: 2; /* Move controls to second row */
+    }
+
+    .trex-image,
+    .sheep-black-image,
+    .ape-chef-image,
+    .cat-blue-image {
+        width: 180px;
+    }
+
+    .animation-buttons {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .animation-btn {
+        padding: 0.9rem;
+        font-size: 0.9rem;
+        min-height: 46px;
+    }
+}
+
+/* Mobile Design - Small to medium screens */
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
@@ -982,11 +1030,19 @@ section {
         font-size: 2.5rem;
     }
 
+    .trex-showcase-section,
+    .sheep-black-showcase-section,
+    .ape-chef-showcase-section,
+    .cat-blue-showcase-section {
+        padding: 60px 0;
+    }
+
     .trex-showcase-container,
     .sheep-black-showcase-container,
     .ape-chef-showcase-container,
     .cat-blue-showcase-container {
         grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
         gap: 2rem;
     }
 
@@ -994,8 +1050,16 @@ section {
     .sheep-black-display-area,
     .ape-chef-display-area,
     .cat-blue-display-area {
-        height: 100%;
-        margin-bottom: 1rem;
+        height: 250px;
+        margin-bottom: 2rem;
+        grid-row: 1; /* Move animals to first row */
+    }
+
+    .trex-controls,
+    .sheep-black-controls,
+    .ape-chef-controls,
+    .cat-blue-controls {
+        grid-row: 2; /* Move controls to second row */
     }
 
     .trex-pet,
@@ -1009,12 +1073,19 @@ section {
     .sheep-black-image,
     .ape-chef-image,
     .cat-blue-image {
-        width: 150px;
+        width: 160px;
     }
 
     .animation-buttons {
         grid-template-columns: repeat(2, 1fr);
-        gap: 0.8rem;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .animation-btn {
+        padding: 1rem 0.8rem;
+        font-size: 0.9rem;
+        min-height: 48px; /* Touch-friendly minimum size */
     }
 
     .capabilities-grid {
@@ -1043,6 +1114,7 @@ section {
     }
 }
 
+/* Responsive Design - Small Mobile */
 @media (max-width: 480px) {
     .hero-title {
         font-size: 2rem;
@@ -1054,21 +1126,48 @@ section {
 
     .section-title {
         font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+        margin-bottom: 2rem;
     }
 
     .trex-showcase-section,
     .sheep-black-showcase-section,
     .ape-chef-showcase-section,
     .cat-blue-showcase-section {
-        padding: 60px 0;
+        padding: 40px 0;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .trex-showcase-container,
+    .sheep-black-showcase-container,
+    .ape-chef-showcase-container,
+    .cat-blue-showcase-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 1.5rem;
     }
 
     .trex-display-area,
     .sheep-black-display-area,
     .ape-chef-display-area,
     .cat-blue-display-area {
-        height: 100%;
-        margin-bottom: 1.5rem;
+        height: 200px;
+        margin-bottom: 2rem;
+        grid-row: 1; /* Move animals to first row */
+    }
+
+    .trex-controls,
+    .sheep-black-controls,
+    .ape-chef-controls,
+    .cat-blue-controls {
+        grid-row: 2; /* Move controls to second row */
     }
 
     .trex-pet,
@@ -1106,10 +1205,23 @@ section {
         margin-bottom: 1.5rem;
     }
 
+    .animation-buttons {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
     .animation-btn {
-        padding: 0.6rem 0.8rem;
-        font-size: 0.8rem;
-        justify-content: center;
+        padding: 0.8rem;
+        font-size: 0.85rem;
+        min-height: 48px;
+        justify-content: flex-start;
+    }
+
+    .btn-icon {
+        font-size: 1.2rem;
+        margin-right: 0.3rem;
     }
 
     .btn-icon {
@@ -1219,16 +1331,27 @@ section {
     margin-top: 3rem;
 }
 
+/* Control sections for better organization */
+.trex-controls,
+.sheep-black-controls,
+.ape-chef-controls,
+.cat-blue-controls {
+    display: flex;
+    flex-direction: column;
+}
+
 .trex-display-area,
 .sheep-black-display-area,
 .ape-chef-display-area,
 .cat-blue-display-area {
     position: relative;
-    height: 100%;
+    height: 300px;
+    min-height: 250px;
     overflow: visible;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    border-radius: 12px;
 }
 
 .trex-pet,
@@ -1253,7 +1376,6 @@ section {
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
     transition: transform 0.3s ease;
-    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
 }
 
 .trex-controls,
@@ -1397,7 +1519,10 @@ section {
 }
 
 /* Legacy T-Rex Showcase Section for backwards compatibility */
-.trex-showcase-section {
+.trex-showcase-section,
+.sheep-black-showcase-section,
+.ape-chef-showcase-section,
+.cat-blue-showcase-section {
     padding: 80px 0;
     position: relative;
 }
@@ -1413,14 +1538,16 @@ section {
 
 .animation-buttons {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 1rem;
     margin-bottom: 2rem;
+    width: 100%;
 }
 
 .animation-btn {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     padding: 0.8rem 1rem;
     background: rgba(255, 255, 255, 0.1);
@@ -1431,7 +1558,10 @@ section {
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
+    border: none;
     backdrop-filter: blur(10px);
+    min-height: 44px; /* Touch-friendly minimum */
+    width: 100%;
 }
 
 [data-theme="dark"] .animation-btn {
@@ -2343,7 +2473,7 @@ section {
     .platform-info {
         grid-template-columns: 1fr;
     }
-    
+
     .policy-content {
         padding: 0 1rem;
     }

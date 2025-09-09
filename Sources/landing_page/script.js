@@ -128,6 +128,11 @@ class AnimalAnimationSystem {
                 this.scheduleRandomAnimations();
             }
         });
+
+        // Add resize listener to recalculate bounds on screen changes
+        window.addEventListener('resize', () => {
+            this.recalculateBounds();
+        });
     }
 
     preloadAnimations() {
@@ -265,7 +270,7 @@ class AnimalAnimationSystem {
         // Get container bounds
         const container = this.animalPet.closest(`.${this.animalId}-display-area`) || this.animalPet.closest('.animal-display-area');
         const containerWidth = container ? container.offsetWidth : 400;
-        const animalWidth = 200; // Animal image width
+        const animalWidth = this.animalImage ? this.animalImage.offsetWidth : 200; // Responsive animal image width
         const maxPosition = containerWidth - animalWidth;
 
         // Initialize position if not set
@@ -306,7 +311,7 @@ class AnimalAnimationSystem {
         // Get container bounds
         const container = this.animalPet.closest(`.${this.animalId}-display-area`) || this.animalPet.closest('.animal-display-area');
         const containerWidth = container ? container.offsetWidth : 400;
-        const animalWidth = 200;
+        const animalWidth = this.animalImage ? this.animalImage.offsetWidth : 200; // Responsive animal image width
         const maxPosition = containerWidth - animalWidth;
 
         // Update position
@@ -388,7 +393,7 @@ class AnimalAnimationSystem {
         const container = this.animalPet.closest(`.${this.animalId}-display-area`) || this.animalPet.closest('.animal-display-area');
         if (container) {
             const containerWidth = container.offsetWidth;
-            const animalWidth = 200;
+            const animalWidth = this.animalImage ? this.animalImage.offsetWidth : 200; // Responsive animal image width
             const maxPosition = containerWidth - animalWidth;
 
             // Adjust position if it's out of bounds
