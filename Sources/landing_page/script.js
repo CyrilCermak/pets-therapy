@@ -84,9 +84,22 @@ function updateBackground() {
 
     if (backgroundElement) {
         const imagePath = currentTheme === 'dark'
-            ? 'assets/mountains_night-0.png'
-            : 'assets/mountains-0.png';
+            ? './assets/mountains_night-0.png'
+            : './assets/mountains-0.png';
         backgroundElement.style.backgroundImage = `url('${imagePath}')`;
+        
+        // Force hardware acceleration for iOS
+        backgroundElement.style.webkitTransform = 'translate3d(0, 0, 0)';
+        backgroundElement.style.transform = 'translate3d(0, 0, 0)';
+        backgroundElement.style.webkitBackfaceVisibility = 'hidden';
+        backgroundElement.style.backfaceVisibility = 'hidden';
+        
+        // Ensure fixed positioning works on iOS
+        backgroundElement.style.position = 'fixed';
+        backgroundElement.style.width = '100vw';
+        backgroundElement.style.height = '100vh';
+        backgroundElement.style.top = '0';
+        backgroundElement.style.left = '0';
     }
 }
 
