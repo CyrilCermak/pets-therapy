@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeThemeDetection() {
     const savedTheme = localStorage.getItem('theme');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
+
     if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
         updateThemeToggleState(savedTheme === 'dark');
@@ -42,16 +42,16 @@ function initializeThemeDetection() {
  */
 function initializeThemeToggle() {
     const themeToggle = document.getElementById('theme-switch');
-    
+
     if (themeToggle) {
         themeToggle.addEventListener('change', function() {
             const isDark = this.checked;
             const theme = isDark ? 'dark' : 'light';
-            
+
             localStorage.setItem('theme', theme);
             document.documentElement.setAttribute('data-theme', theme);
             updateBackground();
-            
+
             // Add smooth transition effect
             document.body.style.transition = 'all 0.3s ease';
             setTimeout(() => {
@@ -78,11 +78,11 @@ function updateThemeToggleState(isDark) {
 function updateBackground() {
     const backgroundElement = document.querySelector('.background-mountains');
     const currentTheme = document.documentElement.getAttribute('data-theme');
-    
+
     if (backgroundElement) {
         const imagePath = currentTheme === 'dark'
-            ? '../../PetsAssets/mountains_night-0.png'
-            : '../../PetsAssets/mountains-0.png';
+            ? './assets/mountains_night-0.png'
+            : './assets/mountains-0.png';
         backgroundElement.style.backgroundImage = `url('${imagePath}')`;
     }
 }
@@ -104,7 +104,7 @@ function setTheme(theme) {
         console.warn('Invalid theme provided. Use "light" or "dark".');
         return;
     }
-    
+
     localStorage.setItem('theme', theme);
     document.documentElement.setAttribute('data-theme', theme);
     updateThemeToggleState(theme === 'dark');
