@@ -160,7 +160,7 @@ class AnimalAnimationSystem {
                     img.onerror = reject;
                     // For ape_chef idle, use front animation frames
                     const framePrefix = (this.animalId === 'ape_chef' && animName === 'idle') ? 'front' : animName;
-                    img.src = `assets/${this.assetPrefix}_${framePrefix}-${i}.png`;
+                    img.src = `assets/pets/${this.assetPrefix}_${framePrefix}-${i}.png`;
                 });
                 preloadPromises.push(promise);
             }
@@ -789,14 +789,14 @@ function startWalkingAnimation(apeElement, index) {
 
     // Walk animation frames
     const walkFrames = [
-        'assets/petsape_walk-0.png',
-        'assets/petsape_walk-1.png',
-        'assets/petsape_walk-2.png',
-        'assets/petsape_walk-3.png',
-        'assets/petsape_walk-4.png',
-        'assets/petsape_walk-5.png',
-        'assets/petsape_walk-6.png',
-        'assets/petsape_walk-7.png'
+        'assets/pets/ape_walk-0.png',
+        'assets/pets/ape_walk-1.png',
+        'assets/pets/ape_walk-2.png',
+        'assets/pets/ape_walk-3.png',
+        'assets/pets/ape_walk-4.png',
+        'assets/pets/ape_walk-5.png',
+        'assets/pets/ape_walk-6.png',
+        'assets/pets/ape_walk-7.png'
     ];
 
     // Animation state

@@ -1,6 +1,8 @@
 require 'fileutils'
 
 assets = %w[
+  mountains-0.png
+  mountains_night-0.png
   ape_chef_angry-0.png
   ape_chef_angry-1.png
   ape_chef_angry-10.png
