@@ -101,4 +101,5 @@ iOSInjectionProject/
 .DS_Store
 
 # Landing page
-/Sources/landing_page/assets/pets # Copied by a script for a local development
+Sources/landing_page/assets/pets/ # Copied by a script for a local development
+
