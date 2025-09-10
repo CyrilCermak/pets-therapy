@@ -98,7 +98,7 @@ body {
     width: 100vw;
     height: 100vh;
     z-index: 0;
-    background-image: url('./assets/mountains-0.png');
+    background-image: url('./assets/pets/mountains-0.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -117,14 +117,14 @@ body {
         height: 100%;
         overflow-x: hidden;
     }
-    
+
     body {
         height: 100%;
         overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
         position: relative;
     }
-    
+
     .background-mountains {
         position: fixed;
         height: 100vh;
@@ -159,17 +159,17 @@ body {
 
 @media (prefers-color-scheme: dark) {
     .background-mountains {
-        background-image: url('./assets/mountains_night-0.png');
+        background-image: url('./assets/pets/mountains_night-0.png');
     }
 }
 
 /* Manual dark theme override */
 [data-theme="dark"] .background-mountains {
-    background-image: url('./assets/mountains_night-0.png');
+    background-image: url('./assets/pets/mountains_night-0.png');
 }
 
 [data-theme="light"] .background-mountains {
-    background-image: url('./assets/mountains-0.png');
+    background-image: url('./assets/pets/mountains-0.png');
 }
 
 /* Container */

@@ -84,16 +84,16 @@ function updateBackground() {
 
     if (backgroundElement) {
         const imagePath = currentTheme === 'dark'
-            ? './assets/mountains_night-0.png'
-            : './assets/mountains-0.png';
+            ? './assets/pets/mountains_night-0.png'
+            : './assets/pets/mountains-0.png';
         backgroundElement.style.backgroundImage = `url('${imagePath}')`;
-        
+
         // Force hardware acceleration for iOS
         backgroundElement.style.webkitTransform = 'translate3d(0, 0, 0)';
         backgroundElement.style.transform = 'translate3d(0, 0, 0)';
         backgroundElement.style.webkitBackfaceVisibility = 'hidden';
         backgroundElement.style.backfaceVisibility = 'hidden';
-        
+
         // Ensure fixed positioning works on iOS
         backgroundElement.style.position = 'fixed';
         backgroundElement.style.width = '100vw';
@@ -234,7 +234,7 @@ class AnimalAnimationSystem {
         const config = this.animations[this.currentAnimation];
         // For ape_chef idle, use front animation frames
         const framePrefix = (this.animalId === 'ape_chef' && this.currentAnimation === 'idle') ? 'front' : this.currentAnimation;
-        const imagePath = `assets/${this.assetPrefix}_${framePrefix}-${this.currentFrame}.png`;
+        const imagePath = `assets/pets/${this.assetPrefix}_${framePrefix}-${this.currentFrame}.png`;
 
         this.animalImage.src = imagePath;
         this.currentFrame++;
@@ -296,7 +296,7 @@ class AnimalAnimationSystem {
         const frameInterval = 1000 / config.fps;
 
         this.animationTimer = setInterval(() => {
-            const imagePath = `assets/${this.assetPrefix}_walk-${this.currentFrame}.png`;
+            const imagePath = `assets/pets/${this.assetPrefix}_walk-${this.currentFrame}.png`;
             this.animalImage.src = imagePath;
             this.currentFrame = (this.currentFrame + 1) % config.frames;
         }, frameInterval);
@@ -677,7 +677,7 @@ function createFeaturedPetCard(pet) {
 
     card.innerHTML = `
         <div class="featured-pet-image">
-            <img src="assets/${pet.id}_front-0.png" alt="${pet.name}" />
+            <img src="assets/pets/${pet.id}_front-0.png" alt="${pet.name}" />
         </div>
         <div class="featured-pet-name">${pet.name}</div>
         <div class="featured-pet-category">${pet.category}</div>
@@ -789,14 +789,14 @@ function startWalkingAnimation(apeElement, index) {
 
     // Walk animation frames
     const walkFrames = [
-        'assets/ape_walk-0.png',
-        'assets/ape_walk-1.png',
-        'assets/ape_walk-2.png',
-        'assets/ape_walk-3.png',
-        'assets/ape_walk-4.png',
-        'assets/ape_walk-5.png',
-        'assets/ape_walk-6.png',
-        'assets/ape_walk-7.png'
+        'assets/petsape_walk-0.png',
+        'assets/petsape_walk-1.png',
+        'assets/petsape_walk-2.png',
+        'assets/petsape_walk-3.png',
+        'assets/petsape_walk-4.png',
+        'assets/petsape_walk-5.png',
+        'assets/petsape_walk-6.png',
+        'assets/petsape_walk-7.png'
     ];
 
     // Animation state
@@ -1060,19 +1060,19 @@ document.head.appendChild(styleSheet);
 function optimizePerformance() {
     // Preload critical images including walk frames
     const criticalImages = [
-        'assets/mountains-0.png',
-        'assets/mountains_night-0.png',
+        'assets/pets/mountains-0.png',
+        'assets/pets/mountains_night-0.png',
         // Preload walk animation frames
-        'assets/ape_walk-0.png',
-        'assets/ape_walk-1.png',
-        'assets/ape_walk-2.png',
-        'assets/ape_walk-3.png',
-        'assets/ape_walk-4.png',
-        'assets/ape_walk-5.png',
-        'assets/ape_walk-6.png',
-        'assets/ape_walk-7.png',
+        'assets/pets/ape_walk-0.png',
+        'assets/pets/ape_walk-1.png',
+        'assets/pets/ape_walk-2.png',
+        'assets/pets/ape_walk-3.png',
+        'assets/pets/ape_walk-4.png',
+        'assets/pets/ape_walk-5.png',
+        'assets/pets/ape_walk-6.png',
+        'assets/pets/ape_walk-7.png',
         // Preload T-Rex front frame for initial display
-        'assets/trex_yellow_front-0.png'
+        'assets/pets/trex_yellow_front-0.png'
     ];
 
     criticalImages.forEach(src => {
