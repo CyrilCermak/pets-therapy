@@ -84,7 +84,6 @@ function updateBackground() {
             ? './assets/pets/mountains_night-0.png'
             : './assets/pets/mountains-0.png';
         backgroundElement.style.backgroundImage = `url('${imagePath}')`;
-    }
 
         // Force hardware acceleration for iOS
         backgroundElement.style.webkitTransform = 'translate3d(0, 0, 0)';
