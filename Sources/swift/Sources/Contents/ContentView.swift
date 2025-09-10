@@ -24,7 +24,9 @@ struct ContentView: View {
 
     @ViewBuilder private func contents(of page: AppPage) -> some View {
         switch page {
-        case .about: AboutView()
+        case .about:
+            AboutView()
+                .environmentObject(AboutViewModel())
         case .petSelection: PetsSelectionView()
         case .screensaver: ScreensaverView()
         case .settings: SettingsView()

@@ -57,7 +57,7 @@
   "dragPath": "drag",
   "fps": 10,
   "zIndex": 0,
-  "tags": ["dinos"],
+  "tags": ["wild-animals", "supporters-only"],
   "id": "trex_violet",
   "movementPath": "walk",
   "speed": 1

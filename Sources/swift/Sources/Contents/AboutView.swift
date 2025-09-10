@@ -1,12 +1,24 @@
 import Schwifty
 import SwiftUI
 
+class AboutViewModel: ObservableObject {
+    private let importPet = ImportPetDragAndDropCoordinator()
+    
+    func importView() -> AnyView {
+        importPet.view()
+    }
+}
+
 struct AboutView: View {
+    
+    @EnvironmentObject var viewModel: AboutViewModel
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: .xl) {
                 PageTitle(text: Lang.Page.about)
-                LeaveReview().padding(.top, .xl)
+                viewModel.importView()
+                LeaveReview()
                 if DeviceRequirement.iOS.isSatisfied {
                     DiscordView()
                 }

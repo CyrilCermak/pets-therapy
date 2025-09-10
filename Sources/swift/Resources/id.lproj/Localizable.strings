@@ -101,6 +101,7 @@
 "shop.theseAreOnlyForSupporters" = "Karakter ini hanya tersedia untuk pendukung.\nMohon pertimbangkan untuk mendukung kami, agar kami dapat menambahkan lebih banyak fitur dan karakter 🙏";
 "somethingWentWrong" = "Terjadi kesalahan, harap coba lagi";
 "species.about.ape" = "Terinspirasi oleh Bubbles dan Sloking... Kurang lebih!";
+"species.about.ape_chef" = "King Kong Dapur! Membalik panekuk dan menjadi gila!";
 "species.about.betta" = "Alias ​​'Ikan Petarung', anggun dan sangat populer";
 "species.about.cat" = "Yah, itu hanya kucing!";
 "species.about.cat_black" = "Yah, itu hanya kucing!";
@@ -216,22 +217,14 @@
 "species.name.trex_violet" = "T-Rex Ungu";
 "species.name.trex_yellow" = "T-Rex Emas";
 "species.name.ufo" = "UFO";
-"tag.aliens" = "Alien";
-"tag.all" = "All (Free)";
-"tag.bear" = "Beruang";
-"tag.birds" = "Burung-burung";
-"tag.cats" = "Kucing";
-"tag.decorations" = "Dekorasi";
-"tag.dinos" = "Dinos";
-"tag.dogs" = "Anjing";
-"tag.emoji" = "Emoji";
-"tag.farm" = "Peternakan";
-"tag.forest" = "Hutan";
-"tag.jungle" = "Hutan";
-"tag.memes" = "Meme";
-"tag.plants" = "Tanaman";
-"tag.pokèmon" = "Pokèmon";
-"tag.water" = "Air";
+"tag.all" = "Semua";
+"tag.featured" = "⭐ Unggulan";
+"tag.supporters-only" = "👑 Premium";
+"tag.free" = "🆓 Gratis";
+"tag.cats-dogs" = "🏠 Kucing & Anjing";
+"tag.wild-animals" = "🌲 Hewan Liar";
+"tag.characters" = "🎮 Karakter";
+"tag.memes-fun" = "🎭 Meme & Hiburan";
 "urls.appStore" = "https://apps.apple.com/app/id1575542220";
 "urls.customPetsDocs" = "https://curzel.it/bit-therapy/custompets";
 "urls.discord" = "https://discord.gg/8tj28beNPH";
@@ -249,9 +242,9 @@
 "youtube.cybertruckLink" = "https://youtu.be/J5A71o3nHyE";
 
 "species.name.bunnym" = "Bunny";
-"species.about.bunnym" = "🐰♂";
+"species.about.bunnym" = "🐰";
 "species.name.bunnyf" = "Bunny";
-"species.about.bunnyf" = "🐰♀";
+"species.about.bunnyf" = "🐰";
 
 "species.name.strawberryhouse" = "Strawberry House";
 "species.name.lattehouse" = "Latte House";

@@ -22,7 +22,6 @@ enum Lang {
         static let leaveReview = "about.leaveReview".localized()
         static let leaveReviewMessage = "about.leaveReviewMessage".localized()
         static let privacyPolicy = "about.privacyPolicy".localized()
-        static let contributors = "about.contributors".localized()
         static let termsAndConditions = "about.termsAndConditions".localized()
     }
 
