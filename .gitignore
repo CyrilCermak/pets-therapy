@@ -99,3 +99,6 @@ fastlane/test_output
 
 iOSInjectionProject/
 .DS_Store
+
+# Landing page
+/Sources/landing_page/assets/pets # Copied by a script for a local development
