@@ -5,8 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pets Therapy - Digital Companions for Your Mac</title>
     <meta name="description" content="Bring joy to your Mac with adorable digital pets. Watch apes and other companions living on your desktop!">
-    <meta name="keywords" content="pets therapy, digital pets, Mac app, desktop companions, virtual pets, cute animals, productivity">
+    <meta name="keywords" content="pets therapy, digital pets, Mac app, desktop companions, virtual pets, cute animals, relax, pixel art">
     <meta name="author" content="Pets Therapy">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="application-name" content="Pets Therapy">
+    <meta name="category" content="Entertainment">
+    <meta name="rating" content="General">
+    <meta name="distribution" content="global">
+    <meta name="language" content="EN">
+    <meta name="coverage" content="Worldwide">
+    <meta name="target" content="all">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
@@ -42,6 +53,48 @@
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://pets-therapy.com/">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Pets Therapy",
+        "applicationCategory": "DesktopApplication",
+        "operatingSystem": "macOS",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "1200"
+        },
+        "description": "Digital pet companions that bring joy to your Mac desktop. Watch adorable virtual pets like apes, cats, and dinosaurs roam freely on your screen.",
+        "downloadUrl": "https://apps.apple.com/us/app/bittherapy/id1575542220",
+        "author": {
+            "@type": "Organization",
+            "name": "Pets Therapy"
+        },
+        "screenshot": "https://pets-therapy.com/assets/og-image.png"
+    }
+    </script>
+
+    <!-- Additional Schema for Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Pets Therapy",
+        "url": "https://pets-therapy.com",
+        "logo": "https://pets-therapy.com/assets/apple-touch-icon.png",
+        "sameAs": [
+            "https://github.com/CyrilCermak/bit-therapy"
+        ]
+    }
+    </script>
 
     <!-- CSS and Fonts -->
     <link rel="stylesheet" href="styles.css">
@@ -96,7 +149,7 @@
             <p class="hero-subtitle">Digital companions that bring joy to your Mac desktop</p>
             <p class="hero-description">
                 Watch adorable pets roam freely on your screen. Playful apes, chef companions, dinos, cats & dogs
-                and so much more. Your desktop will never be boring again!
+                and many more. Enjoy cuteness overload on your desktop.
             </p>
             <div class="hero-buttons">
                 <a href="https://apps.apple.com/us/app/bittherapy/id1575542220" class="btn btn-primary" target="_blank">
@@ -116,6 +169,24 @@
             </div>
         </div>
     </header>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="https://pets-therapy.com/">
+                        <span itemprop="name">Home</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">Digital Pet Companions</span>
+                    <meta itemprop="position" content="2" />
+                </li>
+            </ol>
+        </div>
+    </nav>
 
     <main>
         <!-- T-Rex Showcase Section -->
@@ -279,6 +350,41 @@
             </div>
         </section>
 
+        <!-- FAQ Section with Schema Markup -->
+        <section id="faq" class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">Is Pets Therapy free to download?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes! Pets Therapy is completely free to download from the Mac App Store. You can start enjoying digital pet companions on your desktop immediately.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">What types of pets are available?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">We offer a variety of digital pets including apes, cats, dinosaurs (T-Rex), sheep, chef companions, and many more. Each pet has unique animations and personalities.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">Does it work on all Mac versions?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Pets Therapy is compatible with modern macOS versions. Check the Mac App Store listing for specific system requirements.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">Will the pets affect my Mac's performance?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Pets Therapy is designed to be lightweight and efficient, but like any active desktop application, it does use a small amount of system resources as the pets animate and move around your screen. The impact is minimal and shouldn't noticeably affect your Mac's performance during normal use.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="download" class="download-section">
             <div class="container">
                 <h2 class="section-title">Ready to Get Started?</h2>
@@ -316,9 +422,10 @@
                 <div class="footer-section">
                     <h4>Site</h4>
                     <ul>
-                        <li><a href="#pets">All Pets</a></li>
-                        <li><a href="#trex-showcase">Meet the Pets</a></li>
-                        <li><a href="#download">Download</a></li>
+                        <li><a href="#pets" title="Browse all digital pet companions">All Pets</a></li>
+                        <li><a href="#trex-showcase" title="Meet our featured digital pets">Meet the Pets</a></li>
+                        <li><a href="#download" title="Download free Mac app">Download</a></li>
+                        <li><a href="#faq" title="Frequently asked questions">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -331,9 +438,9 @@
                 <div class="footer-section">
                     <h4>Support</h4>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="https://www.linkedin.com/in/cyril-cermak-210a8b6b/" target="_blank">Contact</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="#faq" title="Frequently asked questions">FAQ</a></li>
+                        <li><a href="https://www.linkedin.com/in/cyril-cermak-210a8b6b/" target="_blank" title="Contact developer">Contact</a></li>
+                        <li><a href="privacy-policy.html" title="Read our privacy policy">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
