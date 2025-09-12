@@ -98,3 +98,8 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+.DS_Store
+
+# Landing page
+Sources/landing_page/assets/pets/ # Copied by a script for a local development
+Sources/landing_page/assets/pets/

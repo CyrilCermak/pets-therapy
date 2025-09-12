@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <title>Custom Pets - Create Your Own Digital Companions | Pets Therapy</title>
+    <meta name="description" content="Learn how to create your own custom digital pets for Pets Therapy. Design unique sprites, animations, and behaviors for your Mac desktop companions.">
+    <meta name="keywords" content="custom pets, digital pets, sprite creation, animations, Mac app, pets therapy, pet design">
+    <meta name="author" content="Pets Therapy">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./assets/android-chrome-512x512.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-mountains" id="backgroundMountains"></div>
+
+    <header class="hero custom-pets-hero">
+        <!-- Theme Toggle Switch -->
+        <div class="theme-toggle">
+            <input type="checkbox" id="theme-switch" class="theme-switch">
+            <label for="theme-switch" class="theme-label">
+                <span class="sun-icon">☀️</span>
+                <span class="moon-icon">🌙</span>
+                <div class="toggle-slider"></div>
+            </label>
+        </div>
+
+        <div class="hero-content">
+            <h1 class="hero-title">Custom Pets</h1>
+            <p class="hero-subtitle">Create your own digital companions</p>
+            <p class="hero-description">
+                Design unique sprites, animations, and behaviors for your desktop pets.
+                Share your creations with the community and bring your imagination to life!
+            </p>
+            <div class="hero-buttons">
+                <a href="#quick-start" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z" fill="currentColor"/>
+                    </svg>
+                    Get Started
+                </a>
+                <a href="index.html" class="btn btn-secondary">← Back to Main</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Quick Start Section -->
+        <section id="quick-start" class="content-section">
+            <div class="container">
+                <h2 class="section-title">Quick Start Guide</h2>
+                <p class="section-description">
+                    Get up and running with custom pets in just a few steps
+                </p>
+
+                <div class="platform-guides">
+                    <!-- macOS Guide -->
+                    <div class="platform-card">
+                        <div class="platform-header">
+                            <h3>🍎 macOS</h3>
+                            <span class="platform-badge">Full Support</span>
+                        </div>
+                        <ol class="step-list">
+                            <li>Click on a pet you like and export it</li>
+                            <li>Modify the JSON file and sprites as you see fit</li>
+                            <li>Double check filename conventions</li>
+                            <li>Zip everything together</li>
+                            <li>Drag and drop the zip into the app</li>
+                            <li>Share your work on <a href="https://discord.com/channels/1014052570160955403/1080176059309375498" target="_blank">Discord</a>!</li>
+                        </ol>
+                    </div>
+
+                    <!-- Windows Guide -->
+                    <div class="platform-card">
+                        <div class="platform-header">
+                            <h3>🪟 Windows</h3>
+                            <span class="platform-badge limited">Limited Support</span>
+                        </div>
+                        <div class="platform-limitations">
+                            <p>Windows currently has limited support:</p>
+                            <ul>
+                                <li>No export functionality</li>
+                                <li>No drag and drop system</li>
+                                <li>Some capabilities not supported</li>
+                            </ul>
+                        </div>
+                        <div class="platform-workaround">
+                            <p><strong>Workaround:</strong> Access the <code>PetAssets</code> or <code>Species</code> folders directly to add, modify, or delete content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Setup Requirements -->
+        <section id="setup" class="content-section">
+            <div class="container">
+                <h2 class="section-title">Setup Requirements</h2>
+                <div class="requirements-grid">
+                    <div class="requirement-card">
+                        <div class="requirement-icon">📱</div>
+                        <h3>Updated App</h3>
+                        <p>Make sure you have the latest version of Pets Therapy installed on your Mac.</p>
+                    </div>
+                    <div class="requirement-card">
+                        <div class="requirement-icon">🎨</div>
+                        <h3>Sprite Editor</h3>
+                        <p>Any tool for designing sprites works. We recommend <a href="https://github.com/aseprite/aseprite" target="_blank">Aseprite</a> for pixel art.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Species Definition -->
+        <section id="species-definition" class="content-section">
+            <div class="container">
+                <h2 class="section-title">Species Definition</h2>
+                <p class="section-description">
+                    Every custom pet is defined by a JSON configuration file
+                </p>
+
+                <div class="definition-content">
+                    <div class="definition-overview">
+                        <h3>What defines a Species?</h3>
+                        <ul>
+                            <li><strong>Unique ID:</strong> A distinctive identifier for your pet</li>
+                            <li><strong>Capabilities:</strong> Behaviors and physics properties</li>
+                            <li><strong>Animations:</strong> Visual states and movements</li>
+                            <li><strong>Attributes:</strong> Speed, scale, FPS, and other properties</li>
+                        </ul>
+                    </div>
+
+                    <div class="code-example">
+                        <h4>Example JSON Structure</h4>
+                        <pre><code>{
+  "id": "ape",
+  "dragPath": "drag",
+  "fallPath": "drag",
+  "fps": 10,
+  "zIndex": 0,
+  "scale": 1,
+  "tags": ["jungle"],
+  "movementPath": "walk",
+  "speed": 0.7,
+  "capabilities": [
+    "AnimatedSprite",
+    "AnimationsProvider",
+    "AnimationsScheduler",
+    "AutoRespawn",
+    "BounceOnLateralCollisions",
+    "Draggable",
+    "FlipHorizontallyWhenGoingLeft",
+    "Gravity",
+    "LinearMovement",
+    "PetsSpritesProvider",
+    "Rotating",
+    "ShowsMenuOnRightClick"
+  ],
+  "animations": [
+    {
+      "id": "front",
+      "position": "fromEntityBottomLeft",
+      "requiredLoops": 5
+    }
+  ]
+}</code></pre>
+                    </div>
+
+                    <div class="important-warning">
+                        <h4>⚠️ Important Naming Rules</h4>
+                        <ul>
+                            <li><strong>Species ID:</strong> Do not include <code>_</code> (underscore) in your species.id</li>
+                            <li><strong>Animation ID:</strong> Do not include <code>_</code> (underscore) in your animation.id</li>
+                            <li><strong>Reason:</strong> Underscores separate species from animation names (e.g., <code>ape_eat</code> = <code>ape</code> + <code>eat</code>)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capabilities -->
+        <section id="capabilities" class="content-section">
+            <div class="container">
+                <h2 class="section-title">Pet Capabilities</h2>
+                <p class="section-description">
+                    Capabilities define how your pet behaves and interacts with the environment
+                </p>
+
+                <div class="capabilities-grid">
+                    <div class="capability-card">
+                        <h4>Standard Capabilities</h4>
+                        <p>Most pets use this recommended set:</p>
+                        <div class="capability-tags">
+                            <span class="capability-tag">AnimatedSprite</span>
+                            <span class="capability-tag">BounceOnLateralCollisions</span>
+                            <span class="capability-tag">FlipHorizontallyWhenGoingLeft</span>
+                            <span class="capability-tag">Gravity</span>
+                            <span class="capability-tag">LinearMovement</span>
+                            <span class="capability-tag">Draggable</span>
+                        </div>
+                    </div>
+
+                    <div class="capability-card">
+                        <h4>Special Capabilities</h4>
+                        <p>Unique behaviors for specific pet types:</p>
+                        <ul>
+                            <li><strong>GetsAngryWhenMeetingOtherCats:</strong> Grumpy Cat's special behavior</li>
+                            <li><strong>WallCrawler:</strong> Allows crawling along screen borders (snails)</li>
+                            <li><strong>RandomPlatformJumper:</strong> Enables jumping to other windows</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Animations -->
+        <section id="animations" class="content-section">
+            <div class="container">
+                <h2 class="section-title">Animation System</h2>
+                <p class="section-description">
+                    Create engaging animations that bring your pets to life
+                </p>
+
+                <div class="animation-info">
+                    <div class="animation-basics">
+                        <h3>Animation Properties</h3>
+                        <ul>
+                            <li><strong>ID:</strong> Determines which sprite set to use</li>
+                            <li><strong>Position:</strong> Where the animation appears</li>
+                            <li><strong>Required Loops:</strong> How many times the animation repeats</li>
+                            <li><strong>Size:</strong> Custom sizing (optional, see sloth's lightsaber)</li>
+                        </ul>
+
+                        <h4>Required Animation</h4>
+                        <p>Every species must have at least a <strong>"front"</strong> animation, which is used on the homepage and pet details.</p>
+                    </div>
+
+                    <div class="animation-properties">
+                        <h3>Other Important Properties</h3>
+                        <div class="property-list">
+                            <div class="property-item">
+                                <strong>movementPath:</strong> Sprite set for movement (usually "walk" or "fly")
+                            </div>
+                            <div class="property-item">
+                                <strong>dragPath:</strong> Sprite used when pet is dragged (usually "drag" or "front")
+                            </div>
+                            <div class="property-item">
+                                <strong>fallPath:</strong> Sprite used when pet is falling (v2.48+, optional)
+                            </div>
+                            <div class="property-item">
+                                <strong>speed:</strong> How fast the pet moves
+                            </div>
+                            <div class="property-item">
+                                <strong>fps:</strong> Animation frame rate (max 20 fps, recommend 10 fps)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sprites -->
+        <section id="sprites" class="content-section">
+            <div class="container">
+                <h2 class="section-title">Sprite Creation</h2>
+                <p class="section-description">
+                    Learn the file naming conventions and structure for your pet sprites
+                </p>
+
+                <div class="sprite-info">
+                    <div class="naming-convention">
+                        <h3>File Naming Convention</h3>
+                        <p>Each sprite file must follow this exact pattern:</p>
+                        <div class="naming-pattern">
+                            <code>{species.id}_{animation.id}-{index}.png</code>
+                        </div>
+
+                        <h4>Examples:</h4>
+                        <div class="naming-examples">
+                            <code>ape_front-1.png</code>
+                            <code>ape_front-2.png</code>
+                            <code>ape_walk-0.png</code>
+                            <code>sloth_swag_lightsaber-0.png</code>
+                        </div>
+
+                        <div class="naming-rules">
+                            <h4>Important Rules:</h4>
+                            <ul>
+                                <li>Indices can start from 0 or 1, but must be sequential</li>
+                                <li>Names are case-sensitive</li>
+                                <li>Use PNG format only</li>
+                                <li>No gaps in the sequence</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="frame-rate-info">
+                        <h3>Animation Duration</h3>
+                        <p>All animations for a species must use the same FPS (frames per second).</p>
+                        <ul>
+                            <li><strong>Maximum FPS:</strong> 20 (for battery conservation)</li>
+                            <li><strong>Recommended FPS:</strong> 10 (100ms per frame)</li>
+                            <li><strong>Setting:</strong> Change the <code>fps</code> property in your JSON</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- App Features -->
+        <section id="app-features" class="content-section">
+            <div class="container">
+                <h2 class="section-title">App Integration</h2>
+                <p class="section-description">
+                    How to export, import, and manage your custom pets
+                </p>
+
+                <div class="app-features-grid">
+                    <div class="feature-card">
+                        <h3>🔄 Export Pets</h3>
+                        <p>Go to the Info view in the bottom navigation bar to find and use the export functionality.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>📥 Import Pets</h3>
+                        <p>Go to the Info view in the bottom navigation bar and drag your ZIP file to the designated drop area.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources -->
+        <section id="resources" class="content-section">
+            <div class="container">
+                <h2 class="section-title">Resources & Community</h2>
+                <p class="section-description">
+                    Get help, inspiration, and share your creations
+                </p>
+
+                <div class="resources-grid">
+
+
+                    <div class="resource-card">
+                        <div class="resource-icon">💬</div>
+                        <h3>Discord Community</h3>
+                        <p>Share your creations and get help from other creators</p>
+                        <a href="https://discord.com/channels/1014052570160955403/1080176059309375498" class="resource-link" target="_blank">
+                            Join Discord
+                        </a>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">🎨</div>
+                        <h3>Aseprite Files</h3>
+                        <p>Download source files for reference and inspiration</p>
+                        <a href="https://github.com/CyrilCermak/bit-therapy/tree/main/Aseprite" class="resource-link" target="_blank">
+                            Browse Files
+                        </a>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">📋</div>
+                        <h3>Complete Examples</h3>
+                        <p>View JSON files for all original species</p>
+                        <a href="https://github.com/CyrilCermak/bit-therapy/tree/main/Species" class="resource-link" target="_blank">
+                            View Examples
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section id="download" class="download-section">
+        <div class="container">
+            <div class="download-options">
+                <div class="">
+                <h3>Download Now</h3>
+                    <a href="https://apps.apple.com/us/app/bittherapy/id1575542220" class="app-store-btn" target="_blank">
+                        <svg class="app-store-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 22C7.78997 22.05 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.13997 6.91 8.85997 6.88C10.15 6.85 11.36 7.72 12.11 7.72C12.86 7.72 14.28 6.66 15.81 6.84C16.37 6.87 18.27 7.04 19.44 8.68C19.34 8.75 17.61 9.81 17.63 12.14C17.66 14.92 20.26 15.9 20.29 15.91C20.27 15.99 19.88 17.39 18.71 19.5Z" fill="currentColor"/>
+                            <path d="M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z" fill="currentColor"/>
+                        </svg>
+                        <div class="app-store-text">
+                            <span class="app-store-large">Mac App Store</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Pets Therapy</h4>
+                    <p>Digital companions for your Mac desktop</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Create</h4>
+                    <ul>
+                        <li><a href="#quick-start">Quick Start</a></li>
+                        <li><a href="#sprites">Sprites Guide</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="https://discord.com/channels/1014052570160955403/1080176059309375498" target="_blank">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="https://github.com/CyrilCermak/bit-therapy" target="_blank">GitHub</a></li>
+                        <li><a href="index.html">Main Site</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="shared.js"></script>
+</body>
+</html>

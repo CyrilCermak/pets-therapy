@@ -1,0 +1,23 @@
+{
+    "name": "Pets Therapy - Digital Companions for Your Mac",
+    "short_name": "Pets Therapy",
+    "description": "Bring joy to your Mac with adorable digital pets. Watch apes and other companions living on your desktop!",
+    "icons": [
+        {
+            "src": "./android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#FF2D92",
+    "background_color": "#1a1a1a",
+    "display": "standalone",
+    "orientation": "portrait",
+    "start_url": "../index.html",
+    "scope": "../"
+}

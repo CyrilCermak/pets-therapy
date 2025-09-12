@@ -15,7 +15,7 @@ I've also made a (terrible) tutorial, you can find it [on YouTube](https://www.y
 
 ### Windows
 
-Windows doesn't support all capabilities (it will just ignore unknown ones) yet, doesn't allow exporting pets and does not have drag and drop system, but you can simply access the `PetAssets` or `Species` folders and add, modify or delete whatever it's in there!
+Windows doesn't support all capabilities (it will just ignore unknown ones) yet, doesn't have the Info view with exporting pets functionality and does not have drag and drop system, but you can simply access the `PetAssets` or `Species` folders and add, modify or delete whatever it's in there!
 
 ## Setup
 You only need two things: 
@@ -142,9 +142,9 @@ I recommend sticking to 10 fps, or 100 milliseconds per frame.
 
 ## App Features
 ### Export
-Click on any pet to show its details, then click the button in the top right.
+Go to the Info view in the bottom navigation bar to find and use the export functionality.
 ![Pet details showing export button](custompets-export.png)
 
 ### Import
-Scroll down the list of pets and drop in the designated area.
+Go to the Info view in the bottom navigation bar and drag your ZIP file to the designated drop area.
 ![Bottom of the homepage showing the drop area](custompets-droparea.png)
