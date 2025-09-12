@@ -63,6 +63,10 @@
 		6457E5C22ADAF5BD00F1D7A7 /* PointsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6457E5B82ADAF5BD00F1D7A7 /* PointsTests.swift */; };
 		6457E5C32ADAF5BD00F1D7A7 /* AutoRespawnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6457E5B92ADAF5BD00F1D7A7 /* AutoRespawnTests.swift */; };
 		6457E5C42ADAF5BD00F1D7A7 /* GravityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6457E5BA2ADAF5BD00F1D7A7 /* GravityTests.swift */; };
+		BC7374532E74947900E213CD /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BC7374522E74947900E213CD /* FirebaseAnalytics */; };
+		BC7374572E74947900E213CD /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = BC7374562E74947900E213CD /* FirebaseCrashlytics */; };
+		BC73745C2E74965B00E213CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC73745A2E74965B00E213CD /* GoogleService-Info.plist */; };
+		BC73745E2E74979A00E213CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC73745A2E74965B00E213CD /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +188,7 @@
 		A6FB7D4928740F8E00AB872E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6FB7D4A28740F8E00AB872E /* BitTherapy.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = BitTherapy.entitlements; sourceTree = "<group>"; };
 		A6FB7D4B28740F8E00AB872E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC73745A2E74965B00E213CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -303,6 +308,7 @@
 		1E77BF492D293A7400AA14EC /* Settings */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (1E77BF552D293A7400AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 1E77BF562D293A7400AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Settings; sourceTree = "<group>"; };
 		1E77BF592D293A7600AA14EC /* StatusBar */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (1E77BF5C2D293A7600AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 1E77BF5D2D293A7600AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = StatusBar; sourceTree = "<group>"; };
 		1E77BF762D293A7800AA14EC /* Yage */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Yage; sourceTree = "<group>"; };
+		BC7374492E74926D00E213CD /* AppAnalytics */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = AppAnalytics; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,9 +339,11 @@
 				1ED44B7429B21AD50091CDAE /* LaunchAtLogin in Frameworks */,
 				1ED44B7829B21AD50091CDAE /* RateKit in Frameworks */,
 				1ED44B8F29B229180091CDAE /* WindowsDetector in Frameworks */,
+				BC7374572E74947900E213CD /* FirebaseCrashlytics in Frameworks */,
 				643C2FA02ADAF70400BC3C32 /* NotAGif in Frameworks */,
 				1ED44B8029B21AD50091CDAE /* Swinject in Frameworks */,
 				1ED44B8229B21AD50091CDAE /* ZIPFoundation in Frameworks */,
+				BC7374532E74947900E213CD /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +529,7 @@
 				1E07313629B9D64B00E31EED /* Pets TherapyMobile Screenshots.xctest */,
 				1EF863F829B22DD500413AEA /* Pets TherapyMobile Tests.xctest */,
 				1EF8640229B22DD500413AEA /* Pets TherapyMobile UITests.xctest */,
+				BC73745A2E74965B00E213CD /* GoogleService-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -540,6 +549,7 @@
 			isa = PBXGroup;
 			children = (
 				1E77BE172D29394300AA14EC /* App */,
+				BC7374492E74926D00E213CD /* AppAnalytics */,
 				1E77BDFC2D29393F00AA14EC /* Contents */,
 				1E77BE402D29395200AA14EC /* CustomPets */,
 				1E77BE642D29395600AA14EC /* Dependencies */,
@@ -635,6 +645,7 @@
 				1E77BF362D293A7100AA14EC /* Screensaver */,
 				1E77BF492D293A7400AA14EC /* Settings */,
 				1E77BF762D293A7800AA14EC /* Yage */,
+				BC7374492E74926D00E213CD /* AppAnalytics */,
 			);
 			name = "Pets Therapy";
 			packageProductDependencies = (
@@ -646,6 +657,8 @@
 				1E8D068729B4DF8B009C2B34 /* Schwifty */,
 				643C2F9F2ADAF70400BC3C32 /* NotAGif */,
 				6437A6D62B041AE300C2D8D7 /* BareBones */,
+				BC7374522E74947900E213CD /* FirebaseAnalytics */,
+				BC7374562E74947900E213CD /* FirebaseCrashlytics */,
 			);
 			productName = "Desktop Pets";
 			productReference = 1E9505B129B21341007666BF /* Pets Therapy.app */;
@@ -715,6 +728,7 @@
 				1E77BF232D293A6E00AA14EC /* PetsSelection */,
 				1E77BF362D293A7100AA14EC /* Screensaver */,
 				1E77BF762D293A7800AA14EC /* Yage */,
+				BC7374492E74926D00E213CD /* AppAnalytics */,
 			);
 			name = "Pets TherapyMobile";
 			packageProductDependencies = (
@@ -830,6 +844,7 @@
 				1E8D068629B4DF8B009C2B34 /* XCRemoteSwiftPackageReference "schwifty" */,
 				643C2F9E2ADAF6F400BC3C32 /* XCRemoteSwiftPackageReference "NotAGif" */,
 				6437A6D12B04160400C2D8D7 /* XCRemoteSwiftPackageReference "barebones" */,
+				BC7374512E74947900E213CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = A65FE354283D80C900D1F5C8;
 			projectDirPath = "";
@@ -871,6 +886,7 @@
 				1ED44B6F29B21A930091CDAE /* Species in Resources */,
 				1E9505DC29B21475007666BF /* PetsAssets in Resources */,
 				1E9505DE29B21492007666BF /* contributors.json in Resources */,
+				BC73745C2E74965B00E213CD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -898,6 +914,7 @@
 				641BE4F02AC2F54100A87232 /* BitTherapyMobile.xctestplan in Resources */,
 				1E1CF22C29B2C6090018A994 /* Species in Resources */,
 				1E1CF22B29B2C6030018A994 /* PetsAssets in Resources */,
+				BC73745E2E74979A00E213CD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1621,6 +1638,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1677,6 +1695,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -1842,6 +1861,14 @@
 				minimumVersion = 4.2.0;
 			};
 		};
+		BC7374512E74947900E213CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = exactVersion;
+				version = 12.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1929,6 +1956,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1E8D068629B4DF8B009C2B34 /* XCRemoteSwiftPackageReference "schwifty" */;
 			productName = Schwifty;
+		};
+		BC7374522E74947900E213CD /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC7374512E74947900E213CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		BC7374562E74947900E213CD /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC7374512E74947900E213CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
