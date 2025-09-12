@@ -67,6 +67,8 @@
 		BC7374572E74947900E213CD /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = BC7374562E74947900E213CD /* FirebaseCrashlytics */; };
 		BC73745C2E74965B00E213CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC73745A2E74965B00E213CD /* GoogleService-Info.plist */; };
 		BC73745E2E74979A00E213CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC73745A2E74965B00E213CD /* GoogleService-Info.plist */; };
+		BC7374602E749C8A00E213CD /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BC73745F2E749C8A00E213CD /* FirebaseAnalytics */; };
+		BC7374682E74AAA000E213CD /* FirebaseAnalyticsCore in Frameworks */ = {isa = PBXBuildFile; productRef = BC7374672E74AAA000E213CD /* FirebaseAnalyticsCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -341,6 +343,7 @@
 				1ED44B8F29B229180091CDAE /* WindowsDetector in Frameworks */,
 				BC7374572E74947900E213CD /* FirebaseCrashlytics in Frameworks */,
 				643C2FA02ADAF70400BC3C32 /* NotAGif in Frameworks */,
+				BC7374682E74AAA000E213CD /* FirebaseAnalyticsCore in Frameworks */,
 				1ED44B8029B21AD50091CDAE /* Swinject in Frameworks */,
 				1ED44B8229B21AD50091CDAE /* ZIPFoundation in Frameworks */,
 				BC7374532E74947900E213CD /* FirebaseAnalytics in Frameworks */,
@@ -367,6 +370,7 @@
 			files = (
 				1E1CF22A29B2C5E30018A994 /* WindowsDetector in Frameworks */,
 				6437A6D92B041AEA00C2D8D7 /* BareBones in Frameworks */,
+				BC7374602E749C8A00E213CD /* FirebaseAnalytics in Frameworks */,
 				643C2FA42ADAF75800BC3C32 /* Schwifty in Frameworks */,
 				1EF8642129B22F2500413AEA /* Swinject in Frameworks */,
 				643C2FA22ADAF70C00BC3C32 /* NotAGif in Frameworks */,
@@ -659,6 +663,7 @@
 				6437A6D62B041AE300C2D8D7 /* BareBones */,
 				BC7374522E74947900E213CD /* FirebaseAnalytics */,
 				BC7374562E74947900E213CD /* FirebaseCrashlytics */,
+				BC7374672E74AAA000E213CD /* FirebaseAnalyticsCore */,
 			);
 			productName = "Desktop Pets";
 			productReference = 1E9505B129B21341007666BF /* Pets Therapy.app */;
@@ -737,6 +742,7 @@
 				643C2FA12ADAF70C00BC3C32 /* NotAGif */,
 				643C2FA32ADAF75800BC3C32 /* Schwifty */,
 				6437A6D82B041AEA00C2D8D7 /* BareBones */,
+				BC73745F2E749C8A00E213CD /* FirebaseAnalytics */,
 			);
 			productName = "Mobile Pets";
 			productReference = 1EF863E929B22DD400413AEA /* Pets TherapyMobile.app */;
@@ -1966,6 +1972,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BC7374512E74947900E213CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
+		};
+		BC73745F2E749C8A00E213CD /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC7374512E74947900E213CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		BC7374672E74AAA000E213CD /* FirebaseAnalyticsCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC7374512E74947900E213CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -35,32 +35,25 @@ final class AnalyticsServiceImpl: AnalyticsService {
         }
         
         // Apply the current analytics state to Firebase
-        Analytics.setAnalyticsCollectionEnabled(_isAnalyticsEnabled)
+        Analytics.setAnalyticsCollectionEnabled(PrivacySettings.defaultAnalyticsEnabled)
     }
     
     func setAnalyticsEnabled(_ enabled: Bool) {
         _isAnalyticsEnabled = enabled
         Analytics.setAnalyticsCollectionEnabled(enabled)
-        
-        if enabled {
-            // Log that analytics was enabled
-            logEvent(.userAction, parameters: [
-                AnalyticsParameterName.action: "analytics_enabled"
-            ])
-        }
     }
     
-    func logEvent(_ name: AnalyticsEventName, parameters: [String: Any]?) {
+    func log(event: AnalyticsEvent) {
         guard isConfigured else {
             print("⚠️ Analytics not configured. Call configure() first.")
             return
         }
         
-        guard _isAnalyticsEnabled else {
+        guard isAnalyticsEnabled else {
             return // Silently ignore if analytics is disabled
         }
         
-        Analytics.logEvent(name.rawValue, parameters: parameters)
+        Analytics.logEvent(event.name, parameters: event.parameters)
     }
     
     func setCurrentScreen(_ screenName: String?, screenClass: String?) {

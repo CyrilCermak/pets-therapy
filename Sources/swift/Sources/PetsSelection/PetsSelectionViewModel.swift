@@ -6,7 +6,6 @@ class PetsSelectionViewModel: ObservableObject {
     @Inject private var appConfig: AppConfig
     @Inject private var assets: PetsAssetsProvider
     @Inject private var speciesProvider: SpeciesProvider
-    @Inject private var analytics: AnalyticsService
 
     @Published var openSpecies: Species?
     @Published var selectedSpecies: [Species] = []
@@ -70,8 +69,6 @@ class PetsSelectionViewModel: ObservableObject {
     private func loadPets(all: [Species], selectedIds: [String], tag: String?) {
         let selected = selectedIds.compactMap { speciesProvider.by(id: $0) }
         selectedSpecies = selected
-        
-        selectedIds.forEach({ analytics.logEvent(.featureUsed, parameters: <#T##[String : Any]?#>)})
         
         // Filter unselected species based on the tag, displaying all
         guard let tag else {

@@ -17,7 +17,7 @@ struct BackgroundSettings: View {
 
 private class BackgroundsViewModel: ObservableObject {
     @Inject private var appConfig: AppConfig
-
+    
     @Published private(set) var selectedItem = ""
 
     let backgrounds: [String] = [
