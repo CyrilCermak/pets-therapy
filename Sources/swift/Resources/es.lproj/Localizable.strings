@@ -2,11 +2,11 @@
 "about.leaveReviewMessage" = "¡Apóyanos gratis dejando un comentario!\n⭐️⭐️⭐️⭐️⭐️";
 "about.privacyPolicy" = "Política de privacidad";
 "about.termsAndConditions" = "Terms and Conditions";
-"analytics.consentTitle" = "Ayudar a Mejorar Pets Therapy";
-"analytics.consentMessage" = "Nos gustaría recopilar datos de uso anónimos para ayudar a mejorar la aplicación. Esto incluye qué mascotas son más populares y cómo se usan las funciones.\n\nNo se recopila información personal, y puedes cambiar esta configuración en cualquier momento en las preferencias de la aplicación.";
+"analytics.consentTitle" = "Ayuda a mejorar la terapia asistida con animales.";
+"analytics.consentMessage" = "Nos gustaría recopilar datos de uso anónimos para ayudar a mejorar la aplicación. Esto incluye información sobre qué mascotas son más populares y cómo se utilizan las funciones. No se recopila información personal y puedes cambiar esta configuración en cualquier momento en el apartado de preferencias de la aplicación.";
 "analytics.consentAccept" = "Permitir Analytics";
 "analytics.consentDecline" = "No Gracias";
-"analytics.privacyNote" = "Tu privacidad nos importa. Toda la recopilación de datos es anónima y nos ayuda a mejorar la aplicación.";
+"analytics.privacyNote" = "Tu privacidad es importante para nosotros. La recopilación de datos es anónima y nos ayuda a mejorar la aplicación.";
 "analytics.settingsToggleLabel" = "Analytics de la App (Anónimo)";
 "appName" = "Pets Therapy";
 "backgrounds.BackgroundMountainDay" = "Montaña, Dia";
