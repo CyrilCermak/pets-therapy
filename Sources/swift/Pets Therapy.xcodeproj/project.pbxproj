@@ -273,6 +273,7 @@
 		BCB366F62E757BF1006CF968 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				iOS/Info.plist,
 				macOS/Info.plist,
 			);
 			target = 1EF863E829B22DD400413AEA /* Pets TherapyMobile */;
@@ -1362,7 +1363,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 107111;
-				DEVELOPMENT_TEAM = 9L5V9XNS25;
+				DEVELOPMENT_TEAM = SH6896K6L5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Resources/iOS/Info.plist;
@@ -1400,7 +1401,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 107111;
-				DEVELOPMENT_TEAM = 9L5V9XNS25;
+				DEVELOPMENT_TEAM = SH6896K6L5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Resources/iOS/Info.plist;

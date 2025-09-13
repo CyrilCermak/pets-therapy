@@ -74,9 +74,7 @@ private struct GridAndFiltersVerticallyStacked: View {
     
     var body: some View {
         VStack(spacing: .lg) {
-            if DeviceRequirement.allSatisfied(.macOS) {
-                HorizontalFiltersView()
-            }
+            HorizontalFiltersView()
             PetsGrid(
                 columns: viewModel.gridColums,
                 text: text,

@@ -24,7 +24,6 @@ struct ShamelessSubscriptionBanner: View {
                     .padding(.horizontal)
                     .frame(height: 32)
             }
-            
             if viewModel.isLoading {
                 ProgressView(Lang.Shop.loading)
                     .frame(height: 32)
