@@ -31,6 +31,7 @@ enum Lang {
         static let consentAccept = "analytics.consentAccept".localized()
         static let consentDecline = "analytics.consentDecline".localized()
         static let privacyNote = "analytics.privacyNote".localized()
+        static let settingsToggleLabel = "analytics.settingsToggleLabel".localized()
     }
 
     enum Backgrounds {

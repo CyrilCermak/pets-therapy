@@ -2,7 +2,13 @@
 "about.leaveReviewMessage" = "通过留下免费的评论来支持我们！\n⭐️⭐️⭐️⭐️⭐️";
 "about.privacyPolicy" = "隐私条款";
 "about.termsAndConditions" = "Terms and Conditions";
-"appName" = "桌面宠物";
+"analytics.consentTitle" = "帮助改进 Pets Therapy";
+"analytics.consentMessage" = "我们希望收集匿名使用数据来帮助改进应用程序。这包括哪些宠物最受欢迎以及功能如何使用。\n\n不会收集任何个人信息，您可以随时在应用程序首选项中更改此设置。";
+"analytics.consentAccept" = "允许分析";
+"analytics.consentDecline" = "不用了，谢谢";
+"analytics.privacyNote" = "您的隐私对我们很重要。所有数据收集都是匿名的，有助于我们改进应用程序。";
+"analytics.settingsToggleLabel" = "应用分析（匿名）";
+"appName" = "Pets Therapy";
 "backgrounds.BackgroundMountainDay" = "山，早上";
 "backgrounds.BackgroundMountainDynamic" = "山";
 "backgrounds.BackgroundMountainNight" = "山，晚上";

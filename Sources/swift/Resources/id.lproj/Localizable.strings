@@ -2,7 +2,13 @@
 "about.leaveReviewMessage" = "Dukung kami secara gratis dengan memberikan ulasan!\n⭐️⭐️⭐️⭐️⭐️";
 "about.privacyPolicy" = "Kebijakan Privasi";
 "about.termsAndConditions" = "Terms and Conditions";
-"appName" = "Desktop Pets";
+"analytics.consentTitle" = "Bantu Meningkatkan Pets Therapy";
+"analytics.consentMessage" = "Kami ingin mengumpulkan data penggunaan anonim untuk membantu meningkatkan aplikasi. Ini termasuk hewan peliharaan mana yang paling populer dan bagaimana fitur digunakan.\n\nTidak ada informasi pribadi yang dikumpulkan, dan Anda dapat mengubah pengaturan ini kapan saja di preferensi aplikasi.";
+"analytics.consentAccept" = "Izinkan Analitik";
+"analytics.consentDecline" = "Tidak Terima Kasih";
+"analytics.privacyNote" = "Privasi Anda penting bagi kami. Semua pengumpulan data bersifat anonim dan membantu kami meningkatkan aplikasi.";
+"analytics.settingsToggleLabel" = "Analitik Aplikasi (Anonim)";
+"appName" = "Pets Therapy";
 "backgrounds.BackgroundMountainDay" = "Gunung, Hari";
 "backgrounds.BackgroundMountainDynamic" = "Gunung";
 "backgrounds.BackgroundMountainNight" = "Gunung, Malam";
