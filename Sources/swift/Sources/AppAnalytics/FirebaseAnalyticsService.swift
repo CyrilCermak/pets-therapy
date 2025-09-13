@@ -3,7 +3,7 @@ import Schwifty
 import FirebaseAnalytics
 import FirebaseCore
 
-final class AnalyticsServiceImpl: AnalyticsService {
+final class FirebaseAnalyticsService: AnalyticsService {
     // MARK: - Privacy Settings
     struct PrivacySettings {
         /// Key for storing analytics enabled state in UserDefaults
