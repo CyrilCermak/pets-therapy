@@ -100,7 +100,8 @@
 "settings.statusBarIconEnabled" = "In Statusleiste anzeigen";
 "settings.useImageInterpolation" = "Bildinterpolation";
 "shop.loading" = "Lädt...";
-"shop.thankYou" = "Vielen Dank für Ihre Unterstützung! ❤️";
+"shop.supporter" = "Unterstützer";
+"shop.thankYou" = "Vielen Dank für deine Unterstützung! ❤️";
 "shop.restore" = "Käufe wiederherstellen";
 "shop.becomeSupporter" = "Unterstützer werden";
 "shop.pleeeease" = "Bitte unterstützen Sie uns";

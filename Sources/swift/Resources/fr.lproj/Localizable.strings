@@ -100,6 +100,7 @@
 "settings.statusBarIconEnabled" = "Afficher dans la barre d'état";
 "settings.useImageInterpolation" = "Interpolation d'images";
 "shop.loading" = "Chargement...";
+"shop.supporter" = "Supporteur";
 "shop.thankYou" = "Merci pour votre soutien ! ❤️";
 "shop.restore" = "Restaurer les achats";
 "shop.becomeSupporter" = "Devenez un supporter";

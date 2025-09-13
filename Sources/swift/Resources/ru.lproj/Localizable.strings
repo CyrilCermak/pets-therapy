@@ -100,7 +100,8 @@
 "settings.statusBarIconEnabled" = "Показывать в строке состояния";
 "settings.useImageInterpolation" = "Интерполяция изображения";
 "shop.loading" = "Загрузка...";
-"shop.thankYou" = "Спасибо за вашу поддержку! ❤️";
+"shop.supporter" = "Сторонник";
+"shop.thankYou" = "Спасибо за поддержку! ❤️";
 "shop.restore" = "Восстановить покупки";
 "shop.becomeSupporter" = "Станьте поддерживающим";
 "shop.pleeeease" = "Пожалуйста, поддержите нас";

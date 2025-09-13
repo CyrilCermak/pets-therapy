@@ -108,6 +108,7 @@ enum Lang {
         static let thankYou = "shop.thankYou".localized()
         static let restore = "shop.restore".localized()
         static let becomeSupporter = "shop.becomeSupporter".localized()
+        static let supporter = "shop.supporter".localized()
         static let pleeeease = "shop.pleeeease".localized()
         static let theseAreOnlyForSupporters = "shop.theseAreOnlyForSupporters".localized()
     }

@@ -100,6 +100,7 @@
 "settings.statusBarIconEnabled" = "在状态栏中显示";
 "settings.useImageInterpolation" = "图像插值";
 "shop.loading" = "加载中...";
+"shop.supporter" = "支持者";
 "shop.thankYou" = "感谢您的支持！❤️";
 "shop.restore" = "恢复购买";
 "shop.becomeSupporter" = "成为支持者";

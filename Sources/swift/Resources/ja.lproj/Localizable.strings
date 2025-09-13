@@ -100,7 +100,8 @@
 "settings.statusBarIconEnabled" = "ステータスバーに表示";
 "settings.useImageInterpolation" = "画像補間";
 "shop.loading" = "読み込み中...";
-"shop.thankYou" = "サポートありがとうございます！❤️";
+"shop.supporter" = "サポーター";
+"shop.thankYou" = "サポートありがとうございます！ ❤️";
 "shop.restore" = "購入を復元";
 "shop.becomeSupporter" = "サポーターになる";
 "shop.pleeeease" = "ご支援をお願いします";
