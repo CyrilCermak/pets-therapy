@@ -91,37 +91,3 @@ private struct AnalyticsConsentMod: ViewModifier {
             }
     }
 }
-
-#if DEBUG
-struct AnalyticsConsentView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            AnalyticsConsentView(viewModel: AnalyticsConsentViewModel())
-                .previewDisplayName("Analytics Consent")
-            
-            // Test different screen sizes
-            AnalyticsConsentView(viewModel: AnalyticsConsentViewModel())
-                .previewDevice("iPhone SE (3rd generation)")
-                .previewDisplayName("iPhone SE")
-            
-            AnalyticsConsentView(viewModel: AnalyticsConsentViewModel())
-                .previewDevice("iPad Pro (11-inch) (4th generation)")
-                .previewDisplayName("iPad Pro")
-        }
-    }
-}
-
-// MARK: - Debug Helpers
-
-extension AnalyticsConsentView {
-    /// Force show analytics consent dialog for testing
-    static func forceShow() -> some View {
-        Button("Show Analytics Consent") {
-            // Reset consent choice to trigger the dialog
-            UserDefaults.standard.removeObject(forKey: "AnalyticsConsentChoiceMade")
-            UserDefaults.standard.removeObject(forKey: "AnalyticsEnabled")
-        }
-        .buttonStyle(.regular)
-    }
-}
-#endif

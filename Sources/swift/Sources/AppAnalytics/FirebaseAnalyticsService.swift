@@ -5,7 +5,7 @@ import FirebaseCore
 
 final class FirebaseAnalyticsService: AnalyticsService {
     // MARK: - Privacy Settings
-    struct PrivacySettings {
+    private struct PrivacySettings {
         /// Key for storing analytics enabled state in UserDefaults
         static let analyticsEnabledKey = "AnalyticsEnabled"
         
