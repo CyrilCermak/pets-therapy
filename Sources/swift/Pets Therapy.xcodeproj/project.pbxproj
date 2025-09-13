@@ -133,7 +133,7 @@
 
 /* Begin PBXFileReference section */
 		1E07311F29B9BD2200E31EED /* ScreenshotsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotsHelper.swift; sourceTree = "<group>"; };
-		1E07313629B9D64B00E31EED /* Pets TherapyMobile Screenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pets TherapyMobile Screenshots.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E07313629B9D64B00E31EED /* Pets Therapy Mobile Screenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pets Therapy Mobile Screenshots.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E07314729B9D86500E31EED /* Pets Therapy Screenshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pets Therapy Screenshots.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E07314829B9D88000E31EED /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		1E07314B29B9D89800E31EED /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
@@ -151,9 +151,9 @@
 		1E9505CB29B21342007666BF /* Pets Therapy UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pets Therapy UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9505CF29B21342007666BF /* BitTherapyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitTherapyUITests.swift; sourceTree = "<group>"; };
 		1ED44B8629B221C20091CDAE /* ImageInterpolationUseCaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageInterpolationUseCaseTests.swift; sourceTree = "<group>"; };
-		1EF863E929B22DD400413AEA /* Pets TherapyMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pets TherapyMobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1EF863F829B22DD500413AEA /* Pets TherapyMobile Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pets TherapyMobile Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1EF8640229B22DD500413AEA /* Pets TherapyMobile UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pets TherapyMobile UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EF863E929B22DD400413AEA /* Pets Therapy Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pets Therapy Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EF863F829B22DD500413AEA /* Pets Therapy Mobile Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pets Therapy Mobile Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EF8640229B22DD500413AEA /* Pets Therapy Mobile UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pets Therapy Mobile UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF8640629B22DD500413AEA /* BitTherapyMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitTherapyMobileUITests.swift; sourceTree = "<group>"; };
 		641BE4EE2AC2F54100A87232 /* BitTherapyMobile.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BitTherapyMobile.xctestplan; sourceTree = "<group>"; };
 		641BE4EF2AC2F54100A87232 /* BitTherapyMobileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitTherapyMobileTests.swift; sourceTree = "<group>"; };
@@ -186,7 +186,7 @@
 				macOS/MacContentView.swift,
 				macOS/MainScene.swift,
 			);
-			target = 1EF863E829B22DD400413AEA /* Pets TherapyMobile */;
+			target = 1EF863E829B22DD400413AEA /* Pets Therapy Mobile */;
 		};
 		1E77BE242D29394300AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -202,7 +202,7 @@
 				macOS/App.swift,
 				macOS/DistributedNotificationsService.swift,
 			);
-			target = 1EF863E829B22DD400413AEA /* Pets TherapyMobile */;
+			target = 1EF863E829B22DD400413AEA /* Pets Therapy Mobile */;
 		};
 		1E77BE5F2D29395200AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -220,7 +220,7 @@
 				Export/macOS/ExportPetUseCaseImpl.swift,
 				Import/macOS/ImportPetUseCaseImpl.swift,
 			);
-			target = 1EF863E829B22DD400413AEA /* Pets TherapyMobile */;
+			target = 1EF863E829B22DD400413AEA /* Pets Therapy Mobile */;
 		};
 		1E77BF122D293A6900AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -238,7 +238,7 @@
 				Rendering/macOS/PixelArtEntityView.swift,
 				Rendering/macOS/WorldWindow.swift,
 			);
-			target = 1EF863E829B22DD400413AEA /* Pets TherapyMobile */;
+			target = 1EF863E829B22DD400413AEA /* Pets Therapy Mobile */;
 		};
 		1E77BF552D293A7400AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -254,7 +254,7 @@
 				iOS/MobileSettings.swift,
 				Settings.swift,
 			);
-			target = 1EF863E829B22DD400413AEA /* Pets TherapyMobile */;
+			target = 1EF863E829B22DD400413AEA /* Pets Therapy Mobile */;
 		};
 		1E77BF5C2D293A7600AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -268,7 +268,7 @@
 			membershipExceptions = (
 				NoStatusBar.swift,
 			);
-			target = 1EF863E829B22DD400413AEA /* Pets TherapyMobile */;
+			target = 1EF863E829B22DD400413AEA /* Pets Therapy Mobile */;
 		};
 		BCB366F62E757BF1006CF968 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -276,7 +276,7 @@
 				iOS/Info.plist,
 				macOS/Info.plist,
 			);
-			target = 1EF863E829B22DD400413AEA /* Pets TherapyMobile */;
+			target = 1EF863E829B22DD400413AEA /* Pets Therapy Mobile */;
 		};
 		BCB366F72E757BF8006CF968 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -506,10 +506,10 @@
 				1E07314729B9D86500E31EED /* Pets Therapy Screenshots.xctest */,
 				1E9505C129B21342007666BF /* Pets Therapy Tests.xctest */,
 				1E9505CB29B21342007666BF /* Pets Therapy UITests.xctest */,
-				1EF863E929B22DD400413AEA /* Pets TherapyMobile.app */,
-				1E07313629B9D64B00E31EED /* Pets TherapyMobile Screenshots.xctest */,
-				1EF863F829B22DD500413AEA /* Pets TherapyMobile Tests.xctest */,
-				1EF8640229B22DD500413AEA /* Pets TherapyMobile UITests.xctest */,
+				1EF863E929B22DD400413AEA /* Pets Therapy Mobile.app */,
+				1E07313629B9D64B00E31EED /* Pets Therapy Mobile Screenshots.xctest */,
+				1EF863F829B22DD500413AEA /* Pets Therapy Mobile Tests.xctest */,
+				1EF8640229B22DD500413AEA /* Pets Therapy Mobile UITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -539,9 +539,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1E07312529B9D64B00E31EED /* Pets TherapyMobile Screenshots */ = {
+		1E07312529B9D64B00E31EED /* Pets Therapy Mobile Screenshots */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E07313329B9D64B00E31EED /* Build configuration list for PBXNativeTarget "Pets TherapyMobile Screenshots" */;
+			buildConfigurationList = 1E07313329B9D64B00E31EED /* Build configuration list for PBXNativeTarget "Pets Therapy Mobile Screenshots" */;
 			buildPhases = (
 				1E07312B29B9D64B00E31EED /* Sources */,
 				1E07312F29B9D64B00E31EED /* Frameworks */,
@@ -552,14 +552,14 @@
 			dependencies = (
 				1E07312629B9D64B00E31EED /* PBXTargetDependency */,
 			);
-			name = "Pets TherapyMobile Screenshots";
+			name = "Pets Therapy Mobile Screenshots";
 			packageProductDependencies = (
 				1E07312829B9D64B00E31EED /* FirebaseAnalyticsWithoutAdIdSupport */,
 				1E07312A29B9D64B00E31EED /* FirebaseCrashlytics */,
 				1EA1679429C1E0E000FAF378 /* Schwifty */,
 			);
 			productName = "Mobile PetsUITests";
-			productReference = 1E07313629B9D64B00E31EED /* Pets TherapyMobile Screenshots.xctest */;
+			productReference = 1E07313629B9D64B00E31EED /* Pets Therapy Mobile Screenshots.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		1E07313B29B9D86500E31EED /* Pets Therapy Screenshots */ = {
@@ -670,9 +670,9 @@
 			productReference = 1E9505CB29B21342007666BF /* Pets Therapy UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		1EF863E829B22DD400413AEA /* Pets TherapyMobile */ = {
+		1EF863E829B22DD400413AEA /* Pets Therapy Mobile */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1EF8641029B22DD500413AEA /* Build configuration list for PBXNativeTarget "Pets TherapyMobile" */;
+			buildConfigurationList = 1EF8641029B22DD500413AEA /* Build configuration list for PBXNativeTarget "Pets Therapy Mobile" */;
 			buildPhases = (
 				1E2DBAF129B866BA00870EB0 /* SwiftLint */,
 				1EF863E529B22DD400413AEA /* Sources */,
@@ -701,7 +701,7 @@
 				BC7374492E74926D00E213CD /* AppAnalytics */,
 				BCB344062E75797000295338 /* Resources */,
 			);
-			name = "Pets TherapyMobile";
+			name = "Pets Therapy Mobile";
 			packageProductDependencies = (
 				1EF8642029B22F2500413AEA /* Swinject */,
 				1E1CF22929B2C5E30018A994 /* WindowsDetector */,
@@ -711,12 +711,12 @@
 				BC73745F2E749C8A00E213CD /* FirebaseAnalytics */,
 			);
 			productName = "Mobile Pets";
-			productReference = 1EF863E929B22DD400413AEA /* Pets TherapyMobile.app */;
+			productReference = 1EF863E929B22DD400413AEA /* Pets Therapy Mobile.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1EF863F729B22DD500413AEA /* Pets TherapyMobile Tests */ = {
+		1EF863F729B22DD500413AEA /* Pets Therapy Mobile Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1EF8641129B22DD500413AEA /* Build configuration list for PBXNativeTarget "Pets TherapyMobile Tests" */;
+			buildConfigurationList = 1EF8641129B22DD500413AEA /* Build configuration list for PBXNativeTarget "Pets Therapy Mobile Tests" */;
 			buildPhases = (
 				1EF863F429B22DD500413AEA /* Sources */,
 				1EF863F529B22DD500413AEA /* Frameworks */,
@@ -727,16 +727,16 @@
 			dependencies = (
 				1EF863FA29B22DD500413AEA /* PBXTargetDependency */,
 			);
-			name = "Pets TherapyMobile Tests";
+			name = "Pets Therapy Mobile Tests";
 			packageProductDependencies = (
 			);
 			productName = "Mobile PetsTests";
-			productReference = 1EF863F829B22DD500413AEA /* Pets TherapyMobile Tests.xctest */;
+			productReference = 1EF863F829B22DD500413AEA /* Pets Therapy Mobile Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1EF8640129B22DD500413AEA /* Pets TherapyMobile UITests */ = {
+		1EF8640129B22DD500413AEA /* Pets Therapy Mobile UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1EF8641229B22DD500413AEA /* Build configuration list for PBXNativeTarget "Pets TherapyMobile UITests" */;
+			buildConfigurationList = 1EF8641229B22DD500413AEA /* Build configuration list for PBXNativeTarget "Pets Therapy Mobile UITests" */;
 			buildPhases = (
 				1EF863FE29B22DD500413AEA /* Sources */,
 				1EF863FF29B22DD500413AEA /* Frameworks */,
@@ -747,11 +747,11 @@
 			dependencies = (
 				1EF8640429B22DD500413AEA /* PBXTargetDependency */,
 			);
-			name = "Pets TherapyMobile UITests";
+			name = "Pets Therapy Mobile UITests";
 			packageProductDependencies = (
 			);
 			productName = "Mobile PetsUITests";
-			productReference = 1EF8640229B22DD500413AEA /* Pets TherapyMobile UITests.xctest */;
+			productReference = 1EF8640229B22DD500413AEA /* Pets Therapy Mobile UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -830,10 +830,10 @@
 				1E9505C029B21342007666BF /* Pets Therapy Tests */,
 				1E9505CA29B21342007666BF /* Pets Therapy UITests */,
 				1E07313B29B9D86500E31EED /* Pets Therapy Screenshots */,
-				1EF863E829B22DD400413AEA /* Pets TherapyMobile */,
-				1EF863F729B22DD500413AEA /* Pets TherapyMobile Tests */,
-				1EF8640129B22DD500413AEA /* Pets TherapyMobile UITests */,
-				1E07312529B9D64B00E31EED /* Pets TherapyMobile Screenshots */,
+				1EF863E829B22DD400413AEA /* Pets Therapy Mobile */,
+				1EF863F729B22DD500413AEA /* Pets Therapy Mobile Tests */,
+				1EF8640129B22DD500413AEA /* Pets Therapy Mobile UITests */,
+				1E07312529B9D64B00E31EED /* Pets Therapy Mobile Screenshots */,
 			);
 		};
 /* End PBXProject section */
@@ -1052,7 +1052,7 @@
 /* Begin PBXTargetDependency section */
 		1E07312629B9D64B00E31EED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1EF863E829B22DD400413AEA /* Pets TherapyMobile */;
+			target = 1EF863E829B22DD400413AEA /* Pets Therapy Mobile */;
 			targetProxy = 1E07312729B9D64B00E31EED /* PBXContainerItemProxy */;
 		};
 		1E07313C29B9D86500E31EED /* PBXTargetDependency */ = {
@@ -1072,12 +1072,12 @@
 		};
 		1EF863FA29B22DD500413AEA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1EF863E829B22DD400413AEA /* Pets TherapyMobile */;
+			target = 1EF863E829B22DD400413AEA /* Pets Therapy Mobile */;
 			targetProxy = 1EF863F929B22DD500413AEA /* PBXContainerItemProxy */;
 		};
 		1EF8640429B22DD500413AEA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1EF863E829B22DD400413AEA /* Pets TherapyMobile */;
+			target = 1EF863E829B22DD400413AEA /* Pets Therapy Mobile */;
 			targetProxy = 1EF8640329B22DD500413AEA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1089,7 +1089,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 206504;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -1113,7 +1113,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 206504;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -1139,7 +1139,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 206504;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -1163,7 +1163,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 206504;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -1190,7 +1190,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 206501;
+				CURRENT_PROJECT_VERSION = 206504;
 				DEVELOPMENT_TEAM = SH6896K6L5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -1203,7 +1203,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 2.65;
+				MARKETING_VERSION = 3.0.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1227,7 +1227,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 206501;
+				CURRENT_PROJECT_VERSION = 206504;
 				DEVELOPMENT_TEAM = SH6896K6L5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -1240,7 +1240,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 2.65;
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1261,7 +1261,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 206504;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -1288,7 +1288,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 206504;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -1313,7 +1313,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 206504;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -1337,7 +1337,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 206504;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -1362,7 +1362,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = ColorAccent;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 107111;
+				CURRENT_PROJECT_VERSION = 206504;
 				DEVELOPMENT_TEAM = SH6896K6L5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1379,7 +1379,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.1;
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1400,7 +1400,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = ColorAccent;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 107111;
+				CURRENT_PROJECT_VERSION = 206504;
 				DEVELOPMENT_TEAM = SH6896K6L5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1417,7 +1417,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.1;
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = it.curzel.pets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1438,7 +1438,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 206504;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -1463,7 +1463,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 206504;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -1488,7 +1488,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 206504;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -1512,7 +1512,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 206504;
 				DEVELOPMENT_TEAM = 9L5V9XNS25;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -1655,7 +1655,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1E07313329B9D64B00E31EED /* Build configuration list for PBXNativeTarget "Pets TherapyMobile Screenshots" */ = {
+		1E07313329B9D64B00E31EED /* Build configuration list for PBXNativeTarget "Pets Therapy Mobile Screenshots" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E07313429B9D64B00E31EED /* Debug */,
@@ -1700,7 +1700,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1EF8641029B22DD500413AEA /* Build configuration list for PBXNativeTarget "Pets TherapyMobile" */ = {
+		1EF8641029B22DD500413AEA /* Build configuration list for PBXNativeTarget "Pets Therapy Mobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1EF8640A29B22DD500413AEA /* Debug */,
@@ -1709,7 +1709,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1EF8641129B22DD500413AEA /* Build configuration list for PBXNativeTarget "Pets TherapyMobile Tests" */ = {
+		1EF8641129B22DD500413AEA /* Build configuration list for PBXNativeTarget "Pets Therapy Mobile Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1EF8640C29B22DD500413AEA /* Debug */,
@@ -1718,7 +1718,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1EF8641229B22DD500413AEA /* Build configuration list for PBXNativeTarget "Pets TherapyMobile UITests" */ = {
+		1EF8641229B22DD500413AEA /* Build configuration list for PBXNativeTarget "Pets Therapy Mobile UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1EF8640E29B22DD500413AEA /* Debug */,
