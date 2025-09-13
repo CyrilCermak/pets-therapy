@@ -38,7 +38,7 @@ private struct Switches: View {
             RandomEventsSwitch()
             AnalyticsSettingsSwitch()
             #if DEBUG
-            ResetAnalyticsConsentButton()
+                ResetAnalyticsConsentButton()
             #endif
         }
     }

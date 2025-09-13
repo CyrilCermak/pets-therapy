@@ -12,6 +12,13 @@ protocol AnalyticsService {
     /// - Parameter enabled: Whether analytics collection should be enabled
     func setAnalyticsEnabled(_ enabled: Bool)
     
+    /// Check if user has made a consent choice
+    var hasUserMadeConsentChoice: Bool { get }
+    
+    /// Reset all consent choices and analytics settings
+    /// This will cause the consent dialog to appear again
+    func resetConsentChoice()
+    
     /// Log a custom event with optional parameters
     /// - Parameters:
     ///   - name: The analytics event name using the type-safe enum

@@ -18,9 +18,6 @@ import Schwifty
 class AnalyticsConsentViewModel: ObservableObject {
     @Inject private var analyticsService: AnalyticsService
     
-    // UserDefaults key for tracking if user has made a consent choice
-    private static let consentChoiceMadeKey = "AnalyticsConsentChoiceMade"
-    
     @Published var shouldShowConsent: Bool = false
     
     init() {
@@ -29,15 +26,14 @@ class AnalyticsConsentViewModel: ObservableObject {
     
     /// Check if we should show the consent dialog based on whether user has made a choice
     private func checkShouldShowConsent() {
-        let hasUserMadeChoice = UserDefaults.standard.bool(forKey: Self.consentChoiceMadeKey)
-        shouldShowConsent = !hasUserMadeChoice
+        shouldShowConsent = !analyticsService.hasUserMadeConsentChoice
     }
     
     /// User explicitly accepts analytics collection
     /// This enables analytics and logs the consent acceptance event
     func acceptAnalytics() {
         analyticsService.setAnalyticsEnabled(true)
-        markConsentChoiceMade()
+        shouldShowConsent = false
         
         // Log consent acceptance (this will now work since analytics is enabled)
         analyticsService.log(event: AppAnalyticsEvent.analyticsConsent(accepted: true))
@@ -47,22 +43,15 @@ class AnalyticsConsentViewModel: ObservableObject {
     /// This disables analytics (no decline event is logged since analytics is disabled)
     func declineAnalytics() {
         analyticsService.setAnalyticsEnabled(false)
-        markConsentChoiceMade()
+        shouldShowConsent = false
         
         // We don't log the decline since analytics is disabled
-    }
-    
-    /// Mark that the user has made a consent choice and hide the dialog
-    private func markConsentChoiceMade() {
-        UserDefaults.standard.set(true, forKey: Self.consentChoiceMadeKey)
-        shouldShowConsent = false
     }
     
     /// Reset consent choice and analytics state (for testing or complete privacy reset)
     /// This will cause the consent dialog to appear again on next app launch
     func resetConsentChoice() {
-        UserDefaults.standard.removeObject(forKey: Self.consentChoiceMadeKey)
-        UserDefaults.standard.removeObject(forKey: "AnalyticsEnabled")
+        analyticsService.resetConsentChoice()
         shouldShowConsent = true
     }
     
@@ -74,6 +63,6 @@ class AnalyticsConsentViewModel: ObservableObject {
     /// Check if user has previously made a consent choice
     /// Returns true if user has either accepted or declined analytics
     var hasUserMadeChoice: Bool {
-        return UserDefaults.standard.bool(forKey: Self.consentChoiceMadeKey)
+        return analyticsService.hasUserMadeConsentChoice
     }
 }

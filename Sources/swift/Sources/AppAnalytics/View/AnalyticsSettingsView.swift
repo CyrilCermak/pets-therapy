@@ -20,11 +20,6 @@ struct AnalyticsSettingsSwitch: View {
         }
         .onChange(of: isAnalyticsEnabled) { newValue in
             analyticsService.setAnalyticsEnabled(newValue)
-            // Mark that user has made a choice
-            UserDefaults.standard.set(true, forKey: "AnalyticsConsentChoiceMade")
-            if newValue {
-                analyticsService.log(event: AppAnalyticsEvent.analyticsConsent(accepted: true))
-            }
         }
         .positioned(.leading)
     }
