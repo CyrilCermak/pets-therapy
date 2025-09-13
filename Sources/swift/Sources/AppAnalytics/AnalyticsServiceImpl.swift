@@ -16,6 +16,10 @@ final class AnalyticsServiceImpl: AnalyticsService {
         static let defaultAnalyticsEnabled = false
     }
     
+    private var firebaseConfigAvailable: Bool {
+        Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist") != nil
+    }
+    
     private var isConfigured = false
     private var _isAnalyticsEnabled: Bool {
         get { UserDefaults.standard.bool(forKey: PrivacySettings.analyticsEnabledKey) }
@@ -32,6 +36,11 @@ final class AnalyticsServiceImpl: AnalyticsService {
     
     func configure() {
         guard !isConfigured else { return }
+        
+        guard firebaseConfigAvailable else {
+            Logger.debug("AnalyticsService", "Firebase Info.plist not configured. Skipping Firebase init.")
+            return
+        }
         
         FirebaseApp.configure()
         isConfigured = true
@@ -61,19 +70,13 @@ final class AnalyticsServiceImpl: AnalyticsService {
     }
     
     func log(event: AnalyticsEvent) {
-        guard isConfigured else {
-            Logger.log("AnalyticsService", "⚠️ Analytics not configured. Call configure() first.")
-            return
-        }
+        guard isConfigured else { return }
         
         Analytics.logEvent(event.name, parameters: event.parameters)
     }
     
     func setCurrentScreen(_ screenName: String?, screenClass: String?) {
-        guard isConfigured else {
-            Logger.log("AnalyticsService", "⚠️ Analytics not configured. Call configure() first.")
-            return
-        }
+        guard isConfigured else { return }
         
         Analytics.logEvent(AnalyticsEventScreenView, parameters: [
             AnalyticsParameterScreenName: screenName ?? "",
@@ -82,6 +85,8 @@ final class AnalyticsServiceImpl: AnalyticsService {
     }
     
     func setAnalyticsCollectionEnabled(_ enabled: Bool) {
+        guard isConfigured else { return }
+        
         Analytics.setAnalyticsCollectionEnabled(enabled)
     }
 }

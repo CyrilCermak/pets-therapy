@@ -65,10 +65,10 @@
 		6457E5C42ADAF5BD00F1D7A7 /* GravityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6457E5BA2ADAF5BD00F1D7A7 /* GravityTests.swift */; };
 		BC7374532E74947900E213CD /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BC7374522E74947900E213CD /* FirebaseAnalytics */; };
 		BC7374572E74947900E213CD /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = BC7374562E74947900E213CD /* FirebaseCrashlytics */; };
-		BC73745C2E74965B00E213CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC73745A2E74965B00E213CD /* GoogleService-Info.plist */; };
-		BC73745E2E74979A00E213CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC73745A2E74965B00E213CD /* GoogleService-Info.plist */; };
 		BC7374602E749C8A00E213CD /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BC73745F2E749C8A00E213CD /* FirebaseAnalytics */; };
 		BC7374682E74AAA000E213CD /* FirebaseAnalyticsCore in Frameworks */ = {isa = PBXBuildFile; productRef = BC7374672E74AAA000E213CD /* FirebaseAnalyticsCore */; };
+		BCB343EF2E7570E600295338 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCB343EE2E7570E600295338 /* GoogleService-Info.plist */; };
+		BCB343F02E7570E600295338 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCB343EE2E7570E600295338 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,7 +190,7 @@
 		A6FB7D4928740F8E00AB872E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6FB7D4A28740F8E00AB872E /* BitTherapy.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = BitTherapy.entitlements; sourceTree = "<group>"; };
 		A6FB7D4B28740F8E00AB872E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC73745A2E74965B00E213CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BCB343EE2E7570E600295338 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -533,7 +533,6 @@
 				1E07313629B9D64B00E31EED /* Pets TherapyMobile Screenshots.xctest */,
 				1EF863F829B22DD500413AEA /* Pets TherapyMobile Tests.xctest */,
 				1EF8640229B22DD500413AEA /* Pets TherapyMobile UITests.xctest */,
-				BC73745A2E74965B00E213CD /* GoogleService-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -545,6 +544,7 @@
 				A6FB7D4528740F8E00AB872E /* Localizable.strings */,
 				A6FB7D4928740F8E00AB872E /* Assets.xcassets */,
 				1E185F4329B230050042E537 /* macOS */,
+				BCB343EE2E7570E600295338 /* GoogleService-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -892,7 +892,7 @@
 				1ED44B6F29B21A930091CDAE /* Species in Resources */,
 				1E9505DC29B21475007666BF /* PetsAssets in Resources */,
 				1E9505DE29B21492007666BF /* contributors.json in Resources */,
-				BC73745C2E74965B00E213CD /* GoogleService-Info.plist in Resources */,
+				BCB343EF2E7570E600295338 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -920,7 +920,7 @@
 				641BE4F02AC2F54100A87232 /* BitTherapyMobile.xctestplan in Resources */,
 				1E1CF22C29B2C6090018A994 /* Species in Resources */,
 				1E1CF22B29B2C6030018A994 /* PetsAssets in Resources */,
-				BC73745E2E74979A00E213CD /* GoogleService-Info.plist in Resources */,
+				BCB343F02E7570E600295338 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

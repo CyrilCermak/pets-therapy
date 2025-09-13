@@ -102,36 +102,48 @@ class AppConfig: ObservableObject {
     
     private func observeEvents() {
         $background
+            .dropFirst()
+            .removeDuplicates()
             .sink { [weak self] name in
                 self?.analytics.log(event: AppAnalyticsEvent.selectedBackground(id: name))
             }
             .store(in: &cancellabels)
         
         $desktopInteractions
+            .dropFirst()
+            .removeDuplicates()
             .sink { [weak self] enabled in
                 self?.analytics.log(event: AppAnalyticsEvent.interactions(enabled: enabled))
             }
             .store(in: &cancellabels)
         
         $floatOverFullscreenApps
+            .dropFirst()
+            .removeDuplicates()
             .sink { [weak self] enabled in
                 self?.analytics.log(event: AppAnalyticsEvent.floatOverFullScreen(enabled: enabled))
             }
             .store(in: &cancellabels)
         
         $gravityEnabled
+            .dropFirst()
+            .removeDuplicates()
             .sink { [weak self] enabled in
                 self?.analytics.log(event: AppAnalyticsEvent.gravity(enabled: enabled))
             }
             .store(in: &cancellabels)
         
         $bounceOffPetsEnabled
+            .dropFirst()
+            .removeDuplicates()
             .sink { [weak self] enabled in
                 self?.analytics.log(event: AppAnalyticsEvent.bounceOffPets(enabled: enabled))
             }
             .store(in: &cancellabels)
         
         $randomEvents
+            .dropFirst()
+            .removeDuplicates()
             .sink { [weak self] enabled in
                 self?.analytics.log(event: AppAnalyticsEvent.randomEvents(enabled: enabled))
             }
