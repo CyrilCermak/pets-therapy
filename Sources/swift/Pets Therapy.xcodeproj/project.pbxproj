@@ -270,6 +270,20 @@
 			);
 			target = 1EF863E829B22DD400413AEA /* Pets TherapyMobile */;
 		};
+		BCB366F62E757BF1006CF968 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				macOS/Info.plist,
+			);
+			target = 1EF863E829B22DD400413AEA /* Pets TherapyMobile */;
+		};
+		BCB366F72E757BF8006CF968 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				iOS/Info.plist,
+			);
+			target = 1E9505B029B21341007666BF /* Pets Therapy */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -289,7 +303,7 @@
 		1E77BF592D293A7600AA14EC /* StatusBar */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (1E77BF5C2D293A7600AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 1E77BF5D2D293A7600AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = StatusBar; sourceTree = "<group>"; };
 		1E77BF762D293A7800AA14EC /* Yage */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Yage; sourceTree = "<group>"; };
 		BC7374492E74926D00E213CD /* AppAnalytics */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = AppAnalytics; sourceTree = "<group>"; };
-		BCB344062E75797000295338 /* Resources */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Resources; sourceTree = "<group>"; };
+		BCB344062E75797000295338 /* Resources */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (BCB366F72E757BF8006CF968 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, BCB366F62E757BF1006CF968 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Resources; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
