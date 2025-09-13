@@ -47,7 +47,7 @@ struct ShamelessSubscriptionBanner: View {
                                 .fontWeight(.semibold)
                         }
                         .padding(.horizontal)
-                        .frame(height: 32)
+                        .frame(height: DesignSystem.buttonsHeight)
                         .foregroundStyle(Color.white)
                         .background(Color.accent)
                         .cornerRadius(8)
