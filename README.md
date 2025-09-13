@@ -23,9 +23,9 @@ Hope you like them too!
 ![Settings, dark mode](docs/2.png)
 
 ## 🎨 Create custom pets
-Starting from version 2.20 you can now create custom pets, please check [the documentation](https://curzel.it/bit-therapy/custompets).
+Starting from version 2.20 you can now create custom pets, please check [the documentation](https://pets-therapy.com/custom-pets.html).
 
-You do not need any programming knowledge or dev tools to create your own pets, just design your characters and follow [the instructions](https://curzel.it/bit-therapy/custompets), good luck!
+You do not need any programming knowledge or dev tools to create your own pets, just design your characters and follow [the instructions](https://pets-therapy.com/custom-pets.html), good luck!
 
 ## 🙏 Contribute
 Contributors get a shout out in the app, just saying... 😏
