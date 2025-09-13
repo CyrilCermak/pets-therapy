@@ -1,4 +1,4 @@
-releases
+Ga releases
 ApesAssets
 
 *.zip
@@ -106,3 +106,6 @@ Sources/landing_page/assets/pets/
 
 # Firebase config for app analytics
 Sources/swift/Resources/GoogleService-Info.plist
+Sources/swift/fastlane/api_key.json
+Sources/swift/fastlane/AuthKey*
+Sources/swift/fastlane/AppFile
