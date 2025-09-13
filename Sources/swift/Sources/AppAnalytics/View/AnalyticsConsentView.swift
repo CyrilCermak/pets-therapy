@@ -35,7 +35,7 @@ struct AnalyticsConsentView: View {
                     .foregroundColor(.secondary)
                 
                 Button(Lang.About.privacyPolicy) {
-                    URL.visit(urlString: Lang.Urls.privacy)
+                    URL.visit(urlString: Constants.URLs.privacy)
                 }
                 .buttonStyle(.text)
                 .font(.caption)

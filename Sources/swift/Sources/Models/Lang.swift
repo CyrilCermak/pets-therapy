@@ -137,19 +137,6 @@ enum Lang {
     enum Tag {
         static let all = "tag.all".localized()
     }
-
-    enum Urls {
-        static let appStore = "urls.appStore".localized()
-        static let customPetsDocs = "urls.customPetsDocs".localized()
-        static let discord = "urls.discord".localized()
-        static let donations = "urls.donations".localized()
-        static let github = "urls.github".localized()
-        static let privacy = "urls.privacy".localized()
-        static let termsAndConditions = "urls.tncs".localized()
-        static let reddit = "urls.reddit".localized()
-        static let twitter = "urls.twitter".localized()
-        static let youtube = "urls.youtube".localized()
-    }
 }
 
 extension Lang {

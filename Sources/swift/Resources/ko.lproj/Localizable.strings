@@ -270,16 +270,7 @@
 "tag.wild-animals" = "🌲 야생동물";
 "tag.characters" = "🎮 캐릭터";
 "tag.memes-fun" = "🎭 밈과 재미";
-"urls.appStore" = "https://apps.apple.com/app/id1575542220";
-"urls.customPetsDocs" = "https://pets-therapy.com/custom-pets.html";
-"urls.discord" = "https://discord.gg/aYCCcDPj5P";
-"urls.donations" = "https://patreon.com/curzel";
-"urls.github" = "https://github.com/curzel-it/bit-therapy";
-"urls.privacy" = "https://pets-therapy.com/privacy-policy.html";
-"urls.reddit" = "https://www.reddit.com/r/DesktopPetsApp";
-"urls.tncs" = "https://pets-therapy.com/terms-and-conditions.html";
-"urls.twitter" = "https://twitter.com/bittherapyapp";
-"urls.youtube" = "https://youtube.com/@TheCurzel";
+
 "yes" = "예";
 "youtube.cybertruckAction" = "사이버트럭 보기";
 "youtube.cybertruckLink" = "https://youtu.be/J5A71o3nHyE";

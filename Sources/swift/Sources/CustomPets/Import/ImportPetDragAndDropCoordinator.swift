@@ -38,7 +38,7 @@ private struct ImportDragAndDropView: View {
 private struct LinkToDocs: View {
     var body: some View {
         Button(Lang.CustomPets.readTheDocs) {
-            URL(string: Lang.Urls.customPetsDocs)?.visit()
+            URL(string: Constants.URLs.customPetsDocs)?.visit()
         }
         .buttonStyle(.text)
     }
