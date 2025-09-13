@@ -31,6 +31,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         Logger.log(tag, "Did finish launching")
         commandLine.handleCommandLineArgs()
         analytics.configure()
+        analytics.log(event: AppAnalyticsEvent.appLaunch)
         onScreen.show()
         return true
     }

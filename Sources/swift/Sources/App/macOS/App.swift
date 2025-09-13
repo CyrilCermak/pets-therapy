@@ -30,6 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         commandLine.handleCommandLineArgs()
         notifications.start()
         analytics.configure()
+        analytics.log(event: AppAnalyticsEvent.appLaunch)
 
         if config.floatOverFullscreenApps {
             NSApp.setActivationPolicy(.accessory)

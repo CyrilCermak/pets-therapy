@@ -8,6 +8,7 @@ enum AppAnalyticsEvent: AnalyticsEvent {
     // General
     case appLaunch
     case error(error: Error, context: String)
+    case analyticsConsent(accepted: Bool)
     // Pets
     case selected(petId: String)
     case deselected(petId: String)
@@ -26,6 +27,7 @@ enum AppAnalyticsEvent: AnalyticsEvent {
         case .selected: return "selected"
         case .deselected: return "deselected"
         case .error: return "error"
+        case .analyticsConsent: return "analytics_consent"
         case .renamed: return "renamed_pet"
         case .selectedBackground: return "selected_background"
         case .interactions: return "interactions"
@@ -43,6 +45,8 @@ enum AppAnalyticsEvent: AnalyticsEvent {
                 "errorDescription": error.localizedDescription,
                 "context": context
             ]
+        case .analyticsConsent(let accepted):
+            return ["accepted": accepted]
         case .selected(let petId):
             return ["pet": petId]
         case .deselected(let petId):

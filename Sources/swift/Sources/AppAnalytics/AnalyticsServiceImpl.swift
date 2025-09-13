@@ -9,12 +9,18 @@ final class AnalyticsServiceImpl: AnalyticsService {
         static let analyticsEnabledKey = "AnalyticsEnabled"
         
         /// Default analytics enabled state (should be false for privacy-first approach)
-        static let defaultAnalyticsEnabled = true
+        static let defaultAnalyticsEnabled = false
     }
     
     private var isConfigured = false
     private var _isAnalyticsEnabled: Bool {
-        get { UserDefaults.standard.bool(forKey: PrivacySettings.analyticsEnabledKey) }
+        get {
+            // If user hasn't made a choice yet, return false (privacy-first)
+            if UserDefaults.standard.object(forKey: PrivacySettings.analyticsEnabledKey) == nil {
+                return false
+            }
+            return UserDefaults.standard.bool(forKey: PrivacySettings.analyticsEnabledKey)
+        }
         set { UserDefaults.standard.set(newValue, forKey: PrivacySettings.analyticsEnabledKey) }
     }
     
@@ -35,7 +41,7 @@ final class AnalyticsServiceImpl: AnalyticsService {
         }
         
         // Apply the current analytics state to Firebase
-        Analytics.setAnalyticsCollectionEnabled(PrivacySettings.defaultAnalyticsEnabled)
+        Analytics.setAnalyticsCollectionEnabled(_isAnalyticsEnabled)
     }
     
     func setAnalyticsEnabled(_ enabled: Bool) {

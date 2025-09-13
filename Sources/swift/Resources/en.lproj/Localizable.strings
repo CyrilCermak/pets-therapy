@@ -2,6 +2,11 @@
 "about.leaveReviewMessage" = "Support us for free by leaving a review!\n⭐️⭐️⭐️⭐️⭐️";
 "about.privacyPolicy" = "Privacy Policy";
 "about.termsAndConditions" = "Terms and Conditions";
+"analytics.consentTitle" = "Help Improve Desktop Pets";
+"analytics.consentMessage" = "We'd like to collect anonymous usage data to help improve the app. This includes which pets are most popular and how features are used.\n\nNo personal information is collected, and you can change this setting anytime in the app preferences.";
+"analytics.consentAccept" = "Allow Analytics";
+"analytics.consentDecline" = "No Thanks";
+"analytics.privacyNote" = "Your privacy matters to us. All data collection is anonymous and helps us make the app better.";
 "appName" = "Desktop Pets";
 "backgrounds.BackgroundMountainDay" = "Mountain, Day";
 "backgrounds.BackgroundMountainDynamic" = "Mountain";

@@ -8,6 +8,7 @@ struct MainScene: Scene {
         WindowGroup {
             ContentView()
                 .onboardingHandler()
+                .analyticsConsentHandler()
                 .environmentObject(appConfig())
         }
     }
