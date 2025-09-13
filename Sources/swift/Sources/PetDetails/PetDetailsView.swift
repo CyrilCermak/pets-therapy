@@ -37,7 +37,6 @@ private struct About: View {
 }
 
 private struct AnimatedPreview: View {
-    @EnvironmentObject var appConfig: AppConfig
     @EnvironmentObject var viewModel: PetDetailsViewModel
 
     var body: some View {
@@ -49,8 +48,10 @@ private struct AnimatedPreview: View {
                         .frame(width: 150, height: 150)
                 }
                 .id(viewModel.selectedAnimation)
+                .transition(.opacity)
             }
             .frame(width: 150, height: 150)
+            .animation(.easeInOut(duration: 0.1), value: viewModel.selectedAnimation)
         }
     }
 }

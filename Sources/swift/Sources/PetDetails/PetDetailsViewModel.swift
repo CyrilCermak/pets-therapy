@@ -28,6 +28,7 @@ class PetDetailsViewModel: ObservableObject {
     var animationFrames: [ImageFrame] {
         assets.images(for: species.id, animation: selectedAnimation)
     }
+
     
     var animations: [String] {
         var allAnimations = species.animations.map({ $0.id })
