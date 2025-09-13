@@ -7,7 +7,7 @@ protocol CommandLineUseCase {
 
 class CommandLineUseCaseImpl: CommandLineUseCase {
     @Inject private var appConfig: AppConfig
-    
+
     private let tag = "CommandLine"
 
     func handleCommandLineArgs() {

@@ -2,18 +2,18 @@ import Foundation
 
 /// Service for tracking analytics events throughout the application
 protocol AnalyticsService {
-    /// Configure Firebase Analytics (should be called during app initialization)
-    func configure()
-    
     /// Check if analytics is currently enabled
     var isAnalyticsEnabled: Bool { get }
+    
+    /// Check if user has made a consent choice
+    var hasUserMadeConsentChoice: Bool { get }
+    
+    /// Configure Analytics (should be called during app initialization)
+    func configure()
     
     /// Enable or disable analytics data collection
     /// - Parameter enabled: Whether analytics collection should be enabled
     func setAnalyticsEnabled(_ enabled: Bool)
-    
-    /// Check if user has made a consent choice
-    var hasUserMadeConsentChoice: Bool { get }
     
     /// Reset all consent choices and analytics settings
     /// This will cause the consent dialog to appear again
