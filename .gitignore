@@ -103,3 +103,4 @@ iOSInjectionProject/
 # Landing page
 Sources/landing_page/assets/pets/ # Copied by a script for a local development
 Sources/landing_page/assets/pets/
+Sources/swift/GoogleService-Info.plist
