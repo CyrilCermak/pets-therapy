@@ -100,6 +100,7 @@
 "settings.statusBarIconEnabled" = "在状态栏中显示";
 "settings.useImageInterpolation" = "图像插值";
 "shop.loading" = "加载中...";
+"shop.supporter" = "支持者";
 "shop.thankYou" = "感谢您的支持！❤️";
 "shop.restore" = "恢复购买";
 "shop.becomeSupporter" = "成为支持者";
@@ -191,7 +192,8 @@
 "species.name.klee" = "Klee";
 "species.name.raiden" = "Raiden";
 "species.name.keqing" = "Keqing";
-"species.name.ape" = "猴子";
+"species.name.ape" = "猿";
+"species.name.ape_chef" = "猿厨师";
 "species.name.betta" = "斗鱼";
 "species.name.cat" = "红色猫咪";
 "species.name.cat_black" = "黑色猫咪";
@@ -254,16 +256,7 @@
 "tag.wild-animals" = "🌲 野生动物";
 "tag.characters" = "🎮 角色";
 "tag.memes-fun" = "🎭 表情包和乐趣";
-"urls.appStore" = "https://apps.apple.com/app/id1575542220";
-"urls.customPetsDocs" = "https://curzel.it/bit-therapy/custompets";
-"urls.discord" = "https://discord.gg/8tj28beNPH";
-"urls.donations" = "https://www.patreon.com/urinamara";
-"urls.github" = "https://github.com/curzel-it/bit-therapy";
-"urls.privacy" = "https://curzel.it/privacy.html";
-"urls.tncs" = "https://curzel.it/terms-and-conditions.html";
-"urls.reddit" = "https://www.reddit.com/r/DesktopPets/";
-"urls.twitter" = "https://twitter.com/HiddenMugs";
-"urls.youtube" = "https://www.youtube.com/@HiddenMugs";
+
 "yes" = "是的";
 "youtube.cybertruckTitle" = "新宠物：赛博卡车！";
 "youtube.cybertruckMessage" = "在它的多边形荣耀中，你甚至不会注意到这是像素艺术！作为感谢，为什么不在我的YouTube频道上观看一个由Cybertruck主演的超尴尬视频呢？";

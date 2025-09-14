@@ -90,7 +90,7 @@ private class ExportSpeciesButtonViewModel: ObservableObject {
     func readTheDocs() {
         title = nil
         message = nil
-        URL(string: Lang.Urls.customPetsDocs)?.visit()
+        URL(string: Constants.URLs.customPetsDocs)?.visit()
     }
 
     func clearMessages() {

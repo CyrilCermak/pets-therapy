@@ -100,7 +100,8 @@
 "settings.statusBarIconEnabled" = "Tampilkan di bilah status";
 "settings.useImageInterpolation" = "Interpolasi gambar";
 "shop.loading" = "Memuat...";
-"shop.thankYou" = "Terima kasih atas dukunganmu! ❤️";
+"shop.supporter" = "Pendukung";
+"shop.thankYou" = "Terima kasih atas dukungan Anda! ❤️";
 "shop.restore" = "Pulihkan Pembelian";
 "shop.becomeSupporter" = "Jadilah pendukung";
 "shop.pleeeease" = "Tolong, dukung kami";
@@ -169,6 +170,7 @@
 "species.name.raiden" = "Raiden";
 "species.name.keqing" = "Keqing";
 "species.name.ape" = "Monyet";
+"species.name.ape_chef" = "Monyet Chef";
 "species.name.betta" = "Ikan Cupang";
 "species.name.cat" = "Kucing Merah";
 "species.name.cat_black" = "Kucing Hitam";
@@ -231,16 +233,7 @@
 "tag.wild-animals" = "🌲 Hewan Liar";
 "tag.characters" = "🎮 Karakter";
 "tag.memes-fun" = "🎭 Meme & Hiburan";
-"urls.appStore" = "https://apps.apple.com/app/id1575542220";
-"urls.customPetsDocs" = "https://curzel.it/bit-therapy/custompets";
-"urls.discord" = "https://discord.gg/8tj28beNPH";
-"urls.donations" = "https://www.patreon.com/urinamara";
-"urls.github" = "https://github.com/curzel-it/bit-therapy";
-"urls.privacy" = "https://curzel.it/privacy.html";
-"urls.tncs" = "https://curzel.it/terms-and-conditions.html";
-"urls.reddit" = "https://www.reddit.com/r/DesktopPets/";
-"urls.twitter" = "https://twitter.com/HiddenMugs";
-"urls.youtube" = "https://www.youtube.com/@HiddenMugs";
+
 "yes" = "Ya";
 "youtube.cybertruckTitle" = "Hewan Peliharaan Baru: Cybertruck!";
 "youtube.cybertruckMessage" = "Dalam kemegahan poligonalnya, kamu bahkan tidak akan menyadari bahwa ini adalah seni piksel! Sebagai ucapan terima kasih, mengapa tidak menonton video super memalukan yang dibintangi oleh Cybertruck di saluran YouTube saya?";

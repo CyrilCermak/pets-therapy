@@ -75,7 +75,7 @@ private struct ContributorsModal: View {
 private struct PrivacyPolicy: View {
     var body: some View {
         Button(Lang.About.privacyPolicy) {
-            URL.visit(urlString: Lang.Urls.privacy)
+            URL.visit(urlString: Constants.URLs.privacy)
         }
         .buttonStyle(.text)
     }
@@ -84,7 +84,7 @@ private struct PrivacyPolicy: View {
 private struct TermsAndConditions: View {
     var body: some View {
         Button(Lang.About.termsAndConditions) {
-            URL.visit(urlString: Lang.Urls.termsAndConditions)
+            URL.visit(urlString: Constants.URLs.termsAndConditions)
         }
         .buttonStyle(.text)
     }
@@ -93,11 +93,8 @@ private struct TermsAndConditions: View {
 private struct Socials: View {
     var body: some View {
         HStack(spacing: .xl) {
-            SocialIcon(name: "github", link: Lang.Urls.github)
-            SocialIcon(name: "twitter", link: Lang.Urls.twitter)
-            SocialIcon(name: "reddit", link: Lang.Urls.reddit)
-            SocialIcon(name: "discord", link: Lang.Urls.discord)
-            SocialIcon(name: "youtube", link: Lang.Urls.youtube)
+            SocialIcon(name: "github", link: Constants.URLs.github)
+            SocialIcon(name: "discord", link: Constants.URLs.discord)
         }
     }
 }
@@ -122,7 +119,7 @@ private struct LeaveReview: View {
                 .multilineTextAlignment(.center)
                 .font(.title2.bold())
             Button(Lang.About.leaveReview) {
-                URL.visit(urlString: Lang.Urls.appStore)
+                URL.visit(urlString: Constants.URLs.appStore)
             }
             .buttonStyle(.regular)
         }
@@ -144,6 +141,6 @@ struct JoinOurDiscord: View {
             .resizable()
             .frame(height: 32)
             .frame(width: 32)
-            .onTapGesture { URL.visit(urlString: Lang.Urls.discord) }
+            .onTapGesture { URL.visit(urlString: Constants.URLs.discord) }
     }
 }

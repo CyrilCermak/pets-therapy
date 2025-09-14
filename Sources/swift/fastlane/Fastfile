@@ -1,0 +1,91 @@
+
+default_platform(:ios)
+
+# Common configuration
+XCODEPROJ = 'Pets Therapy.xcodeproj'
+API_KEY_PATH = './fastlane/api_key.json'
+MACOS_TARGET = 'Pets Therapy'
+IOS_TARGET = 'Pets Therapy Mobile'
+
+platform :ios do
+  desc "Deploy iOS app to TestFlight"
+  lane :release do
+    # Increment build number
+    increment_build_number(xcodeproj: XCODEPROJ)
+
+    # Get version info
+    version = get_version_number(xcodeproj: XCODEPROJ, target: MACOS_TARGET)
+    build_number = get_build_number(xcodeproj: XCODEPROJ)
+
+    # Create git tag
+    add_git_tag(tag: "ios-v#{version}-build#{build_number}")
+
+    # Build iOS app
+    build_app(
+      project: XCODEPROJ,
+      scheme: IOS_TARGET
+    )
+
+    # Upload to TestFlight
+    upload_to_testflight(
+      skip_submission: true,
+      api_key_path: API_KEY_PATH,
+      skip_waiting_for_build_processing: true
+    )
+  end
+end
+
+platform :mac do
+  desc "Deploy macOS app to TestFlight"
+  lane :release do
+    # Increment build number
+    increment_build_number(xcodeproj: XCODEPROJ)
+
+    # Get version info
+    version = get_version_number(xcodeproj: XCODEPROJ, target: MACOS_TARGET)
+    build_number = get_build_number(xcodeproj: XCODEPROJ)
+
+    # Create git tag
+    add_git_tag(tag: "mac-v#{version}-build#{build_number}")
+
+    # Build macOS app
+    build_app(
+      project: XCODEPROJ,
+      scheme: MACOS_TARGET
+    )
+
+    # Upload to TestFlight
+    upload_to_testflight(
+      skip_submission: true,
+      api_key_path: API_KEY_PATH,
+      skip_waiting_for_build_processing: true
+    )
+  end
+end
+
+# Cross-platform lanes
+desc "Deploy both iOS and macOS apps"
+lane :release_all do
+  # Release iOS
+  ios do
+    release
+  end
+
+  # Release macOS
+  mac do
+    release
+  end
+
+  # Create combined git tag
+  version_ios = get_version_number(xcodeproj: XCODEPROJ, target: IOS_TARGET)
+  version_mac = get_version_number(xcodeproj: XCODEPROJ, target: MACOS_TARGET)
+  build_number = get_build_number(xcodeproj: XCODEPROJ)
+
+  add_git_tag(tag: "v#{version_ios}-#{version_mac}-build#{build_number}")
+end
+
+# Error handling
+error do |lane, exception|
+  # Send error notification or log to external service
+  puts "❌ Lane #{lane} failed with exception: #{exception}"
+end

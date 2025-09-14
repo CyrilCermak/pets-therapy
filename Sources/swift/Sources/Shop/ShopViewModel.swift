@@ -77,6 +77,10 @@ class ShopViewModel: ObservableObject {
     }
     
     func checkCurrentEntitlements() async {
+        guard !hasActiveSubscription else {
+            return
+        }
+        
         var activeSubscription = false
         for await result in Transaction.currentEntitlements {
             do {
@@ -129,5 +133,10 @@ class ShopViewModel: ObservableObject {
     func restorePurchases() async {
         try? await AppStore.sync()
         await checkCurrentEntitlements()
+    }
+    
+    func resetPurchaseState() {
+        self.purchaseStatus = ""
+        self.purchaseStatusColor = .white
     }
 }

@@ -100,7 +100,8 @@
 "settings.statusBarIconEnabled" = "Mostra nella barra di stato";
 "settings.useImageInterpolation" = "Interpolazione immagini";
 "shop.loading" = "Caricamento...";
-"shop.thankYou" = "Grazie per il tuo supporto! ❤️";
+"shop.supporter" = "Sostenitore";
+"shop.thankYou" = "Grazie per il tuo sostegno! ❤️";
 "shop.restore" = "Ripristina Acquisti";
 "shop.becomeSupporter" = "Diventa un sostenitore";
 "shop.pleeeease" = "Per favore, supportaci";
@@ -169,6 +170,7 @@
 "species.name.raiden" = "Raiden";
 "species.name.keqing" = "Keqing";
 "species.name.ape" = "Scimmia";
+"species.name.ape_chef" = "Scimmia Chef";
 "species.name.betta" = "Betta";
 "species.name.cat" = "Gatto Rosso";
 "species.name.cat_black" = "Gatto Nero";
@@ -231,16 +233,7 @@
 "tag.wild-animals" = "🌲 Animali Selvatici";
 "tag.characters" = "🎮 Personaggi";
 "tag.memes-fun" = "🎭 Meme e Divertimento";
-"urls.appStore" = "https://apps.apple.com/app/id1575542220";
-"urls.customPetsDocs" = "https://curzel.it/bit-therapy/custompets";
-"urls.discord" = "https://discord.gg/8tj28beNPH";
-"urls.donations" = "https://www.patreon.com/urinamara";
-"urls.github" = "https://github.com/curzel-it/bit-therapy";
-"urls.privacy" = "https://curzel.it/privacy.html";
-"urls.tncs" = "https://curzel.it/terms-and-conditions.html";
-"urls.reddit" = "https://www.reddit.com/r/DesktopPets/";
-"urls.twitter" = "https://twitter.com/HiddenMugs";
-"urls.youtube" = "https://www.youtube.com/@HiddenMugs";
+
 "yes" = "Sì";
 "youtube.cybertruckTitle" = "Nuovo Pet: Cybertruck!";
 "youtube.cybertruckMessage" = "In tutta la sua gloria poligonale, non ti accorgerai nemmeno che è pixel art!\nGià che ci siamo, perché non guardi un video super cringe sulle origini del Cybertruck sul mio canale YouTube?";

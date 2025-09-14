@@ -2,6 +2,7 @@ import Combine
 import Schwifty
 import SwiftUI
 
+@MainActor
 class PetsSelectionViewModel: ObservableObject {
     @Inject private var appConfig: AppConfig
     @Inject private var assets: PetsAssetsProvider

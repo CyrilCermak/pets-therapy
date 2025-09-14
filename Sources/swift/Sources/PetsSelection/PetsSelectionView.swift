@@ -12,10 +12,14 @@ struct PetsSelectionView: View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: .xxl) {
                 MyPets()
-                MorePets().padding(.bottom, .xxxl)
+                    .id("my-pets")
+                MorePets()
+                    .id("more-pets")
+                    .padding(.bottom, .xxxl)
             }
             .padding(.md)
         }
+        .animation(.easeInOut(duration: 0.2), value: viewModel.selectedSpecies.count)
         .sheet(isPresented: viewModel.showingDetails) {
             if let species = viewModel.openSpecies {
                 PetDetailsView(
@@ -45,6 +49,7 @@ private struct MyPets: View {
                 text: nil,
                 species: viewModel.selectedSpecies
             )
+            .id("selected-pets-grid-\(viewModel.selectedSpecies.count)")
         }
     }
 }
@@ -74,14 +79,13 @@ private struct GridAndFiltersVerticallyStacked: View {
     
     var body: some View {
         VStack(spacing: .lg) {
-            if DeviceRequirement.allSatisfied(.macOS) {
-                HorizontalFiltersView()
-            }
+            HorizontalFiltersView()
             PetsGrid(
                 columns: viewModel.gridColums,
                 text: text,
                 species: viewModel.unselectedSpecies
             )
+            .id("unselected-pets-grid-\(viewModel.selectedTag ?? "all")-\(viewModel.unselectedSpecies.count)")
             Spacer()
         }
     }

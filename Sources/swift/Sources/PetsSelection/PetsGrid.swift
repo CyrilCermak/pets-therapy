@@ -15,7 +15,7 @@ struct PetsGrid: View {
                     .foregroundStyle(Color.white)
             }
             LazyVGrid(columns: columns, spacing: Spacing.xl.rawValue) {
-                ForEach(species) {
+                ForEach(species, id: \.id) {
                     PetPreview(species: $0)
                 }
             }
