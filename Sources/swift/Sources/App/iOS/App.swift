@@ -20,6 +20,7 @@ struct MyApp: App {
 class AppDelegate: NSObject, UIApplicationDelegate {
     @Inject private var commandLine: CommandLineUseCase
     @Inject private var onScreen: OnScreenCoordinator
+    @Inject private var analytics: AnalyticsService
     
     private let tag = "AppDelegate"
 
@@ -29,6 +30,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     ) -> Bool {
         Logger.log(tag, "Did finish launching")
         commandLine.handleCommandLineArgs()
+        analytics.configure()
+        analytics.log(event: AppAnalyticsEvent.appLaunch)
         onScreen.show()
         return true
     }

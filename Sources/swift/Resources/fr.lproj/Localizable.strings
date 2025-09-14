@@ -2,7 +2,13 @@
 "about.leaveReviewMessage" = "Soutenez-nous en laissant une belle critique!\n⭐️⭐️⭐️⭐️⭐️";
 "about.privacyPolicy" = "Politique de confidentialité";
 "about.termsAndConditions" = "Terms and Conditions";
-"appName" = "Desktop Pets";
+"analytics.consentTitle" = "Aider à Améliorer Pets Therapy";
+"analytics.consentMessage" = "Nous aimerions collecter des données d'utilisation anonymes afin d'améliorer l'application. Cela inclut les animaux les plus populaires et la manière dont les fonctionnalités sont utilisées. Aucune information personnelle n'est collectée et vous pouvez modifier ce paramètre à tout moment dans les préférences de l'application.";
+"analytics.consentAccept" = "Autoriser Analytics";
+"analytics.consentDecline" = "Non Merci";
+"analytics.privacyNote" = "Votre vie privée nous tient à cœur. Toute la collecte de données est anonyme et nous permet d'améliorer l'application.";
+"analytics.settingsToggleLabel" = "Analytics de l'App (Anonyme)";
+"appName" = "Pets Therapy";
 "backgrounds.BackgroundMountainDay" = "Montagne, Jour";
 "backgrounds.BackgroundMountainDynamic" = "Montagne";
 "backgrounds.BackgroundMountainNight" = "Montagne, Nuit";

@@ -1,8 +1,14 @@
 "about.leaveReview" = "Залишити відгук";
-"about.leaveReviewMessage" = "Підтримайте нас безкоштовно, залишивши відгук! \n⭐️⭐️⭐️⭐️⭐️";
+"about.leaveReviewMessage" = "Підтримайте нас безкоштовно, залишивши відгук!\n⭐️⭐️⭐️⭐️⭐️";
 "about.privacyPolicy" = "Політика конфіденційності";
 "about.termsAndConditions" = "Terms and Conditions";
-"appName" = "Настільні улюбленці";
+"analytics.consentTitle" = "Допоможіть покращити Pets Therapy";
+"analytics.consentMessage" = "Ми хотіли б збирати анонімні дані про використання, щоб допомогти покращити додаток. Це включає, які тварини найпопулярніші та як використовуються функції.\n\nОсобиста інформація не збирається, і ви можете змінити цей параметр у будь-який час у налаштуваннях додатку.";
+"analytics.consentAccept" = "Дозволити аналітику";
+"analytics.consentDecline" = "Ні, дякую";
+"analytics.privacyNote" = "Ваша конфіденційність важлива для нас. Весь збір даних анонімний і допомагає нам покращити додаток.";
+"analytics.settingsToggleLabel" = "Аналітика додатку (анонімна)";
+"appName" = "Pets Therapy";
 "backgrounds.BackgroundMountainDay" = "Гора, денна";
 "backgrounds.BackgroundMountainDynamic" = "Гора";
 "backgrounds.BackgroundMountainNight" = "Гора, нічна";

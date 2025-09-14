@@ -36,6 +36,10 @@ private struct Switches: View {
             DesktopInteractionsSwitch()
             FloatOverFullScreenAppsSwitch()
             RandomEventsSwitch()
+            AnalyticsSettingsSwitch()
+            #if DEBUG
+                ResetAnalyticsConsentButton()
+            #endif
         }
     }
 }

@@ -9,6 +9,7 @@ struct MacContentView: View {
         ContentView()
             .frame(minWidth: MacContentView.minSize.width)
             .frame(minHeight: MacContentView.minSize.height)
+            .analyticsConsentHandler()
             .onWindow { window in
                 AppWindowManager.shared.current = window
                 AppWindowManager.shared.customize(window)

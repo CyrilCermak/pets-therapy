@@ -23,9 +23,6 @@
 		1E07315529B9E4D100E31EED /* AppStoreScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07315329B9E4D100E31EED /* AppStoreScreenshots.swift */; };
 		1E07315A29BA18DD00E31EED /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1E07315929BA18DD00E31EED /* Schwifty */; };
 		1E07319F29BAADF000E31EED /* SpeciesProviderImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E07319E29BAADF000E31EED /* SpeciesProviderImplTests.swift */; };
-		1E185F4029B22FF20042E537 /* contributors.json in Resources */ = {isa = PBXBuildFile; fileRef = 1EE90BFA299802690019CA9A /* contributors.json */; };
-		1E185F4229B22FFA0042E537 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4528740F8E00AB872E /* Localizable.strings */; };
-		1E185F6329B236B80042E537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4928740F8E00AB872E /* Assets.xcassets */; };
 		1E1CF22A29B2C5E30018A994 /* WindowsDetector in Frameworks */ = {isa = PBXBuildFile; productRef = 1E1CF22929B2C5E30018A994 /* WindowsDetector */; };
 		1E1CF22B29B2C6030018A994 /* PetsAssets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7E218E29B0874C00AC9438 /* PetsAssets */; };
 		1E1CF22C29B2C6090018A994 /* Species in Resources */ = {isa = PBXBuildFile; fileRef = 1E7E218F29B0874C00AC9438 /* Species */; };
@@ -33,9 +30,6 @@
 		1E9505C629B21342007666BF /* BitTherapyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9505C529B21342007666BF /* BitTherapyTests.swift */; };
 		1E9505D029B21342007666BF /* BitTherapyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9505CF29B21342007666BF /* BitTherapyUITests.swift */; };
 		1E9505DC29B21475007666BF /* PetsAssets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7E218E29B0874C00AC9438 /* PetsAssets */; };
-		1E9505DD29B2148F007666BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4928740F8E00AB872E /* Assets.xcassets */; };
-		1E9505DE29B21492007666BF /* contributors.json in Resources */ = {isa = PBXBuildFile; fileRef = 1EE90BFA299802690019CA9A /* contributors.json */; };
-		1E9505E029B21496007666BF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6FB7D4528740F8E00AB872E /* Localizable.strings */; };
 		1EA1679529C1E0E000FAF378 /* Schwifty in Frameworks */ = {isa = PBXBuildFile; productRef = 1EA1679429C1E0E000FAF378 /* Schwifty */; };
 		1ED44B6F29B21A930091CDAE /* Species in Resources */ = {isa = PBXBuildFile; fileRef = 1E7E218F29B0874C00AC9438 /* Species */; };
 		1ED44B7429B21AD50091CDAE /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED44B7329B21AD50091CDAE /* LaunchAtLogin */; };
@@ -63,6 +57,10 @@
 		6457E5C22ADAF5BD00F1D7A7 /* PointsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6457E5B82ADAF5BD00F1D7A7 /* PointsTests.swift */; };
 		6457E5C32ADAF5BD00F1D7A7 /* AutoRespawnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6457E5B92ADAF5BD00F1D7A7 /* AutoRespawnTests.swift */; };
 		6457E5C42ADAF5BD00F1D7A7 /* GravityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6457E5BA2ADAF5BD00F1D7A7 /* GravityTests.swift */; };
+		BC7374532E74947900E213CD /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BC7374522E74947900E213CD /* FirebaseAnalytics */; };
+		BC7374572E74947900E213CD /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = BC7374562E74947900E213CD /* FirebaseCrashlytics */; };
+		BC7374602E749C8A00E213CD /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BC73745F2E749C8A00E213CD /* FirebaseAnalytics */; };
+		BC7374682E74AAA000E213CD /* FirebaseAnalyticsCore in Frameworks */ = {isa = PBXBuildFile; productRef = BC7374672E74AAA000E213CD /* FirebaseAnalyticsCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,28 +141,20 @@
 		1E07315329B9E4D100E31EED /* AppStoreScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreScreenshots.swift; sourceTree = "<group>"; };
 		1E07319E29BAADF000E31EED /* SpeciesProviderImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesProviderImplTests.swift; sourceTree = "<group>"; };
 		1E1CF22729B2C34B0018A994 /* BitTherapy.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = BitTherapy.xctestplan; sourceTree = "<group>"; };
-		1E50024D29B7E17F00F6C9B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E50024E29B7E1F100F6C9B8 /* AppStoreScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreScreenshots.swift; sourceTree = "<group>"; };
-		1E50295629AE583A00117A23 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1E7E218D29B0873700AC9438 /* Docs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Docs; path = ../../Docs; sourceTree = "<group>"; };
 		1E7E218E29B0874C00AC9438 /* PetsAssets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PetsAssets; path = ../../PetsAssets; sourceTree = "<group>"; };
 		1E7E218F29B0874C00AC9438 /* Species */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Species; path = ../../Species; sourceTree = "<group>"; };
-		1E93C60229623192007A5B91 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1E9505B129B21341007666BF /* Pets Therapy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pets Therapy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9505C129B21342007666BF /* Pets Therapy Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pets Therapy Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9505C529B21342007666BF /* BitTherapyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitTherapyTests.swift; sourceTree = "<group>"; };
 		1E9505CB29B21342007666BF /* Pets Therapy UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pets Therapy UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9505CF29B21342007666BF /* BitTherapyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitTherapyUITests.swift; sourceTree = "<group>"; };
-		1EB5E8E729A12E4500FF9C9C /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1ED44B8629B221C20091CDAE /* ImageInterpolationUseCaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageInterpolationUseCaseTests.swift; sourceTree = "<group>"; };
-		1EDDB01E29C1B770002696D3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1EE90BFA299802690019CA9A /* contributors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contributors.json; sourceTree = "<group>"; };
 		1EF863E929B22DD400413AEA /* Pets TherapyMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pets TherapyMobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF863F829B22DD500413AEA /* Pets TherapyMobile Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pets TherapyMobile Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF8640229B22DD500413AEA /* Pets TherapyMobile UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pets TherapyMobile UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF8640629B22DD500413AEA /* BitTherapyMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitTherapyMobileUITests.swift; sourceTree = "<group>"; };
-		640CD7B62B17BD230067C88A /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
-		640CD7B72B17BD2B0067C88A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		641BE4EE2AC2F54100A87232 /* BitTherapyMobile.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BitTherapyMobile.xctestplan; sourceTree = "<group>"; };
 		641BE4EF2AC2F54100A87232 /* BitTherapyMobileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitTherapyMobileTests.swift; sourceTree = "<group>"; };
 		644D7A572AC088ED00EDA4A9 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -179,11 +169,6 @@
 		6457E5B82ADAF5BD00F1D7A7 /* PointsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsTests.swift; sourceTree = "<group>"; };
 		6457E5B92ADAF5BD00F1D7A7 /* AutoRespawnTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoRespawnTests.swift; sourceTree = "<group>"; };
 		6457E5BA2ADAF5BD00F1D7A7 /* GravityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GravityTests.swift; sourceTree = "<group>"; };
-		A6FB7D4628740F8E00AB872E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A6FB7D4728740F8E00AB872E /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A6FB7D4928740F8E00AB872E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A6FB7D4A28740F8E00AB872E /* BitTherapy.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = BitTherapy.entitlements; sourceTree = "<group>"; };
-		A6FB7D4B28740F8E00AB872E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -285,6 +270,20 @@
 			);
 			target = 1EF863E829B22DD400413AEA /* Pets TherapyMobile */;
 		};
+		BCB366F62E757BF1006CF968 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				macOS/Info.plist,
+			);
+			target = 1EF863E829B22DD400413AEA /* Pets TherapyMobile */;
+		};
+		BCB366F72E757BF8006CF968 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				iOS/Info.plist,
+			);
+			target = 1E9505B029B21341007666BF /* Pets Therapy */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -303,6 +302,8 @@
 		1E77BF492D293A7400AA14EC /* Settings */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (1E77BF552D293A7400AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 1E77BF562D293A7400AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Settings; sourceTree = "<group>"; };
 		1E77BF592D293A7600AA14EC /* StatusBar */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (1E77BF5C2D293A7600AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 1E77BF5D2D293A7600AA14EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = StatusBar; sourceTree = "<group>"; };
 		1E77BF762D293A7800AA14EC /* Yage */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Yage; sourceTree = "<group>"; };
+		BC7374492E74926D00E213CD /* AppAnalytics */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = AppAnalytics; sourceTree = "<group>"; };
+		BCB344062E75797000295338 /* Resources */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (BCB366F72E757BF8006CF968 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, BCB366F62E757BF1006CF968 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Resources; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,9 +334,12 @@
 				1ED44B7429B21AD50091CDAE /* LaunchAtLogin in Frameworks */,
 				1ED44B7829B21AD50091CDAE /* RateKit in Frameworks */,
 				1ED44B8F29B229180091CDAE /* WindowsDetector in Frameworks */,
+				BC7374572E74947900E213CD /* FirebaseCrashlytics in Frameworks */,
 				643C2FA02ADAF70400BC3C32 /* NotAGif in Frameworks */,
+				BC7374682E74AAA000E213CD /* FirebaseAnalyticsCore in Frameworks */,
 				1ED44B8029B21AD50091CDAE /* Swinject in Frameworks */,
 				1ED44B8229B21AD50091CDAE /* ZIPFoundation in Frameworks */,
+				BC7374532E74947900E213CD /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +363,7 @@
 			files = (
 				1E1CF22A29B2C5E30018A994 /* WindowsDetector in Frameworks */,
 				6437A6D92B041AEA00C2D8D7 /* BareBones in Frameworks */,
+				BC7374602E749C8A00E213CD /* FirebaseAnalytics in Frameworks */,
 				643C2FA42ADAF75800BC3C32 /* Schwifty in Frameworks */,
 				1EF8642129B22F2500413AEA /* Swinject in Frameworks */,
 				643C2FA22ADAF70C00BC3C32 /* NotAGif in Frameworks */,
@@ -407,23 +412,6 @@
 			isa = PBXGroup;
 			children = (
 				1E07315329B9E4D100E31EED /* AppStoreScreenshots.swift */,
-			);
-			path = iOS;
-			sourceTree = "<group>";
-		};
-		1E185F4329B230050042E537 /* macOS */ = {
-			isa = PBXGroup;
-			children = (
-				A6FB7D4A28740F8E00AB872E /* BitTherapy.entitlements */,
-				A6FB7D4B28740F8E00AB872E /* Info.plist */,
-			);
-			path = macOS;
-			sourceTree = "<group>";
-		};
-		1E185F4429B2300E0042E537 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				1E50024D29B7E17F00F6C9B8 /* Info.plist */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -508,7 +496,7 @@
 				1E7E218D29B0873700AC9438 /* Docs */,
 				1EFECB5029B6923F00C7A028 /* Frameworks */,
 				1E7E218E29B0874C00AC9438 /* PetsAssets */,
-				A6FB7D4328740F8E00AB872E /* Resources */,
+				BCB344062E75797000295338 /* Resources */,
 				A6FB7D5128740F8E00AB872E /* Sources */,
 				1E7E218F29B0874C00AC9438 /* Species */,
 				1E9505C429B21342007666BF /* Tests */,
@@ -524,22 +512,11 @@
 			);
 			sourceTree = "<group>";
 		};
-		A6FB7D4328740F8E00AB872E /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				1EE90BFA299802690019CA9A /* contributors.json */,
-				1E185F4429B2300E0042E537 /* iOS */,
-				A6FB7D4528740F8E00AB872E /* Localizable.strings */,
-				A6FB7D4928740F8E00AB872E /* Assets.xcassets */,
-				1E185F4329B230050042E537 /* macOS */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		A6FB7D5128740F8E00AB872E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				1E77BE172D29394300AA14EC /* App */,
+				BC7374492E74926D00E213CD /* AppAnalytics */,
 				1E77BDFC2D29393F00AA14EC /* Contents */,
 				1E77BE402D29395200AA14EC /* CustomPets */,
 				1E77BE642D29395600AA14EC /* Dependencies */,
@@ -635,6 +612,8 @@
 				1E77BF362D293A7100AA14EC /* Screensaver */,
 				1E77BF492D293A7400AA14EC /* Settings */,
 				1E77BF762D293A7800AA14EC /* Yage */,
+				BC7374492E74926D00E213CD /* AppAnalytics */,
+				BCB344062E75797000295338 /* Resources */,
 			);
 			name = "Pets Therapy";
 			packageProductDependencies = (
@@ -646,6 +625,9 @@
 				1E8D068729B4DF8B009C2B34 /* Schwifty */,
 				643C2F9F2ADAF70400BC3C32 /* NotAGif */,
 				6437A6D62B041AE300C2D8D7 /* BareBones */,
+				BC7374522E74947900E213CD /* FirebaseAnalytics */,
+				BC7374562E74947900E213CD /* FirebaseCrashlytics */,
+				BC7374672E74AAA000E213CD /* FirebaseAnalyticsCore */,
 			);
 			productName = "Desktop Pets";
 			productReference = 1E9505B129B21341007666BF /* Pets Therapy.app */;
@@ -715,6 +697,8 @@
 				1E77BF232D293A6E00AA14EC /* PetsSelection */,
 				1E77BF362D293A7100AA14EC /* Screensaver */,
 				1E77BF762D293A7800AA14EC /* Yage */,
+				BC7374492E74926D00E213CD /* AppAnalytics */,
+				BCB344062E75797000295338 /* Resources */,
 			);
 			name = "Pets TherapyMobile";
 			packageProductDependencies = (
@@ -723,6 +707,7 @@
 				643C2FA12ADAF70C00BC3C32 /* NotAGif */,
 				643C2FA32ADAF75800BC3C32 /* Schwifty */,
 				6437A6D82B041AEA00C2D8D7 /* BareBones */,
+				BC73745F2E749C8A00E213CD /* FirebaseAnalytics */,
 			);
 			productName = "Mobile Pets";
 			productReference = 1EF863E929B22DD400413AEA /* Pets TherapyMobile.app */;
@@ -819,6 +804,10 @@
 				es,
 				uk,
 				ru,
+				de,
+				ja,
+				cs,
+				ko,
 			);
 			mainGroup = A65FE354283D80C900D1F5C8;
 			packageReferences = (
@@ -830,6 +819,7 @@
 				1E8D068629B4DF8B009C2B34 /* XCRemoteSwiftPackageReference "schwifty" */,
 				643C2F9E2ADAF6F400BC3C32 /* XCRemoteSwiftPackageReference "NotAGif" */,
 				6437A6D12B04160400C2D8D7 /* XCRemoteSwiftPackageReference "barebones" */,
+				BC7374512E74947900E213CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = A65FE354283D80C900D1F5C8;
 			projectDirPath = "";
@@ -866,11 +856,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E9505E029B21496007666BF /* Localizable.strings in Resources */,
-				1E9505DD29B2148F007666BF /* Assets.xcassets in Resources */,
 				1ED44B6F29B21A930091CDAE /* Species in Resources */,
 				1E9505DC29B21475007666BF /* PetsAssets in Resources */,
-				1E9505DE29B21492007666BF /* contributors.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -892,9 +879,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E185F4229B22FFA0042E537 /* Localizable.strings in Resources */,
-				1E185F4029B22FF20042E537 /* contributors.json in Resources */,
-				1E185F6329B236B80042E537 /* Assets.xcassets in Resources */,
 				641BE4F02AC2F54100A87232 /* BitTherapyMobile.xctestplan in Resources */,
 				1E1CF22C29B2C6090018A994 /* Species in Resources */,
 				1E1CF22B29B2C6030018A994 /* PetsAssets in Resources */,
@@ -1096,24 +1080,6 @@
 			targetProxy = 1EF8640329B22DD500413AEA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		A6FB7D4528740F8E00AB872E /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A6FB7D4628740F8E00AB872E /* en */,
-				A6FB7D4728740F8E00AB872E /* it */,
-				1E93C60229623192007A5B91 /* fr */,
-				1EB5E8E729A12E4500FF9C9C /* id */,
-				1E50295629AE583A00117A23 /* zh-Hans */,
-				1EDDB01E29C1B770002696D3 /* es */,
-				640CD7B62B17BD230067C88A /* uk */,
-				640CD7B72B17BD2B0067C88A /* ru */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1E07313429B9D64B00E31EED /* Debug */ = {
@@ -1621,6 +1587,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1677,6 +1644,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -1842,6 +1810,14 @@
 				minimumVersion = 4.2.0;
 			};
 		};
+		BC7374512E74947900E213CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = exactVersion;
+				version = 12.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1929,6 +1905,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1E8D068629B4DF8B009C2B34 /* XCRemoteSwiftPackageReference "schwifty" */;
 			productName = Schwifty;
+		};
+		BC7374522E74947900E213CD /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC7374512E74947900E213CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		BC7374562E74947900E213CD /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC7374512E74947900E213CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		BC73745F2E749C8A00E213CD /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC7374512E74947900E213CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		BC7374672E74AAA000E213CD /* FirebaseAnalyticsCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC7374512E74947900E213CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

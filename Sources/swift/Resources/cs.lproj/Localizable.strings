@@ -2,7 +2,13 @@
 "about.leaveReviewMessage" = "Podpořte nás zdarma napsáním recenze!\n⭐️⭐️⭐️⭐️⭐️";
 "about.privacyPolicy" = "Zásady ochrany osobních údajů";
 "about.termsAndConditions" = "Obchodní podmínky";
-"appName" = "Desktopová Zvířátka";
+"analytics.consentTitle" = "Pomozte vylepšit Pets Therapy";
+"analytics.consentMessage" = "Rádi bychom shromažďovali anonymní data o používání, abychom pomohli vylepšit aplikaci. To zahrnuje, která zvířátka jsou nejoblíbenější a jak se používají funkce aplikace.\n\nŽádné osobní informace se neshromažďují a toto nastavení můžete kdykoli změnit v předvolbách aplikace.";
+"analytics.consentAccept" = "Povolit analytiku";
+"analytics.consentDecline" = "Ne, děkuji";
+"analytics.privacyNote" = "Vaše soukromí je pro nás důležité. Veškeré shromažďování dat je anonymní a pomáhá nám vylepšit aplikaci.";
+"analytics.settingsToggleLabel" = "Analytika aplikace (anonymní)";
+"appName" = "Pets Therapy";
 "backgrounds.BackgroundMountainDay" = "Hory, den";
 "backgrounds.BackgroundMountainDynamic" = "Hory";
 "backgrounds.BackgroundMountainNight" = "Hory, noc";

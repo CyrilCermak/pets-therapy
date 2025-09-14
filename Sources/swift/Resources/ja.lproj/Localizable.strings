@@ -2,7 +2,13 @@
 "about.leaveReviewMessage" = "レビューを残して無料でサポートしてください！\n⭐️⭐️⭐️⭐️⭐️";
 "about.privacyPolicy" = "プライバシーポリシー";
 "about.termsAndConditions" = "利用規約";
-"appName" = "デスクトップペット";
+"analytics.consentTitle" = "Pets Therapyの改善にご協力ください";
+"analytics.consentMessage" = "アプリの改善のため、匿名の使用データを収集させていただきたいと思います。これには、どのペットが人気か、機能がどのように使用されているかなどが含まれます。\n\n個人情報は一切収集されず、この設定はアプリの設定でいつでも変更できます。";
+"analytics.consentAccept" = "分析を許可";
+"analytics.consentDecline" = "いいえ";
+"analytics.privacyNote" = "あなたのプライバシーは重要です。すべてのデータ収集は匿名で行われ、アプリの改善に役立てられます。";
+"analytics.settingsToggleLabel" = "アプリ分析（匿名）";
+"appName" = "Pets Therapy";
 "backgrounds.BackgroundMountainDay" = "山、昼";
 "backgrounds.BackgroundMountainDynamic" = "山";
 "backgrounds.BackgroundMountainNight" = "山、夜";

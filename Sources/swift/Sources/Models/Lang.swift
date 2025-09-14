@@ -25,6 +25,15 @@ enum Lang {
         static let termsAndConditions = "about.termsAndConditions".localized()
     }
 
+    enum Analytics {
+        static let consentTitle = "analytics.consentTitle".localized()
+        static let consentMessage = "analytics.consentMessage".localized()
+        static let consentAccept = "analytics.consentAccept".localized()
+        static let consentDecline = "analytics.consentDecline".localized()
+        static let privacyNote = "analytics.privacyNote".localized()
+        static let settingsToggleLabel = "analytics.settingsToggleLabel".localized()
+    }
+
     enum Backgrounds {
         static let BackgroundMountainDay = "backgrounds.BackgroundMountainDay".localized()
         static let BackgroundMountainDynamic = "backgrounds.BackgroundMountainDynamic".localized()
@@ -111,6 +120,8 @@ enum Lang {
         static let floatOverFullscreenApps = "settings.floatOverFullscreenApps".localized()
         static let gravity = "settings.gravity".localized()
         static let launchAtLogin = "settings.launchAtLogin".localized()
+        static let anonymousTrackingTitle = "settings.anonymousTrackingTitle".localized()
+        static let anonymousTrackingMessage = "settings.anonymousTrackingMessage".localized()
         static let launchAtLoginPromo = "settings.launchAtLoginPromo".localized()
         static let launchSilentlyTitle = "settings.launchSilentlyTitle".localized()
         static let launchSilentlyMessage = "settings.launchSilentlyMessage".localized()

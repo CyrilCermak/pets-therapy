@@ -103,3 +103,6 @@ iOSInjectionProject/
 # Landing page
 Sources/landing_page/assets/pets/ # Copied by a script for a local development
 Sources/landing_page/assets/pets/
+
+# Firebase config for app analytics
+Sources/swift/Resources/GoogleService-Info.plist

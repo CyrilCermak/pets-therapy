@@ -2,7 +2,13 @@
 "about.leaveReviewMessage" = "Поддержите нас бесплатно, оставив отзыв! \N⭐️⭐️⭐️⭐️⭐️";
 "about.privacyPolicy" = "Политика конфиденциальности";
 "about.termsAndConditions" = "Terms and Conditions";
-"appName" = "Настольные питомцы";
+"analytics.consentTitle" = "Помочь улучшить Pets Therapy";
+"analytics.consentMessage" = "Мы хотели бы собирать анонимные данные об использовании, чтобы помочь улучшить приложение. Это включает в себя, какие питомцы наиболее популярны и как используются функции.\n\nЛичная информация не собирается, и вы можете изменить этот параметр в любое время в настройках приложения.";
+"analytics.consentAccept" = "Разрешить аналитику";
+"analytics.consentDecline" = "Нет, спасибо";
+"analytics.privacyNote" = "Ваша конфиденциальность важна для нас. Все сбор данных анонимен и помогает нам улучшить приложение.";
+"analytics.settingsToggleLabel" = "Аналитика приложения (анонимная)";
+"appName" = "Pets Therapy";
 "backgrounds.BackgroundMountainDay" = "Гора, дневная";
 "backgrounds.BackgroundMountainDynamic" = "Гора";
 "backgrounds.BackgroundMountainNight" = "Гора, ночная";

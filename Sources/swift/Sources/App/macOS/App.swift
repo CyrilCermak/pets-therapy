@@ -23,11 +23,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @Inject private var commandLine: CommandLineUseCase
     @Inject private var notifications: NotificationsService
     @Inject private var onScreen: OnScreenCoordinator
+    @Inject private var analytics: AnalyticsService
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         Logger.log("AppDelegate", "Did finish launching")
         commandLine.handleCommandLineArgs()
         notifications.start()
+        analytics.configure()
+        analytics.log(event: AppAnalyticsEvent.appLaunch)
 
         if config.floatOverFullscreenApps {
             NSApp.setActivationPolicy(.accessory)
